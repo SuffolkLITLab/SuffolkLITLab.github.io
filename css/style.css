@@ -8,6 +8,27 @@ body {
 	line-height: 22px;
 }
 
+.content {
+	margin:15px auto 0 auto;
+	padding:0 15px;
+	max-width:970px;
+}
+
+.footer {
+	margin:10px 0;
+	padding:5px;
+	border-top:solid 1px #888;
+	text-align:right;
+	text-color:#555;
+}
+
+.note {
+	background:#ffd;
+	padding:15px;
+	margin-top:-16px;
+	border: 1px solid #bbb;
+}
+
 h1 {
 	margin: 5px auto 10px auto;
 	font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
