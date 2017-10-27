@@ -17,9 +17,19 @@ body {
 .footer {
 	margin:20px 0;
 	padding:5px;
-	border-top:solid 1px #888;
 	text-align:right;
 	text-color:#555;
+	float:left;
+	width:100%;
+	border-top: solid 1px #555;
+	padding:15px 0px 40px 0px;
+	font-size: 14px;
+	line-height: 18px;
+	color:#555;
+}
+
+a.foota {
+	color:#555;
 }
 
 .note {
@@ -62,20 +72,6 @@ div.food {
 .details {
 	font-size: 14px;
 	line-height: 18px;
-	color:#555;
-}
-
-.footer {
-	float:left;
-	width:100%;
-	border-top: solid 1px #555;
-	padding:15px 0px 40px 0px;
-	font-size: 14px;
-	line-height: 18px;
-	color:#555;
-}
-
-a.foota {
 	color:#555;
 }
 
