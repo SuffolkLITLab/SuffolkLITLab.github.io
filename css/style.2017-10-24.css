@@ -37,6 +37,7 @@ a.foota {
 	padding:15px;
 	margin-top:-16px;
 	border: 1px solid #bbb;
+	text-align:center;
 }
 
 h1 {
@@ -45,6 +46,10 @@ h1 {
 	font-weight: bold;
 	font-size: 32px;
 	line-height: 35px;
+}
+
+h2 {
+	line-height: 30px;	
 }
 	
 div.prize { 
