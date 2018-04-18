@@ -25,7 +25,7 @@ body {
 	font-size: 14px;
 	line-height: 18px;
 	color:#555;
-	box-sizing: border-box; 
+	box-sizing: border-box;
 }
 
 a.foota {
@@ -441,6 +441,12 @@ a.xbutton:hover, a.xbutton:active {
 }
 
 @media only screen and (max-width: 480px) {
+
+	.listing {
+		padding-left: 0px;
+		padding-right: 0px;
+	}
+
 	.profile_wrapper {
 		position:relative;
 		width:100%;
