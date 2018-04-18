@@ -417,6 +417,10 @@ a.xbutton:hover, a.xbutton:active {
 	height:225px;
 }
 
+.listing {
+	padding: 0px 15px 15px 15px;
+}
+
 @media only screen and (max-width: 680px) {
 	.vid_wrapper {
 		position:relative;
