@@ -8,6 +8,22 @@ body {
 	line-height: 22px;
 }
 
+.caption {
+	padding:8px 5px 8px 5px;
+	text-color:#555;
+	text-transform: uppercase;
+	font-size: 11px;
+	line-height: 15px;
+	color:#555;
+	box-sizing: border-box;
+	width:100%;
+	border-bottom: solid 1px #ccc;
+}
+
+.captionlnk {
+	color:#555;
+}
+
 .content {
 	margin:15px auto 0 auto;
 	padding:0 15px;
@@ -421,6 +437,32 @@ a.xbutton:hover, a.xbutton:active {
 	padding: 0px 15px 15px 15px;
 }
 
+.r_img_embed {
+	float:right;
+	margin: 0 0 18px 18px;
+	box-sizing: border-box;
+}
+
+.profile_title {
+	font-size:22px;
+	line-height: 25px;
+}
+
+.profile_title {
+	font-size:22px;
+	line-height: 25px;
+}
+
+
+@media only screen and (max-width: 750px) {
+	.r_img_embed {
+		float:none;
+		position:relative;
+		margin:15px auto;
+	}
+}
+
+
 @media only screen and (max-width: 680px) {
 	.vid_wrapper {
 		position:relative;
@@ -437,12 +479,9 @@ a.xbutton:hover, a.xbutton:active {
 		float:none;
 		width:100%;
 	}
+
 }
 
-.profile_title {
-	font-size:22px;
-	line-height: 25px;
-}
 
 @media only screen and (max-width: 480px) {
 
@@ -466,12 +505,9 @@ a.xbutton:hover, a.xbutton:active {
 		float:none;
 		width:100%;
 	}
+
 }
 
-.profile_title {
-	font-size:22px;
-	line-height: 25px;
-}
 
 a.anchor {
 		display:block;

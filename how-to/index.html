@@ -10,7 +10,6 @@
 	  window.dataLayer = window.dataLayer || [];
 	  function gtag(){dataLayer.push(arguments);}
 	  gtag('js', new Date());
-
 	  gtag('config', 'UA-108858221-1');
 	</script>
 	<meta http-equiv="Content-type" content="text/html;charset=UTF-8"/>
@@ -33,7 +32,7 @@
 	<link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
 	<!--<link rel="apple-touch-icon" href="images/icon.png"/> -->
 	<link rel="stylesheet" href="http://code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css">
-	<link rel="stylesheet" type="text/css" href="../css/style.2017-10-24.css">
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
 	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
   	<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
   	<script src="http://code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
@@ -60,26 +59,73 @@
 	</div>
 
 	<h2>How To...</h2>
+  <div class="r_img_embed" style="max-width:550px;">
+    <img src="https://imgs.xkcd.com/comics/tech_support_cheat_sheet.png" title="'Hey Megan, it's your father. How do I print out a flowchart?'" alt="Tech Support Cheat Sheet" width="100%"/>
+    <div class="caption">Image and Hover Text: <a href="https://xkcd.com/627/" class="captionlnk">Tech Support Cheat Sheet</a> by XKCD</div>
+  </div>
 	<p>
-    <img src="https://imgs.xkcd.com/comics/tech_support_cheat_sheet.png" width="600px" align="right"/>
-		The following How-To docs are used yp help bring lab members up to speed on the constellation of tech tools and concepts used in our work. Although one could start at the beginning and work their way through all of the "lessons" its more common for us to reference selections customized to the needs of our projects.
-
-
-           xkcd google answers
-
-	</p>
+	   This XKCD comic is a pretty good primer on "learning" your way around new software. However, we saw a benefit in providing more formal materials, hence LIT HOW-TO. The following documentation is used to help bring lab members up to speed on a constellation of tech tools and concepts used in our work. They're a work in progress, but we hope even in their current state others might find them useful too. So please, poke around.
+   </p>
+   <p>
+     One could start at the beginning and work their way through all of the "lessons," however, it's more common for us to reference sections as projects call for them. That being said, the first section is a good place to start. We plan to use these resources heavily in next Fall's <a href="../courses/#2998">Coding the Law</a> and as a supplement for <a href="../courses/#fellows">LIT Fellows</a> and students in the <a href="../courses/#2418">LIT Lab</a>.
+  </p>
+  <p>
+    Self-direction is the name of the game. However, students, and to a lessor extent the general public, are not playing without a net. All are welcome to join the Lab's <a href="../slack/">Slack Team</a>. There you'll find public channels for most of the sections below. We hope you'll use them to ask and answer questions.
+  </p>
+  <p>
+    The Lab's standing rule re. asking for help is as follows: <i>If you set to doing something and you are hitting your head against a wall for 30 plus minutes, ask for help in the appropriate Slack channel</i>.</p>
+    <p>
+      If you're not a Lab student and you are using one of the channels associated with a section below, you must abide by the following three rules:</p>
+      <ol>
+        <li>You've got to be kind;<sup>&dagger;</sup></li>
+        <li>If you're asking a question, don't expect an immediate answer (remember Rule 1);</li>
+        <li>If you're answering a question (which you're encouraged to do), don't provide an answer out of the gate. Work to point people in the right direction; and</li>
+        <li>Fill out your user profile so we know who you are.</li>
+	    </ol>
+  <p>
+    <sup>&dagger;</sup> Lab faculty are ultimate arbiters for all disputes.
+  </p>
 
   <div class="listing" style="float:left;border-top: solid 1px #ccc;padding:0 15px 15px 15px;margin-top:30px;">
-		<div class="profile_wrapper"><div class="profile_pic" style="background-image: url('../images/slack.png');background-size:220px;background-position: center;"></div></div>
-		<p class="profile_title"><a name="help" href="#help" class="anchor"></a>0. Find Answers &amp; Ask for Help</p>
+    <div class="profile_wrapper"><div class="profile_pic" style="background-image: url('../images/atom_editor.png');background-size:540px;background-position: -170px -5px;"></div></div>
+		<p class="profile_title"><a name="help" href="#help" class="anchor"></a>Fill Your Tool Box</p>
 		<p>
-      We don <a href="suffolklitlab.slack.com/">The Lab's Team</a>A large part of learning through doing is figuring out how to solve problems. That being said, you aren't playing without net. If you need help, we're here for you. Here's the general rule. If you set to doing something and you keep hitting your head against a wall for 30m+, shoot your instructor a message on You need a tool to read and write code, and no, Microsoft Word won't do the trick. You need a text editor. Unlike word processors, they don't touch anything but text. . screen shots
+      We use a number of software tools to help us collaborate. To help us hit the ground running you'll need to sign up for a few services and download some software.
+    </p>
+    <p>
+      As discussed above, we have a <a href="https://slack.com/">Slack</a> team. If you're a member of the Lab, you need to sign up for an account and <a href="../slack/">join our team</a>. Once you have, <a href="https://get.slack.help/hc/en-us/articles/204092246-Edit-your-profile">fill out your profile</a>, and <a href="https://get.slack.help/hc/en-us/articles/212281468-Direct-messages-and-group-DMs">DM</a> @Colarusso, asking him to add you to your class's private channel. Anyone can <a href="https://get.slack.help/hc/en-us/articles/205239967-Browse-and-join-channels">join public channels</a>. Slack is the Lab's primary communication channel. Consequently, students are expected to regularly check Slack or to set up push notifications. You can download <a href="https://get.slack.help/hc/en-us/articles/201746897-Slack-apps-for-computers-phones-tablets">the app</a> for your phone or desktop.
+    </p>
+    <p> Remember the standing rule on asking for help: <i>If you set to doing something and you are hitting your head against a wall for 30 plus minutes, ask for help in the appropriate Slack channel</i>.
+    </p>
+    <p>
+      To stay on top of projects, we make use of a tool called <a href="https://trello.com/">Trello</a>. If you don't have an account, you can <a href="https://trello.com/signup">create one here</a>.<sup>&dagger;</sup>
+      Students (<b>and anyone interested in taking our self tests</b>) will need a Google Account. If you don't have one, you can <a href="https://accounts.google.com/signup/v2/webcreateaccount?flowName=GlifWebSignIn&flowEntry=SignUp">create one here</a>.<sup>&dagger;</sup>
+
+      GitHub
+
+      Microsoft
+
+
+    </p>
+
+    <p>
+      <b>Students Only</b>: once you've created the necessary accounts, fill out this form to let us know your account names.
+    </p>
+
+
+    <p>
+      You need a tool to read and write code, and no, Microsoft Word won't do the trick. You need a text editor. Unlike word processors, they don't touch anything but text. Have you ever tryied to cut and paste something from Word only to have the formating all messed up? That's because there's a bunch of unseen stuff mixed in with your text. This works well for letters but no so much for code. Also, most text editors will highlight your code, making it easier to read. Some popular free text editors include <a href="https://atom.io/">Atom</a>, <a href="https://notepad-plus-plus.org/">Notepadd++</a> (Windows only), and <a href="https://code.visualstudio.com/">Visual Studio Code</a>. If you don't have a text editor, download one from the preceeding list. It will come in handy soon.
+    </p>
+
+
+    <p>
+      <sup>&dagger;</sup> If you're a member of the lab, you should create a new "work" account to avoid intermingling personal and work accounts. Keep in mind that your usernames may be used publicly in Lab materials available on the Web and associated with your work. Choose them accordingly.
     </p>
 	</div>
 
   <div class="listing" style="float:left;border-top: solid 1px #ccc;padding:0 15px 15px 15px;margin-top:30px;">
 		<div class="profile_wrapper"><div class="profile_pic" style="background-image: url('../images/Rosetta_Stone_London.JPG');background-size:300px;background-position: center -70px;"></div></div>
-		<p class="profile_title"><a name="textedit" href="#textedit" class="anchor"></a>1. Translate Technobabble</p>
+		<p class="profile_title"><a name="textedit" href="#textedit" class="anchor"></a>Translate Technobabble</p>
     <!-- https://commons.wikimedia.org/wiki/File:2007-08-27_Rosetta_Stone_London_0309.JPG#/media/File:2007-08-27_Rosetta_Stone_London_0309.JPG -->
 		<p>
       You need a tool to read and write code, and no, Microsoft Word won't do the trick. You need a text editor. Unlike word processors, they don't touch anything but text. Have you ever tryied to cut and paste something from Word only to have the formating all messed up? That's because there's a bunch of unseen stuff mixed in with your text. This works well for letters but no so much for code. Also, most text editors will highlight your code, making it easier to read. Some popular free text editors include <a href="https://atom.io/">Atom</a>, <a href="https://notepad-plus-plus.org/">Notepadd++</a> (Windows only), and <a href="https://code.visualstudio.com/">Visual Studio Code</a>. If you don't have a text editor, download one from the preceeding list. It will come in handy soon.
@@ -99,7 +145,7 @@
 
   <div class="listing" style="float:left;border-top: solid 1px #ccc;padding:0 15px 15px 15px;margin-top:30px;">
 		<div class="profile_wrapper"><div class="profile_pic" style="background-image: url('../images/atom_editor.png');background-size:540px;background-position: -170px -5px;"></div></div>
-		<p class="profile_title"><a name="textedit" href="#textedit" class="anchor"></a>2. Read and Write Code</p>
+		<p class="profile_title"><a name="textedit" href="#textedit" class="anchor"></a>Read and Write Code</p>
 		<p>
       You need a tool to read and write code, and no, Microsoft Word won't do the trick. You need a text editor. Have you ever tried to cut and paste something from Word only to have the formatting all messed up? That's because there's a bunch of unseen stuff mixed in with your text. Unlike word processors, text editors don't touch anything but text and they often highlight your code, making it easier to read. Some popular (and free) text editors include <a href="https://atom.io/">Atom</a>, <a href="https://notepad-plus-plus.org/">Notepadd++</a> (Windows only), and <a href="https://code.visualstudio.com/">Visual Studio Code</a>. If you don't have a text editor, download one from the preceding list. It will come in handy soon. Also, these editors (esp. Atom) are highly customizable. See e.g., in Atom: <a href="">disabling auto-complete</a> and <a href="">tweaking the spell checker</a>.
     </p>
@@ -215,8 +261,7 @@
 
 	<div class="footer">
     <a href="/"><img src="../images/blue_logo.png" width="50px" align="left" border="0"/></a>
-		<a href="/"><img src="../images/blue_logo.png" width="50px" align="left" border="0"/></a>
-<font size=-1><a href="mailto:litlab@suffolk\.edu">Email</a> | <a href="https://github.com/SuffolkLITLab" target="_blank">GitHub</a> | <a href="../credits/">Credits</a></font>
+    <font size=-1><a href="mailto:litlab@suffolk\.edu">Email</a> | <a href="https://github.com/SuffolkLITLab" target="_blank">GitHub</a> | <a href="../credits/">Credits</a></font>
 	</div>
 
 </BODY>
