@@ -3,7 +3,7 @@
       xmlns:og="http://ogp.me/ns#"
       xmlns:fb="http://www.facebook.com/2008/fbml">
 <HEAD>
-	<title>Data Wrangling</title>
+	<title>How Tos</title>
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-108858221-1"></script>
 	<script>
@@ -21,12 +21,12 @@
 	<meta name="twitter:card" content="summary_large_image">
 	<meta name="twitter:site" content="@SuffolkLITLab">
 	<meta name="twitter:creator" content="@SuffolkLITLab">
-	<meta name="twitter:title" content="Data Wrangling">
+	<meta name="twitter:title" content="How Tows">
 	<meta name="twitter:description" content="">
 	<meta name="twitter:image" content="http://www.davidcolarusso.com/images/lasm_2-1.jpg"/>
 
 	<meta property="og:type" content="website"/>
-	<meta property="og:title" content="Data Wrangling"/>
+	<meta property="og:title" content="How Tows"/>
 	<meta property="og:description" content=""/>
 
 	<meta property="og:image" content="../../../images/lasm_2-1.jpg"/>
@@ -60,7 +60,7 @@
 		</p>
 	</div>
 
-	<h2>Data Wrangling and Feature Engineering</h2>
+	<h2>Install Jupyter Notebooks</h2>
 	<p style="display:none;">
 		<i>Estimated Time (Reading &amp; Exercises): ~? min.</i>
 	</p>
@@ -69,35 +69,59 @@
   </p>
 
   <p>
-    As mentioned previously in <a href="../0/">Why Data Science</a>, data scientist make use of a number of open source tools. There is some debate over what tools one should use, but the primary fracture comes down to <a href="https://qz.com/1063071/the-great-r-versus-python-for-data-science-debate/">R vs Python</a>. Of course, as lawyers we know the answer really is "it depends." That being said, for our purposes we'll be using Python largely because it is a programing language in its own right, and we'll be using this as an opportunity to learn some coding as well. Don't worry, <b>we assume no prior programing experience on your part</b>. That being said, we also expect you to follow the Lab rule re. tech issues: <i>If you set to doing something and you are hitting your head against a wall for 30 plus minutes, ask for help in the appropriate Slack channel.</i>
+    The following is a quick start guide for setting up <a href="http://jupyter.org/">Project Jupyter</a> notebooks.
   </p>
+
+  <h3>Download, Install, and Run Notebooks</h3>
+
   <p>
-    To help ease us into coding, we'll be making use of <a href="https://www.nature.com/news/interactive-notebooks-sharing-the-code-1.16261">notebooks</a>. Notebooks are documents accessed by your web browser which contain blocks of code and text, allowing you to run code next to notes and documentation. Normally, notebooks live on your local computer and just happen to use the browser as an interface. However, to avoid the troubleshooting that comes with having folks install something on a bunch of different computers, we'll be using a cloud-based version of <a href="http://jupyter-notebook-beginner-guide.readthedocs.io/en/latest/what_is_jupyter.html">Jupyter Notebooks</a> from Microsoft.
+    Download and install Anaconda (a free software distribution which includes everything you need to use Jupyter). See <a href="https://www.continuum.io/downloads">https://www.continuum.io/downloads</a>. If you're working in the Lab, we're using Python 3.6.
   </p>
-  <p>
-    To access the notebooks associated with this exercise, you'll need a Microsoft account. If you don't have one, <a href="https://signup.live.com/">create one here</a>. If you haven't already, you may want to follow the suggestions found under <a href="../../../howto/#accounts">Get Your Accounts in Order</a>.
-  </p>
-  <p>
-    Visit <a href="https://notebooks.azure.com/colarusso/libraries/demystified" target="_blank">this collection of files</a> (library) we've put on Azure Notebooks for this lesson, and click <i>Clone</i>.
-  </p>
-  <div style="text-align:center;margin:0px auto;width:100%;padding:8px 0 10px 0px;">
-    <a href="../images/clone.png"><img src="../images/clone.png" alt="screen shot" style="width:100%" border="0"/></a>
-  </div>
-  <p>
-    This will prompt you to login with your Microsoft account, grant Azure permissions, and create a copy of the files that you can actually play with (not just read). You should be brought to your copy of the files, what the site calls a library. Find the file named <i>Wrangling.ipynb</i> and click it.
-  </p>
-  <div style="text-align:center;margin:0px auto;width:100%;padding:8px 0 10px 0px;">
-    <a href="../images/Wrangling.png"><img src="../images/Wrangling.png" alt="screen shot" style="width:100%" border="0"/></a>
-  </div>
-  <p>
-    This will spin up a virtual server running the notebook, and inside the notebook you will find the actual lesson with tips for wrangling your data, including instructions meant to acquaint you with the use of notebooks and Python. Just follow along.
-  </p>
-  <div style="text-align:center;margin:0px auto;width:100%;padding:8px 0 40px 0px;">
-    <a href="../images/wrangling_notebook.png"><img src="../images/wrangling_notebook.png" alt="screen shot" style="width:100%" border="0"/></a>
-  </div>
+
+   <div style="text-align:center;margin:0px auto;max-width:903px;padding:10px 0 15px 0px;">
+     <a href="../images/py3.6.png"><img src="../images/py3.6.png" alt="screen shot" style="width:100%" border="0"/></a>
+   </div>
+
+   <p>
+     After installation:<sup>&dagger;</sup>
+   </p>
+   <ul></li>
+      <li>Open a terminal/command prompt and navigate to the directory where you want to be working (e.g., <code>/users/yourname/documents/</code>)</li>
+      <li>At the prompt enter: <code>jupyter notebook</code></li>
+      <li>That should open up a new tab in your web browser.</li>
+      <li>You should see a drop-down menu in the upper right labeled "New."" Click on that, and choose "Python 3" (or 3.6 if available) under "Notebooks."</li>
+      <li>That should open a new notebook. Basically, you put your code in cells and run them as needed. As this <a href="http://www.nature.com/news/interactive-notebooks-sharing-the-code-1.16261">Nature article</a> makes clear, this is a great way to collaborate and keep all your work in one place.</li>
+      <li>Here’s are some <a href="https://github.com/jupyter/jupyter/wiki/A-gallery-of-interesting-Jupyter-Notebooks">example notebooks</a> to get you started. Just cut-and-paste from these examples and start playing.</li>
+   </ul>
+   <p><sup>&dagger;</sup> You can find these same instructions, along with pictures at the end of the article <a href="Hello, World! Should Attorneys Learn to Code?">Hello, World! Should Attorneys Learn to Code?</a></p>
+  <h3>Common Speed Bumps</h3>
+
+  <p>If you start to play around and get an error like:</p>
+
+  <code>NameError: name 'pd' is not defined</code>
+
+  <p>That means that your notebook hasn't loaded a module with the name <code>pd</code>. So either, you’re missing something like this:</p>
+
+  <code>import numpy as np</code>
+
+  <p>or the module isn't installed on your system. If it's the latter, you’ll get an error like:</p>
+
+  <code>ImportError: No module named 'numpy'</code>
+
+  <p>when you try to import the module. To install a module, all you have to do is go to the terminal/command prompt and type:</p>
+
+  <code>conda install [module name]</code> For example: <code>conda install numpy</code>
+
+  <p>If Anaconda can't find the module, you may want to try <a href="https://en.wikipedia.org/wiki/Pip_(package_manager)">pip</a> like so:</p>
+
+  <code>pip install [module name]</code>
+
+  <p>Note: If you're using Python on your computer for other stuff you may run into all sorts of version issues. In this case you may want to consider using <a href="https://docs.python.org/3/tutorial/venv.html">virtual environments</a>.</p>
+
+  <br/><br/>
 
 	<div class="listing" style="float:left;border-top: solid 1px #ccc;padding:15px 15px 15px 15px;width:100%;box-sizing: border-box;">
-	   <a href="../0/">← Why Data Sci</a>	<span style="float:right;"><a href="../2/">Training Models →</a></span>
+	   <a href="../../#jupyter">Back to Main How To</a>
 	</div>
 	<div class="footer">
 		<a href="/"><img src="../../../images/blue_logo.png" width="50px" align="left" border="0"/></a>

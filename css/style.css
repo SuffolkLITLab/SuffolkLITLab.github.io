@@ -518,3 +518,10 @@ a.anchor {
 		background-repeat: no-repeat;
 		background-position: center;
 }
+
+code {
+    background: #eee;
+    font-weight: bold;
+    color: black;
+    padding: 2px 5px;
+}
