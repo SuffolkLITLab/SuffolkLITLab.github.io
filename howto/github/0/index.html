@@ -62,18 +62,80 @@
 
 	<h2>GitHub, an Introduction</h2>
 	<p>
-		<i>Estimated Time (Reading &amp; Exercises): ~? min.</i>
+		<i>Estimated Time (Reading &amp; Exercises): ~45 min.</i>
 	</p>
+  <h3>Overview</h3>
   <p>
-    <a href="https://github.com/">GitHub</a> is tool for collaborating on coding projects. It’s like track changes for code, except it actually works. Here’s a quick rundown, with GitHub nomenclature italicized. Your project is stored in a code <i>repository</i> (repo). This is just a collection of files and folders. Individual contributors make a copy of a repository by <i>cloning</i> it. This process creates a copy of the repository on your personal computer in a location you choose. You can then edit this code as you like, editing individual files or adding new ones. GitHub Desktop will keep track of your changes, and once you have things where you like them, you <i>commit</i> your changes. After you commit changes, you are ready to <i>synchronize</i> (sync) your local copy with the central repository. This process will incorporate your changes into the main repository and update your local copy with any changes made by fellow contributors. The magic here is that GitHub manages everyone’s changes, doing its best to work out conflicts. In practice, people can make changes to the same file and GitHub makes sure that they get merged properly. Technically, the process of synchronizing is a combination of pulling changes other people have made from the repo to your local copy and pushing your committed changes back to the repo. Depending on your permissions, you may be allowed to push on your own or you may need to make a <i>pull request</i> (ask someone with the right permissions to pull your change into the official version). In these cases, your copy is a <i>fork</i> (as in fork in the road). To <i>fork</i> a <i>repo</i> is to copy it and make your own changes (changes that aren't synced with the original).
-
-
-    https://guides.github.com/introduction/flow/
-
+    <a href="https://github.com/">GitHub</a> is tool for collaborating on coding projects. It’s like track changes for code, except it actually works. Here’s a quick rundown, with GitHub nomenclature italicized. Your project is stored in a code <i>repository</i> (repo). A repo is just a collection of files and folders. Individual contributors make a copy of a repository by <i>cloning</i> it. This process creates a copy of the repository on your personal computer in a location you choose. You can then edit this code as you like, editing individual files or adding new ones. GitHub will keep track of your changes, and once you have things where you like them, you <i>commit</i> your changes. After you commit changes, you are ready to <i>synchronize</i> (sync) your local copy with the central repository. This process will incorporate your changes into the main repository and update your local copy with any changes made by fellow contributors. The magic here is that GitHub manages everyone’s changes, doing its best to work out conflicts. In practice, people can make changes to the same file and GitHub makes sure that they get merged properly. Technically, the process of synchronizing is a combination of pulling changes other people have made from the repo to your local copy and pushing your committed changes back to the repo.
   </p>
-  <p>If you haven't already, you can <a href="https://github.com/join?source=header-home">create a GitHub account here</a> (choose the free plan). You should also download and install the <a href="https://desktop.github.com/">desktop app</a>.
+  <p>
+    When you're collaborating, however, it's nice to add a little discussion and review to the process. Customarily, a repo is comprised of multiple <i>branches</i>, slightly different versions of your code. Branches aren't created every time someone makes a change to the repo, rather they are parallel copies of code that have been intentionally split to give developers some breathing room. Though one may push and pull to a single master branch, it is customary to create multiple branches, allowing folks to work on code in their own <i>development</i> branch without changing the <i>Master Branch</i>. The Master Branch should contain only code that is ready to go live, what's called <i>production code</i> (i.e., the code that is being used in the real world/in production). One only merges branches with the Master Branch when it's ready to go live. How does this happen? Well instead of making a push to your development branch, you make a <i>pull request</i>, asking a Master Branch administrator to pull your changes into the Master Branch. So you make pulls and pushes to an ancillary/development branch until such time as you think it's worth adding to the Master. Then you make a pull request to have your work added to the Master Branch and an admin decides if it's added. You can learn more about this workflow by reading <a href="  https://guides.github.com/introduction/flow/">Understanding the GitHub Flow</a>.
   </p>
+  <p>
+    Sometimes, however, you don't have the permissions needed to push to a branch or to create a new branch within a repo. In these cases you can create your own version of the repo by <i>forking</i> the repo (as in a fork in the road). When you fork a repo, you make a clone of it which you control. You can keep this code and your changes to yourself, or you can make a pull request to have the one of the original repo's admins incorporate your changes just as you can for changes to a branch within a repo.
+  </p>
+  <p>Okay, let's give it a try. If you haven't already, you can <a href="https://github.com/join?source=header-home">create a GitHub account here</a> (choose the free plan). You should also download and install the <a href="https://desktop.github.com/">desktop app</a>.
+  </p>
+  <h3>Exercises</h3>
+  <h4>Hello World</h4>
+  <p>
+      Complete GitHub's <a href="https://guides.github.com/activities/hello-world/">Hello World activity</a>. If you're a Lab student, be sure that you use the GitHub account you provided to the Lab. We'll be looking at <code>http://github.io/[your username]/hello-world</code> to check your work.
+  </p>
+  <h4>Hello World Too</h4>
+  <p>
+      Now let's make an edit using GitHub Desktop. Note: your layout may differ depending on your version of GitHub Desktop.
+  </p>
+  <p>
+    If you haven’t confirmed your email with GitHub, you won’t be able to login when using the desktop app. So be sure you clicked the verify email link in the email you received from GitHub when you signed up.
+  </p>
+  <div style="text-align:center;margin:0px auto;max-width:856px;padding:10px 0 15px 0px;">
+    <a href="../images/.png"><img src="../images/verify.png" alt="screen shot" style="width:100%" border="0"/></a>
+  </div>
+  <p>
+    Open your copy of the GitHub desktop application. Sign into GitHub from inside the app. Click on <kbd>File</kbd> in the top left of the app. Then <kbd>Options</kbd>.  link at the top of the window. If you haven’t already,
+  </p>
+  <div style="text-align:center;margin:0px auto;max-width:903px;padding:10px 0 15px 0px;">
+    <a href="../images/.png"><img src="../images/log-1.png" alt="screen shot" style="width:100%" border="0"/></a>
+  </div>
+  <p>
+    Click on <kbd>File</kbd> in the top left of the app. Then <kbd>Clone Repository</kbd> link at the top of the window. If you haven’t already,
+  </p>
+  <div style="text-align:center;margin:0px auto;max-width:903px;padding:10px 0 15px 0px;">
+    <a href="../images/.png"><img src="../images/log-2.png" alt="screen shot" style="width:100%" border="0"/></a>
+  </div>
 
+  <div style="text-align:center;margin:0px auto;max-width:903px;padding:10px 0 15px 0px;">
+    <a href="../images/.png"><img src="../images/log-3.png" alt="screen shot" style="width:100%" border="0"/></a>
+  </div>
+
+
+  <div style="text-align:center;margin:0px auto;max-width:903px;padding:10px 0 15px 0px;">
+    <a href="../images/.png"><img src="../images/clone-1.png" alt="screen shot" style="width:100%" border="0"/></a>
+  </div>
+
+  <div style="text-align:center;margin:0px auto;max-width:903px;padding:10px 0 15px 0px;">
+    <a href="../images/.png"><img src="../images/clone-2.png" alt="screen shot" style="width:100%" border="0"/></a>
+  </div>
+
+  <div style="text-align:center;margin:0px auto;max-width:903px;padding:10px 0 15px 0px;">
+    <a href="../images/.png"><img src="../images/clone-3.png" alt="screen shot" style="width:100%" border="0"/></a>
+  </div>
+
+  <div style="text-align:center;margin:0px auto;max-width:903px;padding:10px 0 15px 0px;">
+    <a href="../images/.png"><img src="../images/clone-4.png" alt="screen shot" style="width:100%" border="0"/></a>
+  </div>
+
+  <div style="text-align:center;margin:0px auto;max-width:903px;padding:10px 0 15px 0px;">
+    <a href="../images/.png"><img src="../images/clone-5.png" alt="screen shot" style="width:100%" border="0"/></a>
+  </div>
+
+  <div style="text-align:center;margin:0px auto;max-width:903px;padding:10px 0 15px 0px;">
+    <a href="../images/.png"><img src="../images/clone-6.png" alt="screen shot" style="width:100%" border="0"/></a>
+  </div>
+
+  <div style="text-align:center;margin:0px auto;max-width:903px;padding:10px 0 15px 0px;">
+    <a href="../images/.png"><img src="../images/clone-7.png" alt="screen shot" style="width:100%" border="0"/></a>
+  </div>
 
 	<div class="listing" style="float:left;border-top: solid 1px #ccc;padding:15px 15px 15px 15px;width:100%;box-sizing: border-box;">
 	   <a href="../../">← QNA MARKUP</a>	<span style="float:right;"><a href="../../share-on-github/0/">GITHUB INTRO →</a></span>
