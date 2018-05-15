@@ -62,32 +62,47 @@
 
 	<h2>Hello World with GitHub Pages</h2>
 	<p>
-		<i>Estimated Time (Reading &amp; Exercises): ~? min.</i>
+		<i>Estimated Time (Reading &amp; Exercises): ~20 min.</i>
+	</p>
+  <p style="background:#eee;padding:10px 15px;">
+    <i>You are welcome to join our Slack Team. There you can ask and answer questions relating to this lesson under the <a href="https://suffolklitlab.slack.com/messages/CAQ4AQYRG/">#howto-github</a> channel. See <a href="../../">How To</a> for more.</i>
+  </p>
+  <p>
+    In this exercise, we're going to publish a website using GitHub Pages. GitHub Pages is a free service offered by GitHub to open source and publicly accessible content. What does it do? In short it serves your code from a webserver. What does that mean? Well to answer that we'll need some context. Here's a short (~5 min) video.
+  </p>
+  <div style="position:relative;padding-top:56.25%;">
+  	<iframe src="https://www.youtube.com/embed/7_LPdttKXPc?rel=0" frameborder="0" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
+	</div>
+  <p> So to clarify, GitHub Pages places the code from your repo (or some subset of that code) on a webserver for others to access over the Internet. Yes, people can already see your code if they visit your repo's page on GitHub.com, but their browsers don't interpret that code. That is, they see the text of the code, not the result. By serving your code on a webserver you can actually place your code live on the Internet. GitHub Pages restricts what it will serve to something called static content (things like HTML), but that's all we need for our purposes.
 	</p>
   <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam quis lorem ex. Nullam rhoncus imperdiet interdum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Quisque a dolor sem. In sit amet lobortis diam. Curabitur varius condimentum interdum. Suspendisse quis tortor massa. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer vel porttitor turpis. In malesuada rhoncus dolor, ac sagittis quam rutrum quis. Sed at turpis efficitur, volutpat lacus et, tempus lorem. Fusce sed sapien sem. Sed ullamcorper, ante nec feugiat pellentesque, felis neque venenatis justo, vitae commodo urna lectus ac ipsum. Vestibulum porttitor nisi eu pellentesque consequat.
+    Make sure you're signed into GitHub.com, and navigate to your repo's page on GitHub (e.g. <a href="https://github.com/colarusso/hello-world">https://github.com/colarusso/hello-world</a>). Click on <kbd>Settings</kbd>.
   </p>
-
   <div style="text-align:center;margin:0px auto;max-width:903px;padding:10px 0 15px 0px;">
     <a href="../images/.png"><img src="../images/html-0.png" alt="screen shot" style="width:100%" border="0"/></a>
   </div>
 
+  <p>Scroll down to the GitHub Pages section and select <kbd>master branch</kbd> from the <kbd>Source</kbd> pulldown. Then click <kbd>Save</kbd>.</p>
   <div style="text-align:center;margin:0px auto;max-width:754px;padding:10px 0 15px 0px;">
     <a href="../images/.png"><img src="../images/html-1.png" alt="screen shot" style="width:100%" border="0"/></a>
   </div>
 
+  <p>This will update your settings page, showing where on the web your page is being served (e.g., <a href="https://colarusso.github.io/hello-world/">https://colarusso.github.io/hello-world/</a>).
   <div style="text-align:center;margin:0px auto;max-width:741px;padding:10px 0 15px 0px;">
     <a href="../images/.png"><img src="../images/html-2.png" alt="screen shot" style="width:100%" border="0"/></a>
   </div>
 
+  <p>If you visit your page, you'll see the content of your README.md file served as a webpage. That's because the the README is the only file on your site.</p>
   <div style="text-align:center;margin:0px auto;max-width:553px;padding:10px 0 15px 0px;">
     <a href="../images/.png"><img src="../images/html-3.png" alt="screen shot" style="width:100%" border="0"/></a>
   </div>
 
+  <p>Customarily, webpages aren't Markdown files (<kbd>.md</kbd>). They're normally HTML files. We'll get in to HTML (<kbd>.html</kbd>)more in another exercise, but like markdown, they're just text files filled where content conforming to a set structure. Use your text editor to create a new "text" file named <kbd>index.html</kbd> in your local copy of the repo right next to the README file. It should have the following content.</p>
   <div style="text-align:center;margin:0px auto;max-width:653px;padding:10px 0 15px 0px;">
     <a href="../images/.png"><img src="../images/html-4.png" alt="screen shot" style="width:100%" border="0"/></a>
   </div>
 
+<p> You can cut and paste the code from here:</p>
 <pre style="background:#eee;padding:15px;">
 &lt;html>
   &lt;head>
@@ -98,17 +113,21 @@
   &lt;/body>
 &lt;/html></pre>
 
+  <p>After you've saved your file, look at your repo in GitHub Desktop. You'll see that the addition of your file registered as a change. Commit and push the change.</p>
   <div style="text-align:center;margin:0px auto;max-width:885px;padding:10px 0 15px 0px;">
     <a href="../images/.png"><img src="../images/html-5.png" alt="screen shot" style="width:100%" border="0"/></a>
   </div>
 
+  <p>Wait a minute or two (it can take a few minutes for your GitHub Pages site to update), and visit your site. If everything worked, you should see something like this.</p>
   <div style="text-align:center;margin:0px auto;max-width:553px;padding:10px 0 15px 0px;">
     <a href="../images/.png"><img src="../images/html-6.png" alt="screen shot" style="width:100%" border="0"/></a>
   </div>
-
+  <p>If you're a Lab student, this final push is like turning in your work for this exercise. Just be sure that you use the GitHub account you provided to the Lab. We'll be looking at <code>http://[your username].github.io/hello-world</code> to check your work.
+  </p>
+  <br/><br/>
 
 	<div class="listing" style="float:left;border-top: solid 1px #ccc;padding:15px 15px 15px 15px;width:100%;box-sizing: border-box;">
-	   <a href="../../">← QNA MARKUP</a>	<span style="float:right;"><a href="../../share-on-github/0/">GITHUB INTRO →</a></span>
+	   <a href="../0/">← GitHub Intro.</a>	<span style="float:right;"><a href="../../">Back to Main How To</a></span>
 	</div>
 	<div class="footer">
 		<a href="/"><img src="../../../images/blue_logo.png" width="50px" align="left" border="0"/></a>
