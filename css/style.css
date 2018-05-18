@@ -410,6 +410,7 @@ a.xbutton:hover, a.xbutton:active {
 	border-radius: 50%;
 	background-color: #ddd;
 	border: 4px solid #555;
+	box-sizing: border-box;
 }
 
 .profile_vid {
