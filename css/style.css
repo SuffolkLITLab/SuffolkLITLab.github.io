@@ -436,6 +436,7 @@ a.xbutton:hover, a.xbutton:active {
 
 .listing {
 	padding: 0px 15px 15px 15px;
+	box-sizing: border-box;
 }
 
 .r_img_embed {
