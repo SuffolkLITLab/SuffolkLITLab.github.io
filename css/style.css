@@ -167,7 +167,14 @@ text-transform: uppercase;
 text-decoration: none;
 font-size: 13px;
 line-height: 20px;
+}
 
+.menu_p {
+	border-top: solid 1px #ccc;
+	border-bottom: solid 1px #ccc;
+	padding:4px 5px;
+	margin-bottom:25px
+}
 
 font-weight: 100;
 }
@@ -414,14 +421,30 @@ a.xbutton:hover, a.xbutton:active {
 }
 
 .profile_vid {
+	box-sizing: border-box;
 	float:left;
 	margin:20px 25px 25px 0;
 	width:400px;
 	height:200px;
 }
 
+.profile_vid_right {
+	box-sizing: border-box;
+	float:right;
+	margin:20px 0 25px 25px;
+	width:400px;
+	height:200px;
+}
+
 .vid_wrapper {
+	box-sizing: border-box;
 	float:left;
+	padding-bottom:25px;
+}
+
+.vid_wrapper_right {
+	box-sizing: border-box;
+	float:right;
 	padding-bottom:25px;
 }
 
@@ -466,12 +489,11 @@ a.xbutton:hover, a.xbutton:active {
 
 
 @media only screen and (max-width: 680px) {
-	.vid_wrapper {
+	.vid_wrapper, .vid_wrapper_right {
 		position:relative;
 		width:100%;
-
 	}
-	.profile_vid {
+	.profile_vid, .profile_vid_right {
 		float:none;
 		position:relative;
 		margin:15px auto;
@@ -503,7 +525,7 @@ a.xbutton:hover, a.xbutton:active {
 		width:200px;
 	}
 
-	.profile_vid {
+	.profile_vid, .profile_vid_right {
 		float:none;
 		width:100%;
 	}
@@ -526,4 +548,13 @@ code {
     font-weight: bold;
     color: black;
     padding: 2px 5px;
+}
+
+.tab {
+	float:left;
+	box-sizing: border-box;
+	width:100px;
+	border-right: solid 1px #ccc;
+	text-align:center;
+	padding:10px 15px;
 }
