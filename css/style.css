@@ -420,6 +420,15 @@ a.xbutton:hover, a.xbutton:active {
 	box-sizing: border-box;
 }
 
+.profile_img {
+	box-sizing: border-box;
+	float:left;
+	margin:20px 25px 25px 0;
+	text-align:center;
+	max-width:400px;
+}
+
+
 .profile_vid {
 	box-sizing: border-box;
 	float:left;
@@ -503,6 +512,12 @@ a.xbutton:hover, a.xbutton:active {
 		float:none;
 		width:100%;
 	}
+	.profile_img {
+		float:none;
+		position:relative;
+		margin:15px auto;
+		width:400px;
+	}
 
 }
 
@@ -526,6 +541,11 @@ a.xbutton:hover, a.xbutton:active {
 	}
 
 	.profile_vid, .profile_vid_right {
+		float:none;
+		width:100%;
+	}
+
+	.profile_img {
 		float:none;
 		width:100%;
 	}
