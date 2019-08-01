@@ -50,11 +50,8 @@
         var location_uri = "https://nominatim.openstreetmap.org/reverse?lat="+position.coords.latitude+"&lon="+position.coords.longitude+"&format=json";
         console.log(location_uri)
         $.ajax({
-          type: "POST",
+          type: "GET",
           url: location_uri,
-          data: formData,
-          dataType: "json",
-          contentType : "application/json",
           success: function(data) {
              if (data.address.country_code == "us") {
                 $('#unknown_jur').hide()
@@ -73,17 +70,29 @@
         setTimeout(function(){ $('#loading').hide(); $('#response').show() }, 1500);
       }
 
-      //var formData = JSON.stringify($("#thisForm").serializeArray());
-      var formData = "{\"text\": \"this test right here\",\"save-text\":1}"
+
+      //JSON.stringify($("#thisForm").serializeArray());
+      //var formData = "{\"text\": \"this test right here\",\"save-text\":1}"
       function make_query() {
-        console.log(formData)
+
+        var Data = { text: $("#text").val() }
+
+        if ($('#save-id').prop('checked')) {
+          Object.assign(Data, {'save-text': 1})
+        } else {
+          Object.assign(Data, {'save-text': 0})
+        }
+
+        //Object.assign(Data, {key_: value_});
+
+        console.log(Data)
         $.ajax({
           type: "POST",
           url: "https://spot.suffolklitlab.org/v0/entities-terminal/",
-          data: formData,
+          data: JSON.stringify(Data),
           dataType: "json",
           headers: {
-            "Authorization": "Bearer sadsadadasd"
+            "Authorization": "Bearer "+$("#bearer").val()
           },
           contentType : "application/json",
           success: function(data) {
@@ -130,7 +139,7 @@
 
 <textarea name='text' id="text" style="width:100%;height:150px;font-size:15px;padding:5px;box-sizing: border-box;"></textarea>
 
-<div style="padding:5px 0 8px 0;"><input id="check" type="checkbox" CHECKED><span class="subtitle"><label for="check"> Use my reply to help people facing similar issues. <a href="">Learn more.</a></label></span></div>
+<div style="padding:5px 0 8px 0;"><input id="save-id" name="save-id" type="checkbox" CHECKED><span class="subtitle"><label for="save-id"> Use my reply to help people facing similar issues. <a href="">Learn more.</a></label></span></div>
 
 <p id="unknown_jur">Where did this happen/is this taking place?&nbsp;&nbsp;
   <select id="man_jur">
@@ -288,10 +297,10 @@
 <div style="float:left;background:#eee;width:100%;margin:30px 0 0 0;padding:0 15px;box-sizing: border-box;border: solid 1px #555;">
 <h3>For testing purposes only: </h3>
 <p>
-Key: <input name='bearer' style="width:250px;"> ----
-Upper: <input name='upper' style="width:25px;" value="0.5"> ----
-Pred: <input name='pred' style="width:25px;" value="0.5"> ----
-Lower: <input name='lower' style="width:25px;" value="0">
+Key: <input id='bearer' name='bearer' style="width:250px;" value=""> ----
+Upper: <input id='upper' name='upper' style="width:25px;" value="0.5"> ----
+Pred: <input id='pred' name='pred' style="width:25px;" value="0.5"> ----
+Lower: <input id='lower' name='lower' style="width:25px;" value="0">
 </p>
 </div>
 
