@@ -3,7 +3,7 @@
       xmlns:og="http://ogp.me/ns#"
       xmlns:fb="http://www.facebook.com/2008/fbml">
 <HEAD>
-	<title>How To</title>
+	<title>Spot Showcase</title>
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-108858221-1"></script>
 	<script>
@@ -17,14 +17,14 @@
 	<meta name="apple-mobile-web-app-capable" content="no" />
   <link rel="apple-touch-icon" href="../images/icon_300.png"/>
 	<meta property="og:type" content="website"/>
-	<meta property="og:title" content="How To"/>
+	<meta property="og:title" content="Spot Showcase"/>
 	<meta property="og:description" content=""/>
 	<meta property="og:image" content="../images/lasm_2-1.jpg"/>
 
 	<meta name="twitter:card" content="summary_large_image">
 	<meta name="twitter:site" content="@SuffolkLITLab">
 	<meta name="twitter:creator" content="@SuffolkLITLab">
-	<meta name="twitter:title" content="How To">
+	<meta name="twitter:title" content="Spot Showcase">
 	<meta name="twitter:description" content="">
 	<meta name="twitter:image" content="http://www.davidcolarusso.com/images/lasm_2-1.jpg"/>
 
@@ -39,7 +39,8 @@
   <script src="js_bin/Countable.js"></script>
   <script>
       window.scrollTo(0,0)
-      var test_var = [];
+      var controlling_jur = "man_jur";
+      var jur_picked = "0";
 
       function getLocation() {
         if (navigator.geolocation) {
@@ -56,10 +57,12 @@
           url: location_uri,
           success: function(data) {
              if (data.address.country_code == "us") {
+                controlling_jur = "auto_jur";
                 $('#unknown_jur').hide()
                 $('#jurisdiction').html(data.address.state);
                 $('#auto_jur').val('yes');
                 $('#known_jur').show()
+                console.log(data)
              }
            },
            error: function (jqXHR, exception) {
@@ -69,66 +72,143 @@
       }
       getLocation();
 
-      function ping() {
-        $('#response').hide()
-        $('#loading').show()
-        //setTimeout(function(){ $('#loading').hide(); $('#response').show() }, 1500);
+      function find_abr(name) {
+        var out;
+        states.forEach(function(element) {
+          if (name == element["name"]) {
+            out = element["abr"]
+          }
+        });
+        return out;
+      }
+
+      function find_name(abr) {
+        var out;
+        states.forEach(function(element) {
+          if (abr == element["abr"]) {
+            out = element["name"]
+          }
+        });
+        return out;
+      }
+
+      function find_img(name) {
+        var out;
+        nsmi_translations["labels"].forEach(function(element) {
+          if (name == element["name"]) {
+            out = element["img"]
+          }
+        });
+        return out;
+      }
+
+      function find_avvo(name) {
+        var out;
+        nsmi_translations["labels"].forEach(function(element) {
+          if (name == element["name"]) {
+            out = element["name_avvo"]
+          }
+        });
+        return out;
+      }
+
+      function find_CL(name) {
+        var out;
+        nsmi_translations["labels"].forEach(function(element) {
+          if (name == element["name"]) {
+            out = element["name_CL"]
+          }
+        });
+        return out;
       }
 
       function make_query() {
 
-        var Data = { text: $("#text").val() }
-
-        if ($('#save-id').prop('checked')) {
-          Object.assign(Data, {'save-text': 1})
-        } else {
-          Object.assign(Data, {'save-text': 0})
-        }
-
-        if ($('#cutoff-lower').val() != "") {
-          Object.assign(Data, {'cutoff-lower': $('#cutoff-lower').val()*1})
-        }
-        if ($('#cutoff-pred').val() != "") {
-          Object.assign(Data, {'cutoff-pred': $('#cutoff-pred').val()*1})
-        }
-        if ($('#cutoff-upper').val() != "") {
-          Object.assign(Data, {'cutoff-upper': $('#cutoff-upper').val()*1})
-        }
-
-        console.log(Data)
-        $.ajax({
-          type: "POST",
-          url: "https://spot.suffolklitlab.org/v0/entities-terminal/",
-          data: JSON.stringify(Data),
-          dataType: "json",
-          headers: {
-            "Authorization": "Bearer "+$("#bearer").val()
-          },
-          contentType : "application/json",
-          success: function(data) {
-            console.log(data)
-            $('#loading').hide();
-            test_var = data;
-            $('#response').html("<h2>It looks like you may be looking for help with...</h2>")
-            data["labels"].forEach(function(element) {
-              $('#response').html($('#response').html()+"<div style=\"margin:15px 0px; padding:10px 5px 5px 5px; border-top: solid 1px #ccc;\"><table width=\"100%\"><tr><td width=\"1%\" valign=\"top\"><div style=\"float:left;margin:0 10px 0px 3px;\"><img src=\"\" width=\"60px\" height=\"60px\"></div></td><td><span class=\"subtitle\" style=\"float:right;margin:0px 0 4px 0;font-weight: normal;\"><a href=\"\" target=\"_blank\">How sure?</a>&nbsp;&nbsp;"+Math.round(element["lower"]*100)+"%-"+Math.round(element["upper"]*100)+"%</span><span style=\"font-weight: bold; font-size:18px;\">"+element["name"]+"</span><p>Help me find relevant: (1) <a href=\"https://www.avvo.com/business-lawyer/"+$('#man_jur').val()+".html\" target=\"_blank\">attorneys</a>; (2) <a href=\"https://www.google.com/search?q=court+"+element["name"]+"+site%3A*"+$('#man_jur').val()+".us&oq=site%3A*ma.us\" target=\"_blank\">articles</a>; (3) <a href=\"https://community.lawyer/search?jurisdictions[]="+"&taxonomy_categories[]="+element["name"]+"\" target=\"_blank\">interactive self-help</a>.</p></td></tr></table></div>")
-              console.log(element);
-            });
-            //$('#response').html(JSON.stringify(data))
-            $('#response').show()
-          },
-          error: function (jqXHR, exception) {
-            err = JSON.parse(jqXHR.responseText)
-            console.log(err)
-            $('#loading').hide();
-            if (err["message"]) {
-              $('#response').html("<h2>There was an error...</h2><ul><li>"+err["message"]+"</li></ul>")
+        if ((controlling_jur == "man_jur") && ($('#man_jur').val() != 0)) {
+            jur_picked = $('#man_jur').val();
+            console.log(jur_picked)
+        } else if (controlling_jur == "auto_jur") {
+            if ($('#auto_jur').val()=="yes") {
+              jur_picked = find_abr($('#jurisdiction').html());
             } else {
-              $('#response').html("<h2>There was an error...</h2>")
+              jur_picked = $('#auto_jur').val();
             }
-            $('#response').show()
+        } else {
+          jur_picked = "0";
+        }
+
+        if ($('#result__words').html()>=10) {
+
+          if (jur_picked != 0) {
+            $('#response').hide();
+            $('#loading').show();
+            scroll2Q('output',900);
+
+            var Data = { text: $("#text").val() }
+
+            if ($('#save-id').prop('checked')) {
+              Object.assign(Data, {'save-text': 1})
+            } else {
+              Object.assign(Data, {'save-text': 0})
+            }
+
+            if ($('#cutoff-lower').val() != "") {
+              Object.assign(Data, {'cutoff-lower': $('#cutoff-lower').val()*1})
+            }
+            if ($('#cutoff-pred').val() != "") {
+              Object.assign(Data, {'cutoff-pred': $('#cutoff-pred').val()*1})
+            }
+            if ($('#cutoff-upper').val() != "") {
+              Object.assign(Data, {'cutoff-upper': $('#cutoff-upper').val()*1})
+            }
+
+            console.log(Data)
+            $.ajax({
+              type: "POST",
+              url: "https://spot.suffolklitlab.org/v0/entities-terminal/",
+              data: JSON.stringify(Data),
+              dataType: "json",
+              headers: {
+                "Authorization": "Bearer "+$("#bearer").val()
+              },
+              contentType : "application/json",
+              success: function(data) {
+                console.log(data)
+                $('#loading').hide();
+                if (data["labels"].length == 0) {
+                  $('#response').html("<h2>We had a problem spotting issues in your text. Please try expanding on your explanation.</h2>")
+                } else {
+                  $('#response').html("<h2>It looks like you may be looking for help with...</h2>")
+                  data["labels"].forEach(function(element) {
+                    $('#response').html($('#response').html()+"<div style=\"margin:15px 0px; padding:10px 5px 5px 5px; border-top: solid 1px #ccc;\"><table width=\"100%\"><tr><td width=\"1%\" valign=\"top\"><div style=\"float:left;border-radius: 50%;border: 2px solid #555;margin:0 10px 0px 3px;background-img:"+find_img(element["name"])+"; background:#eee;\"><img src=\"images/space.gif\" width=\"60px\" height=\"60px\"></div></td><td><span class=\"subtitle\" style=\"float:right;margin:0px 0 4px 0;font-weight: normal;\"><a href=\"javascript:alert('Coming Soon.');\" target=\"_blank\">How sure?</a>&nbsp;&nbsp;"+Math.round(element["lower"]*100)+"%-"+Math.round(element["upper"]*100)+"%</span><span style=\"font-weight: bold; font-size:18px;\">"+element["name"]+"</span><p>Help me find relevant: (1) <a href=\"https://community.lawyer/search?jurisdictions[]="+find_name(jur_picked)+"&taxonomy_categories[]="+find_CL(element["name"])+"\" target=\"_blank\">interactive self-help</a>; (2) <a href=\"https://www.avvo.com/"+find_avvo(element["name"])+"/"+jur_picked+".html\" target=\"_blank\">attorneys</a>; (3) <a href=\"https://www.google.com/search?q=legal+help+with+"+encodeURI(element["name"])+"+issues+in+"+find_name(jur_picked)+"+site%3A*.org&oq=site%3A*ma.us\" target=\"_blank\">articles and blog posts</a>.</p></td></tr></table></div>")
+                    console.log(element);
+                  });
+                }
+                //$('#response').html(JSON.stringify(data))
+                $('#response').show()
+              },
+              error: function (jqXHR, exception) {
+                err = JSON.parse(jqXHR.responseText)
+                console.log(err)
+                $('#loading').hide();
+                if (err["message"]) {
+                  $('#response').html("<h2>There was an error...</h2><ul><li>"+err["message"]+"</li></ul>")
+                } else {
+                  $('#response').html("<h2>There was an error...</h2>")
+                }
+                $('#response').show()
+              }
+            });
+          } else {
+            $('#man_jur').css('background-color', 'orange');
+            alert("You must choose a place where this is happening (or did happen).");
           }
-        });
+        } else {
+           $('#text').css('background-color', 'orange');
+           alert("Your reply must be at least ten words long.");
+           document.getElementById('text').focus();
+         }
+
       }
 
       function scroll2Q(id,speed) {
@@ -148,31 +228,269 @@
                	 })();
             }
     	}
+
+      var states = [
+      	{ abr: "AL", name: "Alabama"},
+      	{ abr: "AK", name: "Alaska"},
+      	{ abr: "AS", name: "American Samoa"},
+      	{ abr: "AZ", name: "Arizona"},
+      	{ abr: "AR", name: "Arkansas"},
+      	{ abr: "CA", name: "California"},
+      	{ abr: "CO", name: "Colorado"},
+      	{ abr: "CT", name: "Connecticut"},
+      	{ abr: "DE", name: "Delaware"},
+      	{ abr: "DC", name: "District of Columbia"},
+      	{ abr: "FL", name: "Florida"},
+      	{ abr: "GA", name: "Georgia"},
+      	{ abr: "GU", name: "Guam"},
+      	{ abr: "HI", name: "Hawaii"},
+      	{ abr: "ID", name: "Idaho"},
+      	{ abr: "IL", name: "Illinois"},
+      	{ abr: "IN", name: "Indiana"},
+      	{ abr: "IA", name: "Iowa"},
+      	{ abr: "KS", name: "Kansas"},
+      	{ abr: "KY", name: "Kentucky"},
+      	{ abr: "LA", name: "Louisiana"},
+      	{ abr: "ME", name: "Maine"},
+      	{ abr: "MD", name: "Maryland"},
+      	{ abr: "MA", name: "Massachusetts"},
+      	{ abr: "MI", name: "Michigan"},
+      	{ abr: "MN", name: "Minnesota"},
+      	{ abr: "MS", name: "Mississippi"},
+      	{ abr: "MO", name: "Missouri"},
+      	{ abr: "MT", name: "Montana"},
+      	{ abr: "NE", name: "Nebraska"},
+      	{ abr: "NV", name: "Nevada"},
+      	{ abr: "NH", name: "New Hampshire"},
+      	{ abr: "NJ", name: "New Jersey"},
+      	{ abr: "NM", name: "New Mexico"},
+      	{ abr: "NY", name: "New York"},
+      	{ abr: "NC", name: "North Carolina"},
+      	{ abr: "ND", name: "North Dakota"},
+      	{ abr: "MP", name: "Northern Mariana Islands"},
+      	{ abr: "OH", name: "Ohio"},
+      	{ abr: "OK", name: "Oklahoma"},
+      	{ abr: "OR", name: "Oregon"},
+      	{ abr: "PA", name: "Pennsylvania"},
+      	{ abr: "PR", name: "Puerto Rico"},
+      	{ abr: "RI", name: "Rhode Island"},
+      	{ abr: "SC", name: "South Carolina"},
+      	{ abr: "SD", name: "South Dakota"},
+      	{ abr: "TN", name: "Tennessee"},
+      	{ abr: "TX", name: "Texas"},
+      	{ abr: "UT", name: "Utah"},
+      	{ abr: "VT", name: "Vermont"},
+      	{ abr: "VA", name: "Virginia"},
+      	{ abr: "VI", name: "Virgin Islands"},
+      	{ abr: "WA", name: "Washington"},
+      	{ abr: "WV", name: "West Virginia"},
+      	{ abr: "WI", name: "Wisconsin"},
+      	{ abr: "WY", name: "Wyoming"}
+      ]
+
+      nsmi_translations = {
+        "labels": [
+          {
+      		"id": "TO-00-00-00-00",
+      		"name": "Accidents, Injuries, and Torts (Problems with Others)",
+      		"name_avvo": "personal-injury-lawyer",
+      		"name_CL": "Accidents and Torts",
+      		"img": "",
+          "img_cred": ""
+          },
+          {
+      		"id": "BE-00-00-00-00",
+      		"name": "Benefits",
+      		"name_avvo": "government-lawyer",
+      		"name_CL": "Benefits",
+      		"img": "",
+          "img_cred": ""
+          },
+          {
+      		"id": "RI-00-00-00-00",
+      		"name": "Civil and Human Rights",
+      		"name_avvo": "civil-rights-lawyer",
+      		"name_CL": "Civil and Human Rights",
+      		"img": "",
+          "img_cred": ""
+          },
+          {
+      		"id": "CO-00-00-00-00",
+      		"name": "Court and Lawyers",
+      		"name_avvo": "lawsuits-disputes-lawyer",
+      		"name_CL": "Courts and Lawyers",
+      		"img": "",
+          "img_cred": ""
+          },
+          {
+      		"id": "CR-00-00-00-00",
+      		"name": "Crime & Prisons",
+      		"name_avvo": "criminal-defense-lawyer",
+      		"name_CL": "Crime and Prisons",
+      		"img": "",
+          "img_cred": ""
+          },
+          {
+      		"id": "DI-00-00-00-00",
+      		"name": "Disaster Relief",
+      		"name_avvo": "government-lawyer",
+      		"name_CL": "Disaster Relief",
+      		"img": "",
+          "img_cred": ""
+          },
+          {
+      		"id": "ED-00-00-00-00",
+      		"name": "Education",
+      		"name_avvo": "government-lawyer",
+      		"name_CL": "Education",
+      		"img": "",
+          "img_cred": ""
+          },
+          {
+      		"id": "EN-00-00-00-00",
+      		"name": "Environmental Justice",
+      		"name_avvo": "lawsuits-disputes-lawyer",
+      		"name_CL": "Environmental Justice",
+      		"img": "",
+          "img_cred": ""
+          },
+          {
+      		"id": "ES-00-00-00-00",
+      		"name": "Estates & Wills",
+      		"name_avvo": "estate-planning-lawyer",
+      		"name_CL": "Estates and Wills",
+      		"img": "",
+          "img_cred": ""
+          },
+          {
+      		"id": "FA-00-00-00-00",
+      		"name": "Family",
+      		"name_avvo": "family-lawyer",
+      		"name_CL": "Family",
+      		"img": "",
+          "img_cred": ""
+          },
+          {
+      		"id": "GO-00-00-00-00",
+      		"name": "Government services",
+      		"name_avvo": "government-lawyer",
+      		"name_CL": "Government Services",
+      		"img": "",
+          "img_cred": ""
+          },
+          {
+      		"id": "HE-00-00-00-00",
+      		"name": "Health",
+      		"name_avvo": "personal-injury-lawyer",
+      		"name_CL": "Health",
+      		"img": "",
+          "img_cred": ""
+          },
+          {
+      		"id": "HO-00-00-00-00",
+      		"name": "Housing",
+      		"name_avvo": "real-estate-lawyer",
+      		"name_CL": "Housing %26 Real Estate",
+      		"img": "",
+          "img_cred": ""
+          },
+          {
+      		"id": "IM-00-00-00-00",
+      		"name": "Immigration",
+      		"name_avvo": "immigration-lawyer",
+      		"name_CL": "Immigration",
+      		"img": "",
+          "img_cred": ""
+          },
+          {
+      		"id": "MO-00-00-00-00",
+      		"name": "Money, Debt, and Consumer Issues",
+      		"name_avvo": "consumer-protection-lawyer",
+      		"name_CL": "Money, Debt, and Consumer Issues",
+      		"img": "",
+          "img_cred": ""
+          },
+          {
+      		"id": "NA-00-00-00-00",
+      		"name": "Native American Issues and Tribal Law",
+      		"name_avvo": "native-peoples-law-lawyer",
+      		"name_CL": "Native American Issues and Tribal Law",
+      		"img": "",
+          "img_cred": ""
+          },
+          {
+      		"id": "BU-00-00-00-00",
+      		"name": "Small Business and IP",
+      		"name_avvo": "intellectual-property-lawyer",
+      		"name_CL": "Business and Intellectual Property",
+      		"img": "",
+          "img_cred": ""
+          },
+          {
+      		"id": "TR-00-00-00-00",
+      		"name": "Traffic and Cars",
+      		"name_avvo": "speeding-traffic-ticket-lawyer",
+      		"name_CL": "Traffic and Cars",
+      		"img": "",
+          "img_cred": ""
+          },
+          {
+      		"id": "VE-00-00-00-00",
+      		"name": "Veterans & Military",
+      		"name_avvo": "military-law-lawyer",
+      		"name_CL": "Veterans and Military",
+      		"img": "",
+          "img_cred": ""
+          },
+          {
+      		"id": "WO-00-00-00-00",
+      		"name": "Work and Employment",
+      		"name_avvo": "employment-labor-lawyer",
+      		"name_CL": "Work and Employment Law",
+      		"img": "",
+          "img_cred": ""
+          }
+        ]
+      }
+
+
+
   </script>
 
 </HEAD>
 <BODY BGCOLOR="#ffffff" BACKGROUND="" MARGINWIDTH="0" MARGINHEIGHT="0" onLoad="document.getElementById('text').focus();">
+
+<form id="thisForm" name="thisForm">
 <div class="content">
 
   <div id="icon" style="background-size: 100px 100px;background-image: url('../images/seal.jpg');">
     <a href="/"><img src="../images/space.gif" width="100px" height="100px;" border="0"/></a>
   </div>
 
-  <p>Spot is an NSMIv2 entity/issue spotter built by Suffolk University's Legal Innovation and Technology (LIT) Lab. Spot builds upon data from the Learned Hands online game, a partnership between the LIT Lab and Stanford's Legal Design Lab. Learned Hands aims to crowdsource the labeling of laypeople's legal questions for the training of machine learning (ML) classifiers like Spot. When complete, Spot will be made available for free to non-profit &amp; <i>pro bono</i> legal service providers. What follows is a sample web app. built with the Spot API. <b>The following is presented for demonstration purposes only, and should not be relied on. By its nature, it is incomplete and potentially inaccurate.</b></p>
+
+  <p>This webpage was built with the a very early version of the <a href="https://app.swaggerhub.com/apis-docs/suffolklitlab/spot/" target="_blank">Spot API</a>. The issue spotter isn't very good right now, but you can help it improve by playing <a href="https://learnedhands.law.stanford.edu/" target="_blank">Learned Hands</a>. This page is presented for demonstration purposes only. <span style="background:yellow;"><b>The results presented here should <i>NOT</i> be relied on. By its very nature, it is incomplete and inaccurate</b></span>. FWIW, the context here is that you're someone looking to solve a potential legal problem.</p>
+
+
+  <div style="display:none;float:left;background:#eee;width:100%;margin:0px 0 20px 0;padding:0 15px;box-sizing: border-box;border: solid 1px #555;">
+  <p>
+    Token: <input id='bearer' name='bearer' style="width:300px;" value="516ca8844a07ccbd380cbf9b4255dc7d0449a8805b55fdd525743eea31bfb054">&nbsp;&nbsp;
+    Cutoffs:&nbsp;&nbsp; Upper: <input type=number id='cutoff-upper' name='cutoff-upper' style="width:45px;" value="0.5">&nbsp;&nbsp;
+    Pred: <input type=number id='cutoff-pred' name='cutoff-pred' style="width:45px;" value="0.5">&nbsp;&nbsp;
+    Lower: <input type=number id='cutoff-lower' name='cutoff-lower' style="width:45px;" value="0.05">
+  </p>
+  </div>
 
 	<h1 style="text-align:center;margin:25px 0px 0px 0px;text-align:left;">What seems to be the problem?</h1>
-  <div style="margin:3px 0 4px 0;font-weight: normal;"><span class="subtitle"> 150 to 250 word replies tend to get the best results.</span>
+  <div style="margin:3px 0 4px 0;font-weight: normal;"><span class="subtitle"> Replies must be at least 10 words. 150 to 250 word replies tend to get the best results. </span>
   <span class="subtitle" style="float:right;">&nbsp;&nbsp;<span id="result__words">0</span> words</span>
   </div>
 
-<form id="thisForm" name="thisForm">
+  <textarea name='text' id="text" style="width:100%;height:150px;font-size:15px;padding:5px;box-sizing: border-box;"></textarea>
 
-<textarea name='text' id="text" style="width:100%;height:150px;font-size:15px;padding:5px;box-sizing: border-box;"></textarea>
-
-<div style="padding:5px 0 8px 0;"><input id="save-id" name="save-id" type="checkbox" CHECKED><span class="subtitle"><label for="save-id"> Use my reply to help people facing similar issues. <a href="">Learn more.</a></label></span></div>
+<div style="padding:5px 0 8px 0;"><input id="save-id" name="save-id" type="checkbox" CHECKED><span class="subtitle"><label for="save-id"> Use my reply to help people facing similar issues. <a href="javascript:alert('Coming Soon.');">Learn more.</a></label></span></div>
 
 <p id="unknown_jur">Where did this happen/is this taking place?&nbsp;&nbsp;
-  <select id="man_jur">
+  <select id="man_jur" onChange="$('#man_jur').css('background-color', '');">
     <option value="0">Choose a Location (US only)</option>
     <option value="AL">Alabama </option>
     <option value="AK">Alaska </option>
@@ -297,7 +615,7 @@
 
 
 <p style="margin:0px 0px 5px 0px;">
-<input type="button" style="width:100%;padding:5px;;" value="SEND" onCLick="ping();make_query();scroll2Q('output',900);"/>
+<input type="button" style="width:100%;padding:5px;;" value="SEND" onCLick="make_query();"/>
 </p>
 
 <div id="output" style="float:left;width:100%;">
@@ -312,15 +630,7 @@
 </div>
 
 
-<div style="float:left;background:#eee;width:100%;margin:30px 0 0 0;padding:0 15px;box-sizing: border-box;border: solid 1px #555;">
-<h3>For testing purposes only: </h3>
-<p>
-Key: <input id='bearer' name='bearer' style="width:250px;" value=""> ----
-Upper: <input type=number id='cutoff-upper' name='cutoff-upper' style="width:45px;" value="0.5"> ----
-Pred: <input type=number id='cutoff-pred' name='cutoff-pred' style="width:45px;" value="0.5"> ----
-Lower: <input type=number id='cutoff-lower' name='cutoff-lower' style="width:45px;" value="0.05">
-</p>
-</div>
+
 
 </form>
 	<div class="footer" style="margin-bottom:100%">
@@ -334,8 +644,11 @@ Lower: <input type=number id='cutoff-lower' name='cutoff-lower' style="width:45p
   var area = document.getElementById('text');
 
   function callback (counter) {
-    console.log(counter);
+    //console.log(counter);
     $('#result__words').html(counter.words);
+    if ($('#result__words').html()>=10) {
+      $('#text').css('background-color', '');
+    }
   }
 
   Countable.live(area, callback);
