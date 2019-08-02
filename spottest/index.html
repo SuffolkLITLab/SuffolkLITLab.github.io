@@ -39,6 +39,7 @@
   <script src="js_bin/Countable.js"></script>
   <script>
       window.scrollTo(0,0)
+      var test_var = [];
 
       function getLocation() {
         if (navigator.geolocation) {
@@ -47,6 +48,7 @@
       }
 
       function showPosition(position) {
+        console.log("Lat:"+position.coords.latitude+" Lon:"+position.coords.longitude)
         var location_uri = "https://nominatim.openstreetmap.org/reverse?lat="+position.coords.latitude+"&lon="+position.coords.longitude+"&format=json";
         console.log(location_uri)
         $.ajax({
@@ -59,6 +61,9 @@
                 $('#auto_jur').val('yes');
                 $('#known_jur').show()
              }
+           },
+           error: function (jqXHR, exception) {
+               console.log(jqXHR.responseText)
            }
           });
       }
@@ -67,12 +72,9 @@
       function ping() {
         $('#response').hide()
         $('#loading').show()
-        setTimeout(function(){ $('#loading').hide(); $('#response').show() }, 1500);
+        //setTimeout(function(){ $('#loading').hide(); $('#response').show() }, 1500);
       }
 
-
-      //JSON.stringify($("#thisForm").serializeArray());
-      //var formData = "{\"text\": \"this test right here\",\"save-text\":1}"
       function make_query() {
 
         var Data = { text: $("#text").val() }
@@ -83,7 +85,15 @@
           Object.assign(Data, {'save-text': 0})
         }
 
-        //Object.assign(Data, {key_: value_});
+        if ($('#cutoff-lower').val() != "") {
+          Object.assign(Data, {'cutoff-lower': $('#cutoff-lower').val()*1})
+        }
+        if ($('#cutoff-pred').val() != "") {
+          Object.assign(Data, {'cutoff-pred': $('#cutoff-pred').val()*1})
+        }
+        if ($('#cutoff-upper').val() != "") {
+          Object.assign(Data, {'cutoff-upper': $('#cutoff-upper').val()*1})
+        }
 
         console.log(Data)
         $.ajax({
@@ -96,14 +106,34 @@
           },
           contentType : "application/json",
           success: function(data) {
-             console.log(data)
+            console.log(data)
+            $('#loading').hide();
+            test_var = data;
+            $('#response').html("<h2>It looks like you may be looking for help with...</h2>")
+            data["labels"].forEach(function(element) {
+              $('#response').html($('#response').html()+"<div style=\"margin:15px 0px; padding:10px 5px 5px 5px; border-top: solid 1px #ccc;\"><table width=\"100%\"><tr><td width=\"1%\" valign=\"top\"><div style=\"float:left;margin:0 10px 0px 3px;\"><img src=\"\" width=\"60px\" height=\"60px\"></div></td><td><span class=\"subtitle\" style=\"float:right;margin:0px 0 4px 0;font-weight: normal;\"><a href=\"\" target=\"_blank\">How sure?</a>&nbsp;&nbsp;"+Math.round(element["lower"]*100)+"%-"+Math.round(element["upper"]*100)+"%</span><span style=\"font-weight: bold; font-size:18px;\">"+element["name"]+"</span><p>Help me find relevant: (1) <a href=\"https://www.avvo.com/business-lawyer/"+$('#man_jur').val()+".html\" target=\"_blank\">attorneys</a>; (2) <a href=\"https://www.google.com/search?q=court+"+element["name"]+"+site%3A*"+$('#man_jur').val()+".us&oq=site%3A*ma.us\" target=\"_blank\">articles</a>; (3) <a href=\"https://community.lawyer/search?jurisdictions[]="+"&taxonomy_categories[]="+element["name"]+"\" target=\"_blank\">interactive self-help</a>.</p></td></tr></table></div>")
+              console.log(element);
+            });
+            //$('#response').html(JSON.stringify(data))
+            $('#response').show()
+          },
+          error: function (jqXHR, exception) {
+            err = JSON.parse(jqXHR.responseText)
+            console.log(err)
+            $('#loading').hide();
+            if (err["message"]) {
+              $('#response').html("<h2>There was an error...</h2><ul><li>"+err["message"]+"</li></ul>")
+            } else {
+              $('#response').html("<h2>There was an error...</h2>")
+            }
+            $('#response').show()
           }
         });
       }
 
       function scroll2Q(id,speed) {
     		var top = document.getElementById(id).offsetTop; //Getting Y of target element
-    		console.log("Jump to Y for ("+id+"): "+top);
+    		//console.log("Jump to Y for ("+id+"): "+top);
     		//adapted from https://github.com/Yappli/smooth-scroll
     		var moving_frequency = 5; // Affects performance !
     		var hop_count = speed/moving_frequency
@@ -277,18 +307,6 @@
 </div>
 
 <div id="response" style="float:left;display:none;width:100%;margin:20px auto;">
-<h2>It looks like you may have an interest in clearing a criminal record. If that's the case, how would you like to proceed?</h2>
-<div style="float:left;width:150px;">
-  <a href="https://community.lawyer/search?jurisdictions=Massachusetts&taxonomy_subcategorys=Criminal%20records" target="_blank"><img src="attorney.png" width="150px;"/>Find an Attorney</a>
-</div>
-
-<div style="float:left;width:150px;">
-  <a href="https://community.lawyer/search?jurisdictions=Massachusetts&taxonomy_subcategorys=Criminal%20records" target="_blank"><img src="text.png" width="150px;"/>Informational Texts</a>
-</div>
-
-<div style="float:left;border:solid 1px #555;width:150px;">
-  <a href="https://community.lawyer/search?jurisdictions=Massachusetts&taxonomy_subcategorys=Criminal%20records" target="_blank"><img src="interactive.png" width="150px;"/>Interactive Self-Help</a>
-</div>
 </div>
 
 </div>
@@ -298,9 +316,9 @@
 <h3>For testing purposes only: </h3>
 <p>
 Key: <input id='bearer' name='bearer' style="width:250px;" value=""> ----
-Upper: <input id='upper' name='upper' style="width:25px;" value="0.5"> ----
-Pred: <input id='pred' name='pred' style="width:25px;" value="0.5"> ----
-Lower: <input id='lower' name='lower' style="width:25px;" value="0">
+Upper: <input type=number id='cutoff-upper' name='cutoff-upper' style="width:45px;" value="0.5"> ----
+Pred: <input type=number id='cutoff-pred' name='cutoff-pred' style="width:45px;" value="0.5"> ----
+Lower: <input type=number id='cutoff-lower' name='cutoff-lower' style="width:45px;" value="0.05">
 </p>
 </div>
 
