@@ -180,7 +180,7 @@
                 } else {
                   $('#response').html("<h2>It looks like you may be looking for help with...</h2>")
                   data["labels"].forEach(function(element) {
-                    $('#response').html($('#response').html()+"<div style=\"margin:15px 0px; padding:10px 5px 5px 5px; border-top: solid 1px #ccc;\"><table width=\"100%\"><tr><td width=\"1%\" valign=\"top\"><div style=\"float:left;border-radius: 50%;border: 2px solid #555;margin:0 10px 0px 3px;background-img:"+find_img(element["name"])+"; background:#eee;\"><img src=\"images/space.gif\" width=\"60px\" height=\"60px\"></div></td><td><span class=\"subtitle\" style=\"float:right;margin:0px 0 4px 0;font-weight: normal;\"><a href=\"javascript:alert('Coming Soon.');\" target=\"_blank\">How sure?</a>&nbsp;&nbsp;"+Math.round(element["lower"]*100)+"%-"+Math.round(element["upper"]*100)+"%</span><span style=\"font-weight: bold; font-size:18px;\">"+element["name"]+"</span><p>Help me find relevant: (1) <a href=\"https://community.lawyer/search?jurisdictions[]="+find_name(jur_picked)+"&taxonomy_categories[]="+find_CL(element["name"])+"\" target=\"_blank\">interactive self-help</a>; (2) <a href=\"https://www.avvo.com/"+find_avvo(element["name"])+"/"+jur_picked+".html\" target=\"_blank\">attorneys</a>; (3) <a href=\"https://www.google.com/search?q=legal+help+with+"+encodeURI(element["name"])+"+issues+in+"+find_name(jur_picked)+"+site%3A*.org&oq=site%3A*ma.us\" target=\"_blank\">articles and blog posts</a>.</p></td></tr></table></div>")
+                    $('#response').html($('#response').html()+"<div style=\"margin:15px 0px; padding:10px 5px 5px 5px; border-top: solid 1px #ccc;\"><table width=\"100%\"><tr><td width=\"1%\" valign=\"top\"><div style=\"float:left;border-radius: 50%;border: 2px solid #555;margin:0 10px 0px 3px;background-img:"+find_img(element["name"])+"; background:#eee;\"><img src=\"images/space.gif\" width=\"60px\" height=\"60px\"></div></td><td><span class=\"subtitle\" style=\"float:right;margin:0px 0 4px 0;font-weight: normal;\"><a href=\"javascript:alert('Coming Soon.');\" target=\"_blank\">How sure?</a>&nbsp;&nbsp;"+Math.round(element["lower"]*100)+"%-"+Math.round(element["upper"]*100)+"%</span><span style=\"font-weight: bold; font-size:18px;\">"+element["name"]+"</span><p>Help me find relevant: (1) <a href=\"https://www.avvo.com/"+find_avvo(element["name"])+"/"+jur_picked+".html\" target=\"_blank\">attorneys</a>; (2) <a href=\"https://community.lawyer/search?jurisdictions[]="+find_name(jur_picked)+"&taxonomy_categories[]="+find_CL(element["name"])+"\" target=\"_blank\">interactive self-help</a>; (3) <a href=\"https://www.google.com/search?q=legal+help+with+"+encodeURI(element["name"])+"+issues+in+"+find_name(jur_picked)+"+site%3A*.org&oq=site%3A*ma.us\" target=\"_blank\">articles and blog posts</a>.</p></td></tr></table></div>")
                     console.log(element);
                   });
                 }
@@ -481,11 +481,11 @@
   </div>
 
 	<h1 style="text-align:center;margin:25px 0px 0px 0px;text-align:left;">What seems to be the problem?</h1>
-  <div style="margin:3px 0 4px 0;font-weight: normal;"><span class="subtitle"> Replies must be at least 10 words. 150 to 250 word replies tend to get the best results. </span>
-  <span class="subtitle" style="float:right;">&nbsp;&nbsp;<span id="result__words">0</span> words</span>
+  <div style="margin:3px 0 4px 0;font-weight: normal;"><span class="subtitle"> Reply must be at least 10 words. 150 to 250 word replies tend to get the best results. </span>
+  <span id="word_count" name="word_count" class="subtitle" style="float:right;color:red;font-weight:bold;">&nbsp;&nbsp;<span id="result__words">0</span> words</span>
   </div>
 
-  <textarea name='text' id="text" style="width:100%;height:150px;font-size:15px;padding:5px;box-sizing: border-box;"></textarea>
+  <textarea name='text' id="text" style="width:100%;height:200px;font-size:15px;padding:5px;box-sizing: border-box;"></textarea>
 
 <div style="padding:5px 0 8px 0;"><input id="save-id" name="save-id" type="checkbox" CHECKED><span class="subtitle"><label for="save-id"> Use my reply to help people facing similar issues. <a href="javascript:alert('Coming Soon.');">Learn more.</a></label></span></div>
 
@@ -646,8 +646,16 @@
   function callback (counter) {
     //console.log(counter);
     $('#result__words').html(counter.words);
-    if ($('#result__words').html()>=10) {
+    if (($('#result__words').html()>=10) && ($('#result__words').html()<150)) {
       $('#text').css('background-color', '');
+      $('#word_count').css('color', 'black');
+      $('#word_count').css('font-weight', 'normal');
+    } else if (($('#result__words').html()>=150) && ($('#result__words').html()<=250)) {
+      $('#word_count').css('color', 'green');
+      $('#word_count').css('font-weight', 'bold');
+    } else if ($('#result__words').html()>250) {
+      $('#word_count').css('color', 'black');
+      $('#word_count').css('font-weight', 'normal');
     }
   }
 
