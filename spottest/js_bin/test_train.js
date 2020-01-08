@@ -81,21 +81,57 @@ function find_child_img(name) {
 }
 
 function find_avvo(name) {
-  var out;
+  var out = "";
   nsmi_translations["labels"].forEach(function(element) {
     if (name == element["name"]) {
       out = element["name_avvo"]
     }
   });
+  if (out != "") {
+      return out;
+  } else {
+      return find_child_avvo(name);
+  }
+}
+
+function find_child_avvo(name) {
+  var out;
+  nsmi_translations["labels"].forEach(function(element) {
+      if (element["children"]) {
+        element["children"].forEach(function(child) {
+            if (name == child["name"]) {
+              out = child["name_avvo"]
+            }
+        });
+      }
+  });
   return out;
 }
 
 function find_CL(name) {
-  var out;
+  var out = "";
   nsmi_translations["labels"].forEach(function(element) {
     if (name == element["name"]) {
       out = element["name_CL"]
     }
+  });
+  if (out != "") {
+      return out;
+  } else {
+      return find_child_CL(name);
+  }
+}
+
+function find_child_CL(name) {
+  var out;
+  nsmi_translations["labels"].forEach(function(element) {
+      if (element["children"]) {
+        element["children"].forEach(function(child) {
+            if (name == child["name"]) {
+              out = child["name_CL"]
+            }
+        });
+      }
   });
   return out;
 }
@@ -215,12 +251,12 @@ function make_query() {
             returned_id = []
             $('#response').html("<h2>It looks like you may be looking for help with...</h2>")
             data["labels"].forEach(function(element) {
-              $('#response').html($('#response').html()+"<div style=\"margin:15px 0px; padding:10px 5px 5px 5px; border-top: solid 1px #555;\"><table width=\"100%\"><tr><td width=\"1%\" valign=\"top\"><div style=\"float:left;border-radius: 8px;border: 2px solid #aaa;margin:0 15px 0px 0px;background-image:url('images/"+find_img(element["name"])+"');background-position: center;    background-size: 60px 60px;\"><img src=\"../images/space.gif\" width=\"60px\" height=\"60px\"></div></td><td><span class=\"subtitle\" style=\"float:right;margin:0px 0 4px 0;font-weight: normal;\"><a href=\"https://spot.suffolklitlab.org/performance/#uncertainty\" target=\"_blank\">How sure?</a>&nbsp;&nbsp;"+Math.round(element["lower"]*100)+"%-"+Math.round(element["upper"]*100)+"%</span><span style=\"font-weight: bold; font-size:18px;\">"+element["name"]+"</span><p>"+find_des(element["id"])+"</p><p>Help me find relevant: (1) <a href=\"https://www.avvo.com/"+find_avvo(element["name"])+"/"+jur_picked+".html\" target=\"_blank\">attorneys</a>; (2) <a href=\"https://community.lawyer/search?jurisdictions[]="+find_name(jur_picked)+"&taxonomy_categories[]="+find_CL(element["name"])+"\" target=\"_blank\">interactive self-help</a>; (3) <a href=\"https://www.google.com/search?q=legal+help+with+"+encodeURI(element["name"])+"+issues+in+"+find_name(jur_picked)+"+site%3A*.org+OR+site%3A*"+jur_picked+".us+OR+site%3A*.gov\" target=\"_blank\">articles and blog posts</a>.</p></td></tr></table></div>")
+              $('#response').html($('#response').html()+"<div style=\"margin:15px 0px; padding:10px 5px 5px 5px; border-top: solid 1px #555;\"><table width=\"100%\"><tr><td width=\"1%\" valign=\"top\"><div style=\"float:left;border-radius: 8px;border: 2px solid #aaa;margin:0 15px 0px 0px;background-image:url('images/"+find_img(element["name"])+"');background-position: center;    background-size: 60px 60px;\"><img src=\"../images/space.gif\" width=\"60px\" height=\"60px\"></div></td><td><span class=\"subtitle\" style=\"float:right;margin:0px 0 4px 0;font-weight: normal;\"><a href=\"https://spot.suffolklitlab.org/performance/#uncertainty\" target=\"_blank\">How sure?</a>&nbsp;&nbsp;"+Math.round(element["lower"]*100)+"%-"+Math.round(element["upper"]*100)+"%</span><span style=\"font-weight: bold; font-size:18px;\">"+element["name"]+"</span><p>"+find_des(element["id"])+"</p><p>Help me find relevant: (1) <a href=\"https://www.qnamarkup.net/i/?source=https://raw.githubusercontent.com/SonyaCoding/LSC_Project/master/qna/civ/"+jur_picked+".txt#"+element["id"]+"\" target=\"_blank\">attorneys</a>; (2) <a href=\"https://community.lawyer/search?jurisdictions[]="+find_name(jur_picked)+"&taxonomy_categories[]="+find_CL(element["name"])+"\" target=\"_blank\">interactive self-help</a>; (3) <a href=\"https://www.google.com/search?q=legal+help+with+"+encodeURI(element["name"])+"+issues+in+"+find_name(jur_picked)+"+site%3A*.org+OR+site%3A*."+jur_picked+".us+OR+site%3A*.gov\" target=\"_blank\">resources on the web</a>.</p></td></tr></table></div>")
               returned_id.push(element["id"]);
               console.log(element);
               if (element["children"]) {
                 element["children"].forEach(function(child) {
-                  $('#response').html($('#response').html()+"<div style=\"margin:15px 0px; padding:10px 5px 5px 5px; border-top: solid 1px #555;\"><table width=\"100%\"><tr><td width=\"1%\" valign=\"top\"><div style=\"float:left;border-radius: 8px;border: 2px solid #aaa;margin:0 15px 0px 0px;background-image:url('images/"+find_img(child["name"])+"');background-position: center;    background-size: 60px 60px;\"><img src=\"../images/space.gif\" width=\"60px\" height=\"60px\"></div></td><td><span class=\"subtitle\" style=\"float:right;margin:0px 0 4px 0;font-weight: normal;\"><a href=\"https://spot.suffolklitlab.org/performance/#uncertainty\" target=\"_blank\">How sure?</a>&nbsp;&nbsp;"+Math.round(child["lower"]*100)+"%-"+Math.round(child["upper"]*100)+"%</span><span style=\"font-weight: bold; font-size:18px;\">"+element["name"]+" &raquo; "+child["name"]+"</span><p>"+find_des(child["id"])+"</p><p>Help me find relevant: (1) <a href=\"https://www.avvo.com/"+find_avvo(element["name"])+"/"+jur_picked+".html\" target=\"_blank\">attorneys</a>; (2) <a href=\"https://community.lawyer/search?jurisdictions[]="+find_name(jur_picked)+"&taxonomy_categories[]="+find_CL(element["name"])+"\" target=\"_blank\">interactive self-help</a>; (3) <a href=\"https://www.google.com/search?q=legal+help+with+"+encodeURI(element["name"])+"+issues+in+"+find_name(jur_picked)+"+site%3A*.org+OR+site%3A*"+jur_picked+".us+OR+site%3A*.gov\" target=\"_blank\">articles and blog posts</a>.</p></td></tr></table></div>")
+                  $('#response').html($('#response').html()+"<div style=\"margin:15px 0px; padding:10px 5px 5px 5px; border-top: solid 1px #555;\"><table width=\"100%\"><tr><td width=\"1%\" valign=\"top\"><div style=\"float:left;border-radius: 8px;border: 2px solid #aaa;margin:0 15px 0px 0px;background-image:url('images/"+find_img(child["name"])+"');background-position: center;    background-size: 60px 60px;\"><img src=\"../images/space.gif\" width=\"60px\" height=\"60px\"></div></td><td><span class=\"subtitle\" style=\"float:right;margin:0px 0 4px 0;font-weight: normal;\"><a href=\"https://spot.suffolklitlab.org/performance/#uncertainty\" target=\"_blank\">How sure?</a>&nbsp;&nbsp;"+Math.round(child["lower"]*100)+"%-"+Math.round(child["upper"]*100)+"%</span><span style=\"font-weight: bold; font-size:18px;\">"+element["name"]+" &raquo; "+child["name"]+"</span><p>"+find_des(child["id"])+"</p><p>Help me find relevant: (1) <a href=\"https://www.qnamarkup.net/i/?source=https://raw.githubusercontent.com/SonyaCoding/LSC_Project/master/qna/civ/"+jur_picked+".txt#"+child["id"]+"\" target=\"_blank\">attorneys</a>; (2) <a href=\"https://community.lawyer/search?jurisdictions[]="+find_name(jur_picked)+"&taxonomy_categories[]="+find_CL(child["name"])+"\" target=\"_blank\">interactive self-help</a>; (3) <a href=\"https://www.google.com/search?q=legal+help+with+"+encodeURI(child["name"])+"+issues+in+"+find_name(jur_picked)+"+site%3A*.org+OR+site%3A*."+jur_picked+".us+OR+site%3A*.gov\" target=\"_blank\">resources on the web</a>.</p></td></tr></table></div>")
                   returned_id.push(child["id"]);
                   console.log(child);
                 });
@@ -1402,8 +1438,8 @@ nsmi_translations = {
                     "id": "HO-06-00-00-00",
                     "name": "Renting or leasing a home",
                     "description": "About the process of renting or leasing a home, and problems that may come up while renting a home, mobile home, or while living in a group home or homeless shelter.",
-                    "name_avvo": "",
-                    "name_CL": "",
+                    "name_avvo": "Renting or leasing a home",
+                    "name_CL": "Renting or leasing a home",
                     "img": "housing.jpg",
                     "img_cred": "https://flic.kr/p/HdCzCt"
                   },
