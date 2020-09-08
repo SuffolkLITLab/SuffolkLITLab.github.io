@@ -37,6 +37,46 @@
 	<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
   	<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
   	<script src="https://code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
+
+  <style>
+  .desc_table {
+    float:left;
+    max-width: 100%;
+    text-align:left;
+    box-sizing: border-box;
+    display: table;
+  }
+
+  .desc_cell {
+    display: table-cell;
+    vertical-align: middle;
+  }
+  .start {
+    float:left;
+    background: #0072E8;
+    width: 175px;
+    height: 60px;
+    line-height: 60px;
+    text-align:center;
+    color:white;
+    font-weight:600;
+    border-radius:10px;
+    margin:0px 0px 0 20px;
+    box-sizing: border-box;
+  }
+
+  @media only screen and (max-width: 600px) {
+    .desc_cell {
+      float:left;
+      width: 100%;
+      display: block;
+    }
+
+    .start{
+      margin:10px 0 0 0;
+    }
+  }
+  </style>
 </HEAD>
 <BODY BGCOLOR="#ffffff" BACKGROUND="" MARGINWIDTH="0" MARGINHEIGHT="0">
 <div class="content">
@@ -60,13 +100,13 @@
 	</div>
 
 
-              <div class="desc_table" style="background:#ffffdd;border:1px solid #555;padding:15px;text-align:left;margin-bottom:40px;float:left;  max-width: 100%;  text-align:left;  box-sizing: border-box;  display: table;">
-                <div class="desc_cell" style="display: table-cell; vertical-align: middle;">
+              <div class="desc_table" style="background:#ffffdd;border:1px solid #555;padding:15px;text-align:left;margin-bottom:40px;">
+                <div class="desc_cell">
                 <h2 style="margin-top:0px;"><a name="CDC">CDC Eviction Moratorium Assistant</a></h2>
                 <p>To mitigate community spread of the novel coronavirus, the Center for Disease Control (CDC) has issued an order pausing residential evictions for some tenants unable to make rental payments due to hardships caused by the coronavirus. Use <a href="https://apps.suffolklitlab.org/start/cdc_moratorium" target="_blank">this form</a> to see if you are covered by this order and to produce a declaration to share with your landlord if you are.</p>
               </div>
-              <div class="desc_cell" style="display: table-cell; vertical-align: middle; width:1%">
-                <a href="https://apps.suffolklitlab.org/start/cdc_moratorium" onClick="gtag('event', 'interview', {'event_category':'start', 'event_label':'https://apps.suffolklitlab.org/start/cdc_moratorium'});" target="_blank"><div class="start" style="float:left;  background: #0072E8;  width: 175px;  height: 60px;  line-height: 60px;  text-align:center;  color:white;  font-weight:600;  border-radius:10px;  margin:0px 0px 0 20px;  box-sizing: border-box;">Start Form</div></a>
+              <div class="desc_cell" style="width:1%">
+                <a href="https://apps.suffolklitlab.org/start/cdc_moratorium" onClick="gtag('event', 'interview', {'event_category':'start', 'event_label':'https://apps.suffolklitlab.org/start/cdc_moratorium'});" target="_blank"><div class="start">Start Form</div></a>
               </div>
               </div>
 
