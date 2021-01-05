@@ -3,7 +3,7 @@
       xmlns:og="http://ogp.me/ns#"
       xmlns:fb="http://www.facebook.com/2008/fbml">
 <HEAD>
-	<title>Spot Showcase</title>
+	<title>Spot Test/Showcase</title>
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-108858221-1"></script>
 	<script>
@@ -17,16 +17,16 @@
 	<meta name="apple-mobile-web-app-capable" content="no" />
   <link rel="apple-touch-icon" href="../images/icon_300.png"/>
 	<meta property="og:type" content="website"/>
-	<meta property="og:title" content="Spot Showcase"/>
-	<meta property="og:description" content=""/>
+	<meta property="og:title" content="Spot Test/Showcase"/>
+	<meta property="og:description" content="Spot is an LIST (formerly NSMIv2) entity/issue spotter built by Suffolk University's Legal Innovation and Technology (LIT) Lab. Spot builds upon data from the Learned Hands online game, a partnership between the LIT Lab and Stanford's Legal Design Lab. Learned Hands aims to crowdsource the labeling of laypeople's legal questions for the training of machine learning (ML) classifiers/issue spotters."/>
 	<meta property="og:image" content="../images/thefuture.png"/>
 
 	<meta name="twitter:card" content="summary_large_image">
 	<meta name="twitter:site" content="@SuffolkLITLab">
 	<meta name="twitter:creator" content="@SuffolkLITLab">
-	<meta name="twitter:title" content="Spot Showcase">
-	<meta name="twitter:description" content="">
-	<meta name="twitter:image" content="http://www.davidcolarusso.com/images/thefuture.png"/>
+	<meta name="twitter:title" content="Spot Test/Showcase">
+  <meta name="twitter:description" content="Spot is an LIST (formerly NSMIv2) entity/issue spotter built by Suffolk University's Legal Innovation and Technology (LIT) Lab. Spot builds upon data from the Learned Hands online game, a partnership between the LIT Lab and Stanford's Legal Design Lab. Learned Hands aims to crowdsource the labeling of laypeople's legal questions for the training of machine learning (ML) classifiers/issue spotters. ">
+  <meta name="twitter:image" content="http://www.davidcolarusso.com/images/thefuture.png"/>
 
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
@@ -40,7 +40,7 @@
   <script src="js_bin/test_train.js"></script>
 
 </HEAD>
-<BODY BGCOLOR="#ffffff" BACKGROUND="" MARGINWIDTH="0" MARGINHEIGHT="0" onLoad="document.getElementById('text').focus();">
+<BODY BGCOLOR="#ffffff" BACKGROUND="" MARGINWIDTH="0" MARGINHEIGHT="0">
 
 <form id="thisForm" name="thisForm">
 <div class="content">
@@ -64,27 +64,43 @@
   	</div>
 
 
-  <p>This demonstration page is built on an early beta of the <a href="https://spot.suffolklitlab.org/" target="_blank">Spot API</a>, a project bringing free AI-powered issue spotting to legal aid and non-profits. The issue spotter isn't very good right now, but you can help improve it by playing <a href="https://learnedhands.law.stanford.edu/" target="_blank">Learned Hands</a>. This page is presented for demonstration purposes only. <span style="background:yellow;"><b>The results presented here should <i>NOT</i> be relied on. The project is currently incomplete, and the outputs presented are inaccurate</b></span>. FWIW, the presumed context here is that you're someone looking to solve a potential legal issue. <a href="javascript:void('');" onClick="$('#text').val('My apartment caught on fire and my landlord is trying to claim negligence to get me to cover the damages. I came back to my apartment yesterday after studying at the library to see it on fire.  The cause of the fire was determined that the back left stove was on which heated a pan which then then heated a toaster which consequently caused the outlet it was plugged into to catch on fire.  My landlord is expecting me to pay, due to negligence, for the damages to the unit, i understand im liable for my personal property damaged.  However, in the pictures i took while the fire department was there none of the knobs on my stove where on.  In addition, the outlet which was the actual cause of the fire did not have Arc Fault Circuit interrupters which would have prevented the fire in the first place.  Also my stove had broke the in early June and had maintenance done on it by that apartment complex.  I am therefore asking where do i go from here? I am a college student and do not have any money to cover the cost of the damages.');$('#text').css('background-color', '');Countable.live(area, callback);">Seed reply with sample text</a>.</p>
+  <p>This demonstration page is built on a beta of the <a href="https://spot.suffolklitlab.org/" target="_blank">Spot API</a>, a project bringing free AI-powered issue spotting to legal aid and non-profits. The issue spotter isn't perfect, but you can help improve it by playing <a href="https://learnedhands.law.stanford.edu/" target="_blank">Learned Hands</a>. This page is presented for demonstration purposes only. <span style="background:yellow;"><b>The results presented here should <i>NOT</i> be relied on in isolation. The project is a work in progress</b></span>. To learn more about it's coverage, read up on its <a href="https://spot.suffolklitlab.org/performance/" target="_blank">current performance</a>, or take it for a spin below.</p>
 
-
-  <div style="display:none;float:left;background:#eee;width:100%;margin:0px 0 20px 0;padding:0 15px;box-sizing: border-box;border: solid 1px #555;">
+  <div style="display:show;float:left;background:#eee;width:100%;margin:0px 0 20px 0;padding:0 15px;box-sizing: border-box;border: solid 1px #555;">
+  <a name="uncertainty"></a>
   <p>
-    Token: <input id='bearer' name='bearer' style="width:300px;" value="516ca8844a07ccbd380cbf9b4255dc7d0449a8805b55fdd525743eea31bfb054">&nbsp;&nbsp;
-    Cutoffs:&nbsp;&nbsp; Upper: <input type=number id='cutoff-upper' name='cutoff-upper' style="width:45px;" value="0.5">&nbsp;&nbsp;
-    Pred: <input type=number id='cutoff-pred' name='cutoff-pred' style="width:45px;" value="0.5">&nbsp;&nbsp;
-    Lower: <input type=number id='cutoff-lower' name='cutoff-lower' style="width:45px;" value="0.05">
+    <input type="hidden" id='bearer' name='bearer' style="width:300px;" value="8c9364cdd6e949a8afdab7d7722a81e919b060a6778a4d6cabb41510ab146a64">
+    <b>Managing Uncertainty:</b>
+      When Spot returns a list of issues, it provides a prediction accompanied by a lower and upper bound. See <a href="https://app.swaggerhub.com/apis-docs/suffolklitlab/spot/" target="_blank">Documentation</a>. The bounds are intended to provide users with information about the uncertainty for a given prediction, allowing them to tailor their results to their use case and tolerance for error. The larger the distance between the lower bound and the prediction, the more likely it is that the prediction is overly optimistic about finding the issue. Conversely, the larger the difference between the prediction and the upper bound, the more likely it is that the prediction is under-estimating the chance that the issue is present. Users are encouraged to consider this when setting the cutoffs for triggering the return of an issue. For example, a user interested in avoiding false negatives may set Spot to return results based on the upper bound being greater than 50%, while one interested in avoiding false positives might choose to base their cutoff on the lower bound. The distance between the lower and upper bounds communicates something about the overall uncertainty around a prediction, with the most certain predictions being those with the smallest distances between the two. <a href="https://spot.suffolklitlab.org/performance/#uncertainty" target="_blank">Learn More</a>.
   </p>
+
+    <div style="float:left;width:200px;margin:15px">Lower Bound Cutoff: <output id="lower_disp">?</output>
+    <input type="range" id='cutoff-lower' name='cutoff-lower' min="0" max="1" value="0.25" step="0.01" onLoad="$('#lower_disp').val(this.value)" oninput="$('#lower_disp').val(this.value)" style="width:200px;">
+    </div>
+    <div style="float:left;width:200px;margin:15px">Prediction Cutoff: <output id="pred_disp">?</output>
+    <input type="range" id='cutoff-pred' name='cutoff-pred' min="0" max="1" value="0.5" step="0.01" onLoad="$('#pred_disp').val(this.value)" oninput="$('#pred_disp').val(this.value)" style="width:200px;">
+    </div>
+    <div style="float:left;width:200px;margin:15px">Upper Bound Cutoff: <output id="upper_disp">?</output>
+    <input type="range" id='cutoff-upper' name='cutoff-upper' min="0" max="1" value="0.5" step="0.01" onLoad="$('#upper_disp').val(this.value)" oninput="$('#upper_disp').val(this.value)" style="width:200px;">
+    </div>
+
   </div>
 
+  <p>Currently, there are several live implementations of Spot which either focus on an issues well covered by Spot or supplement Spot with additional context. You can see them here: <a href="https://courtformsonline.org/" target="_blank">Court Forms Online</a> (MA); <a href="https://masslrf.org/en/triage/info" target="_blank">Massachusetts Legal Resource Finder</a> (MA); <a href="https://ptla.org/find-legal-help" target="_blank">Pine Tree Legal Assistance Triage</a> (MN); and <a href="https://www.reddit.com/r/legaladvice/comments/jxbny2/ai_comes_to_la_ama_and_discussion_about_a_new_ai/" target="_blank">Reddit Eviction help bot</a> (national).</p>
+
+  <p>FWIW, the presumed context here is that you are someone looking to solve a potential legal issue in <b>Massachusstes</b>. <a href="javascript:void('');" onClick="$('#text').val(sample[Math.floor(Math.random() * sample.length)]);$('#text').css('background-color', '');Countable.live(area, callback);">Seed reply with sample text</a>.<p>
+
 	<h1 style="text-align:center;margin:25px 0px 0px 0px;text-align:left;">What seems to be the problem?</h1>
-  <div style="margin:3px 0 4px 0;font-weight: normal;"><span class="subtitle"> Reply must be at least 10 words long. 150 to 250 word replies tend to get the best results. </span>
+  <div style="margin:3px 0 4px 0;font-weight: normal;"><span class="subtitle"> Longer replies, a sentence or two, tend to get the best results. </span>
   <span id="word_count" name="word_count" class="subtitle" style="float:right;color:red;font-weight:bold;">&nbsp;&nbsp;<span id="result__words">0</span> words</span>
   </div>
 
-  <textarea name='text' id="text" style="width:100%;height:200px;font-size:15px;padding:5px;box-sizing: border-box;"></textarea>
+  <textarea name='text' id="text" style="width:100%;height:200px;font-size:15px;padding:5px;box-sizing: border-box;" placeholder="Share your story here"></textarea>
 
-<div style="padding:5px 0 8px 0;"><input id="save-id" name="save-id" type="checkbox" CHECKED><span class="subtitle"><label for="save-id"> Use my reply to help people facing similar issues. <a href="https://spot.suffolklitlab.org/#whyshare" target="_blank">Learn more.</a></label></span></div>
+<div style="padding:5px 0 8px 0;"><input id="save-id" name="save-id" type="checkbox"><span class="subtitle"><label for="save-id"> Use my reply to help people facing similar issues. <a href="https://spot.suffolklitlab.org/data/user-driven/" target="_blank">Learn more</a></label></span></div>
 
+<p><input type="hidden" id="man_jur" name="man_jur"  value="MA"></p>
+<!--
 <p id="unknown_jur">Where did this happen/is this taking place?&nbsp;&nbsp;
   <select id="man_jur" onChange="$('#man_jur').css('background-color', '');">
     <option value="0">Choose a Location (US only)</option>
@@ -146,6 +162,7 @@
     <option value="WY">Wyoming </option>
   </select>
 </p>
+-->
 
 <p id="known_jur" style="display:none;">Is this taking place/did this happen in <b id="jurisdiction">Massachusetts</b>?&nbsp;&nbsp;
   <select id="auto_jur">
@@ -237,6 +254,24 @@
 
 <script>
   // http://sacha.me/Countable/docs/
+
+  $('#upper_disp').val($('#cutoff-upper').val())
+  $('#pred_disp').val($('#cutoff-pred').val())
+  $('#lower_disp').val($('#cutoff-lower').val())
+
+  $('#text').keypress(function(e){
+  if(e.keyCode == 13 && !e.shiftKey) {
+    e.preventDefault();
+    make_query();
+   }
+  });
+
+  var sample = [
+                  "My landlord wants to kick me out of my apartment.",
+                  "The heat in my apartment isn't working.",
+                  "I want a divorce.",
+                  "My spouse won't pay child support."
+               ]
 
   var area = document.getElementById('text');
 
