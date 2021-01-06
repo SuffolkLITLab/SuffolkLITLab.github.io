@@ -457,9 +457,13 @@ function make_query() {
 
       var Data = { text: $("#text").val() }
 
-      Object.assign(Data, {'save-text': 1})
+      if ($('#save-id').is(":checked")) {
+        Object.assign(Data, {'save-text': 1})
+      } else {
+        Object.assign(Data, {'save-text': 0})
+      }
 
-      Object.assign(Data, {'test-train': 1})
+      Object.assign(Data, {'test-train': 0})
 
       if ($('#cutoff-lower').val() != "") {
         Object.assign(Data, {'cutoff-lower': $('#cutoff-lower').val()*1})
