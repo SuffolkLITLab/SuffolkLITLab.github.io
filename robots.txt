@@ -1,0 +1,2 @@
+User-agent: *
+Disallow: /doc-assembly-line/slack_archive/
