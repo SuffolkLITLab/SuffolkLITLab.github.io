@@ -411,7 +411,7 @@ function make_query() {
       //console.log(jur_picked)
   } else if (controlling_jur == "auto_jur") {
       if ($('#auto_jur').val()=="yes") {
-        jur_picked = find_abr($('#jurisdiction').html());
+        jur_picked = Object.keys(jurisdictions).find(key => jurisdictions[key] === $('#jurisdiction').html());
       } else {
         jur_picked = $('#auto_jur').val();
       }
