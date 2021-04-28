@@ -101,175 +101,176 @@ function resouces(name,id,text_id){
 
 
   if (id.includes("XX")) {
-    lawyer_str_0 = "https://www.justia.com/lawyers/personal-injury/massachusetts"
+    lawyer_str_0 = "https://www.justia.com/lawyers/personal-injury/"+jurisdictions[jur_picked].toLowerCase();
   } else if (id.includes("XX")) {
-    lawyer_str_0 = "https://www.justia.com/lawyers/medical-malpractice/massachusetts"
+    lawyer_str_0 = "https://www.justia.com/lawyers/medical-malpractice/"+jurisdictions[jur_picked].toLowerCase();
 
   } else if (id.includes("CR")) {
-    lawyer_str_0 = "https://www.justia.com/lawyers/criminal-law/massachusetts"
-    lawyer_str_1 = "https://www.avvo.com/criminal-defense-lawyer/ma.html"
-    lawyer_str_2 = "https://lawyers.findlaw.com/lawyer/practicestate/criminal-law/massachusetts"
+    lawyer_str_0 = "https://www.justia.com/lawyers/criminal-law/"+jurisdictions[jur_picked].toLowerCase();
+    lawyer_str_1 = "https://www.avvo.com/criminal-defense-lawyer/"+jur_picked.toLowerCase()+".html";
+    lawyer_str_2 = "https://lawyers.findlaw.com/lawyer/practicestate/criminal-law/"+jurisdictions[jur_picked].toLowerCase();
   } else if (id.includes("TR-02-05")) {
-    lawyer_str_0 = "https://www.justia.com/lawyers/dui-dwi/massachusetts"
-    lawyer_str_1 = "https://www.avvo.com/dui-dwi/ma.html"
-    lawyer_str_2 = "https://lawyers.findlaw.com/lawyer/practicestate/dui-dwi-lawyer/massachusetts"
+    lawyer_str_0 = "https://www.justia.com/lawyers/dui-dwi/"+jurisdictions[jur_picked].toLowerCase();
+    lawyer_str_1 = "https://www.avvo.com/dui-dwi/"+jur_picked.toLowerCase()+".html";
+    lawyer_str_2 = "https://lawyers.findlaw.com/lawyer/practicestate/dui-dwi-lawyer/"+jurisdictions[jur_picked].toLowerCase();
 
   } else if (id.includes("FA")) {
-    lawyer_str_0 = "https://www.justia.com/lawyers/family-law/massachusetts"
-    lawyer_str_1 = "https://www.avvo.com/family-lawyer/ma.html"
-    lawyer_str_2 = "https://lawyers.findlaw.com/lawyer/practicestate/family-law/massachusetts"
+    lawyer_str_0 = "https://www.justia.com/lawyers/family-law/"+jurisdictions[jur_picked].toLowerCase();
+    lawyer_str_1 = "https://www.avvo.com/family-lawyer/"+jur_picked.toLowerCase()+".html";
+    lawyer_str_2 = "https://lawyers.findlaw.com/lawyer/practicestate/family-law/"+jurisdictions[jur_picked].toLowerCase();
   } else if (id.includes("FA-06")) {
-    lawyer_str_0 = "https://www.justia.com/lawyers/divorce/massachusetts"
-    lawyer_str_1 = "https://www.avvo.com/divorce-separation-lawyer/ma.html"
-    lawyer_str_2 = "https://lawyers.findlaw.com/lawyer/practicestate/divorce/massachusetts"
+    lawyer_str_0 = "https://www.justia.com/lawyers/divorce/"+jurisdictions[jur_picked].toLowerCase();
+    lawyer_str_1 = "https://www.avvo.com/divorce-separation-lawyer/"+jur_picked.toLowerCase()+".html";
+    lawyer_str_2 = "https://lawyers.findlaw.com/lawyer/practicestate/divorce/"+jurisdictions[jur_picked].toLowerCase();
 
   } else if (id.includes("MO-13")) {
-    lawyer_str_0 = "https://www.justia.com/lawyers/bankruptcy/massachusetts"
-    lawyer_str_1 = "https://www.avvo.com/bankruptcy-debt-lawyer/ma.html"
-    lawyer_str_2 = "https://lawyers.findlaw.com/lawyer/practicestate/bankruptcy-law/massachusetts"
+    lawyer_str_0 = "https://www.justia.com/lawyers/bankruptcy/"+jurisdictions[jur_picked].toLowerCase();
+    lawyer_str_1 = "https://www.avvo.com/bankruptcy-debt-lawyer/"+jur_picked.toLowerCase()+".html";
+    lawyer_str_2 = "https://lawyers.findlaw.com/lawyer/practicestate/bankruptcy-law/"+jurisdictions[jur_picked].toLowerCase();
   } else if (id.includes("XX")) {
-    lawyer_str_0 = "https://www.justia.com/lawyers/business-law/massachusetts"
+    lawyer_str_0 = "https://www.justia.com/lawyers/business-law/"+jurisdictions[jur_picked].toLowerCase();
   } else if (id.includes("XX")) {
-    lawyer_str_0 = "https://www.justia.com/lawyers/consumer-law/massachusetts"
+    lawyer_str_0 = "https://www.justia.com/lawyers/consumer-law/"+jurisdictions[jur_picked].toLowerCase();
   } else if (id.includes("XX")) {
-    lawyer_str_0 = "https://www.justia.com/lawyers/employment-law/massachusetts"
+    lawyer_str_0 = "https://www.justia.com/lawyers/employment-law/"+jurisdictions[jur_picked].toLowerCase();
   } else if (id.includes("ES-01")) {
-    lawyer_str_0 = "https://www.justia.com/lawyers/estate-planning/massachusetts"
-    lawyer_str_1 = "https://www.avvo.com/estate-planning-lawyer/ma.html"
-    lawyer_str_2 = "https://lawyers.findlaw.com/lawyer/practicestate/estate-planning/massachusetts"
+    lawyer_str_0 = "https://www.justia.com/lawyers/estate-planning/"+jurisdictions[jur_picked].toLowerCase();
+    lawyer_str_1 = "https://www.avvo.com/estate-planning-lawyer/"+jur_picked.toLowerCase()+".html";
+    lawyer_str_2 = "https://lawyers.findlaw.com/lawyer/practicestate/estate-planning/"+jurisdictions[jur_picked].toLowerCase();
 
   } else if (id.includes("HO-08")) {
-    lawyer_str_0 = "https://www.justia.com/lawyers/foreclosure-defense/massachusetts"
-    lawyer_str_1 = "https://www.avvo.com/foreclosure-lawyer/ma.html"
-    lawyer_str_2 = "https://lawyers.findlaw.com/lawyer/practicestate/foreclosure-alternatives/massachusetts"
+    lawyer_str_0 = "https://www.justia.com/lawyers/foreclosure-defense/"+jurisdictions[jur_picked].toLowerCase();
+    lawyer_str_1 = "https://www.avvo.com/foreclosure-lawyer/"+jur_picked.toLowerCase()+".html";
+    lawyer_str_2 = "https://lawyers.findlaw.com/lawyer/practicestate/foreclosure-alternatives/"+jurisdictions[jur_picked].toLowerCase();
   } else if (id.includes("IM")) {
-    lawyer_str_0 = "https://www.justia.com/lawyers/immigration-law/massachusetts"
-    lawyer_str_1 = "https://www.avvo.com/immigration-lawyer/ma.html"
-    lawyer_str_2 = "https://lawyers.findlaw.com/lawyer/practicestate/immigration-naturalization-law/massachusetts"
+    lawyer_str_0 = "https://www.justia.com/lawyers/immigration-law/"+jurisdictions[jur_picked].toLowerCase();
+    lawyer_str_1 = "https://www.avvo.com/immigration-lawyer/"+jur_picked.toLowerCase()+".html";
+    lawyer_str_2 = "https://lawyers.findlaw.com/lawyer/practicestate/immigration-naturalization-law/"+jurisdictions[jur_picked].toLowerCase();
   } else if (id.includes("BU-04")) {
-    lawyer_str_0 = "https://www.justia.com/lawyers/intellectual-property/massachusetts"
-    lawyer_str_1 = "https://www.avvo.com/intellectual-property-lawyer/ma.html"
-    lawyer_str_2 = "https://lawyers.findlaw.com/lawyer/practicestate/intellectual-property-law/massachusetts"
+    lawyer_str_0 = "https://www.justia.com/lawyers/intellectual-property/"+jurisdictions[jur_picked].toLowerCase();
+    lawyer_str_1 = "https://www.avvo.com/intellectual-property-lawyer/"+jur_picked.toLowerCase()+".html";
+    lawyer_str_2 = "https://lawyers.findlaw.com/lawyer/practicestate/intellectual-property-law/"+jurisdictions[jur_picked].toLowerCase();
   } else if (id.includes("FA-15")) {
-    lawyer_str_0 = "https://www.justia.com/lawyers/nursing-home-abuse/massachusetts"
-    lawyer_str_1 = "https://www.avvo.com/elder-law-lawyer/ma.html"
-    lawyer_str_2 = "https://lawyers.findlaw.com/lawyer/practicestate/nursing-home-abuse/massachusetts"
+    lawyer_str_0 = "https://www.justia.com/lawyers/nursing-home-abuse/"+jurisdictions[jur_picked].toLowerCase();
+    lawyer_str_1 = "https://www.avvo.com/elder-law-lawyer/"+jur_picked.toLowerCase()+".html";
+    lawyer_str_2 = "https://lawyers.findlaw.com/lawyer/practicestate/nursing-home-abuse/"+jurisdictions[jur_picked].toLowerCase();
   } else if (id.includes("ES-02")) {
-    lawyer_str_0 = "https://www.justia.com/lawyers/probate/massachusetts"
-    lawyer_str_1 = "https://www.avvo.com/probate-lawyer/ma.html"
-    lawyer_str_2 = "https://lawyers.findlaw.com/lawyer/practicestate/probate-estate-administration/massachusetts"
+    lawyer_str_0 = "https://www.justia.com/lawyers/probate/"+jurisdictions[jur_picked].toLowerCase();
+    lawyer_str_1 = "https://www.avvo.com/probate-lawyer/"+jur_picked.toLowerCase()+".html";
+    lawyer_str_2 = "https://lawyers.findlaw.com/lawyer/practicestate/probate-estate-administration/"+jurisdictions[jur_picked].toLowerCase();
 
   } else if (id.includes("XX")) {
-    lawyer_str_0 = "https://www.justia.com/lawyers/productsliability/massachusetts"
+    lawyer_str_0 = "https://www.justia.com/lawyers/productsliability/"+jurisdictions[jur_picked].toLowerCase();
   } else if (id.includes("XX")) {
-    lawyer_str_0 = "https://www.justia.com/lawyers/real-estate-law/massachusetts"
+    lawyer_str_0 = "https://www.justia.com/lawyers/real-estate-law/"+jurisdictions[jur_picked].toLowerCase();
   } else if (id.includes("XX")) {
-    lawyer_str_0 = "https://www.justia.com/lawyers/tax-law/massachusetts"
+    lawyer_str_0 = "https://www.justia.com/lawyers/tax-law/"+jurisdictions[jur_picked].toLowerCase();
   } else if (id.includes("TR-02")) {
-    lawyer_str_0 = "https://www.justia.com/lawyers/traffic-tickets/massachusetts"
-    lawyer_str_1 = "https://www.avvo.com/speeding-traffic-ticket-lawyer/ma.html"
-    lawyer_str_2 = "https://lawyers.findlaw.com/lawyer/practicestate/traffic-violations/massachusetts"
+    lawyer_str_0 = "https://www.justia.com/lawyers/traffic-tickets/"+jurisdictions[jur_picked].toLowerCase();
+    lawyer_str_1 = "https://www.avvo.com/speeding-traffic-ticket-lawyer/"+jur_picked.toLowerCase()+".html";
+    lawyer_str_2 = "https://lawyers.findlaw.com/lawyer/practicestate/traffic-violations/"+jurisdictions[jur_picked].toLowerCase();
   } else if (id.includes("WO-07")) {
-    lawyer_str_0 = "https://www.justia.com/lawyers/workers-compensation/massachusetts"
-    lawyer_str_1 = "https://www.avvo.com/workers-compensation-lawyer/ma.html"
-    lawyer_str_2 = "https://lawyers.findlaw.com/lawyer/practicestate/workers-compensation-law/massachusetts"
+    lawyer_str_0 = "https://www.justia.com/lawyers/workers-compensation/"+jurisdictions[jur_picked].toLowerCase();
+    lawyer_str_1 = "https://www.avvo.com/workers-compensation-lawyer/"+jur_picked.toLowerCase()+".html";
+    lawyer_str_2 = "https://lawyers.findlaw.com/lawyer/practicestate/workers-compensation-law/"+jurisdictions[jur_picked].toLowerCase();
 
   } else if (id.includes("XX")) {
-    lawyer_str_0 = "https://www.justia.com/lawyers/agricultural-law/massachusetts"
+    lawyer_str_0 = "https://www.justia.com/lawyers/agricultural-law/"+jurisdictions[jur_picked].toLowerCase();
   } else if (id.includes("XX")) {
-    lawyer_str_0 = "https://www.justia.com/lawyers/animal-dog-law/massachusetts"
+    lawyer_str_0 = "https://www.justia.com/lawyers/animal-dog-law/"+jurisdictions[jur_picked].toLowerCase();
   } else if (id.includes("XX")) {
-    lawyer_str_0 = "https://www.justia.com/lawyers/antitrust-law/massachusetts"
+    lawyer_str_0 = "https://www.justia.com/lawyers/antitrust-law/"+jurisdictions[jur_picked].toLowerCase();
   } else if (id.includes("AA")) {
-    lawyer_str_0 = "https://www.justia.com/lawyers/appeals-appellate/massachusetts"
-    lawyer_str_1 = "https://www.avvo.com/appeals-lawyer/ma.html"
-    lawyer_str_2 = "https://lawyers.findlaw.com/lawyer/practicestate/litigation-appeals/massachusetts"
+    lawyer_str_0 = "https://www.justia.com/lawyers/appeals-appellate/"+jurisdictions[jur_picked].toLowerCase();
+    lawyer_str_1 = "https://www.avvo.com/appeals-lawyer/"+jur_picked.toLowerCase()+".html";
+    lawyer_str_2 = "https://lawyers.findlaw.com/lawyer/practicestate/litigation-appeals/"+jurisdictions[jur_picked].toLowerCase();
   } else if (id.includes("XX")) {
-    lawyer_str_0 = "https://www.justia.com/lawyers/arbitration-mediation/massachusetts"
+    lawyer_str_0 = "https://www.justia.com/lawyers/arbitration-mediation/"+jurisdictions[jur_picked].toLowerCase();
   } else if (id.includes("XX")) {
-    lawyer_str_0 = "https://www.justia.com/lawyers/asbestos-mesothelioma/massachusetts"
+    lawyer_str_0 = "https://www.justia.com/lawyers/asbestos-mesothelioma/"+jurisdictions[jur_picked].toLowerCase();
   } else if (id.includes("XX")) {
-    lawyer_str_0 = "https://www.justia.com/lawyers/cannabis-marijuana-law/massachusetts"
+    lawyer_str_0 = "https://www.justia.com/lawyers/cannabis-marijuana-law/"+jurisdictions[jur_picked].toLowerCase();
   } else if (id.includes("RI")) {
-    lawyer_str_0 = "https://www.justia.com/lawyers/civil-rights/massachusetts"
-    lawyer_str_1 = "https://www.avvo.com/civil-rights-lawyer/ma.html"
-    lawyer_str_2 = "https://lawyers.findlaw.com/lawyer/practicestate/civil-rights/massachusetts"
+    lawyer_str_0 = "https://www.justia.com/lawyers/civil-rights/"+jurisdictions[jur_picked].toLowerCase();
+    lawyer_str_1 = "https://www.avvo.com/civil-rights-lawyer/"+jur_picked.toLowerCase()+".html";
+    lawyer_str_2 = "https://lawyers.findlaw.com/lawyer/practicestate/civil-rights/"+jurisdictions[jur_picked].toLowerCase();
   } else if (id.includes("XX")) {
-    lawyer_str_0 = "https://www.justia.com/lawyers/collections/massachusetts"
+    lawyer_str_0 = "https://www.justia.com/lawyers/collections/"+jurisdictions[jur_picked].toLowerCase();
   } else if (id.includes("XX")) {
-    lawyer_str_0 = "https://www.justia.com/lawyers/communications-internet-law/massachusetts"
+    lawyer_str_0 = "https://www.justia.com/lawyers/communications-internet-law/"+jurisdictions[jur_picked].toLowerCase();
   } else if (id.includes("XX")) {
-    lawyer_str_0 = "https://www.justia.com/lawyers/construction-law/massachusetts"
+    lawyer_str_0 = "https://www.justia.com/lawyers/construction-law/"+jurisdictions[jur_picked].toLowerCase();
   } else if (id.includes("FA-07")) {
-    lawyer_str_0 = "https://www.justia.com/lawyers/domestic-violence/massachusetts"
-    lawyer_str_1 = "https://www.avvo.com/domestic-violence-lawyer/ma.html"
-    lawyer_str_2 = "https://lawyers.findlaw.com/lawyer/practicestate/domestic-violence/massachusetts"
+    lawyer_str_0 = "https://www.justia.com/lawyers/domestic-violence/"+jurisdictions[jur_picked].toLowerCase();
+    lawyer_str_1 = "https://www.avvo.com/domestic-violence-lawyer/"+jur_picked.toLowerCase()+".html";
+    lawyer_str_2 = "https://lawyers.findlaw.com/lawyer/practicestate/domestic-violence/"+jurisdictions[jur_picked].toLowerCase();
 
   } else if (id.includes("ED")) {
-    lawyer_str_0 = "https://www.justia.com/lawyers/education-law/massachusetts"
-    lawyer_str_1 = "https://www.justia.com/lawyers/education-law/massachusetts"
-    lawyer_str_2 = "https://lawyers.findlaw.com/lawyer/practicestate/education-law/massachusetts"
-    //lawyer_str_1 = "https://www.avvo.com//ma.html"
+    lawyer_str_0 = "https://www.justia.com/lawyers/education-law/"+jurisdictions[jur_picked].toLowerCase();
+    lawyer_str_1 = "https://www.justia.com/lawyers/education-law/"+jurisdictions[jur_picked].toLowerCase();
+    lawyer_str_2 = "https://lawyers.findlaw.com/lawyer/practicestate/education-law/"+jurisdictions[jur_picked].toLowerCase();
+    //lawyer_str_1 = "https://www.avvo.com//"+jur_picked.toLowerCase()+".html";
   } else if (id.includes("XX")) {
-    lawyer_str_0 = "https://www.justia.com/lawyers/elder-law/massachusetts"
+    lawyer_str_0 = "https://www.justia.com/lawyers/elder-law/"+jurisdictions[jur_picked].toLowerCase();
   } else if (id.includes("XX")) {
-    lawyer_str_0 = "https://www.justia.com/lawyers/energy-oil-gas-law/massachusetts"
+    lawyer_str_0 = "https://www.justia.com/lawyers/energy-oil-gas-law/"+jurisdictions[jur_picked].toLowerCase();
   } else if (id.includes("XX")) {
-    lawyer_str_0 = "https://www.justia.com/lawyers/entertainment-sports-law/massachusetts"
+    lawyer_str_0 = "https://www.justia.com/lawyers/entertainment-sports-law/"+jurisdictions[jur_picked].toLowerCase();
   } else if (id.includes("XX")) {
-    lawyer_str_0 = "https://www.justia.com/lawyers/environmental-law/massachusetts"
+    lawyer_str_0 = "https://www.justia.com/lawyers/environmental-law/"+jurisdictions[jur_picked].toLowerCase();
   } else if (id.includes("XX")) {
-    lawyer_str_0 = "https://www.justia.com/lawyers/gov-administrative-law/massachusetts"
+    lawyer_str_0 = "https://www.justia.com/lawyers/gov-administrative-law/"+jurisdictions[jur_picked].toLowerCase();
   } else if (id.includes("XX")) {
-    lawyer_str_0 = "https://www.justia.com/lawyers/health-care-law/massachusetts"
+    lawyer_str_0 = "https://www.justia.com/lawyers/health-care-law/"+jurisdictions[jur_picked].toLowerCase();
   } else if (id.includes("MO-07")) {
-    lawyer_str_0 = "https://www.justia.com/lawyers/insurance-claims/massachusetts"
-    lawyer_str_1 = "https://www.avvo.com/insurance-lawyer/ma.html"
-    lawyer_str_2 = "https://lawyers.findlaw.com/lawyer/practicestate/insurance-law/massachusetts"
+    lawyer_str_0 = "https://www.justia.com/lawyers/insurance-claims/"+jurisdictions[jur_picked].toLowerCase();
+    lawyer_str_1 = "https://www.avvo.com/insurance-lawyer/"+jur_picked.toLowerCase()+".html";
+    lawyer_str_2 = "https://lawyers.findlaw.com/lawyer/practicestate/insurance-law/"+jurisdictions[jur_picked].toLowerCase();
   } else if (id.includes("XX")) {
-    lawyer_str_0 = "https://www.justia.com/lawyers/insurance-defense/massachusetts"
+    lawyer_str_0 = "https://www.justia.com/lawyers/insurance-defense/"+jurisdictions[jur_picked].toLowerCase();
   } else if (id.includes("XX")) {
-    lawyer_str_0 = "https://www.justia.com/lawyers/international-law/massachusetts"
+    lawyer_str_0 = "https://www.justia.com/lawyers/international-law/"+jurisdictions[jur_picked].toLowerCase();
   } else if (id.includes("XX")) {
-    lawyer_str_0 = "https://www.justia.com/lawyers/juvenile-law/massachusetts"
+    lawyer_str_0 = "https://www.justia.com/lawyers/juvenile-law/"+jurisdictions[jur_picked].toLowerCase();
   } else if (id.includes("HO-02") | id.includes("HO-06")) {
-    lawyer_str_0 = "https://www.justia.com/lawyers/landlord-tenant/massachusetts"
-    lawyer_str_1 = "https://www.avvo.com/landlord-tenant-lawyer/ma.html"
-    lawyer_str_2 = "https://lawyers.findlaw.com/lawyer/practicestate/landlord-tenant/massachusetts"
+    lawyer_str_0 = "https://www.justia.com/lawyers/landlord-tenant/"+jurisdictions[jur_picked].toLowerCase();
+    lawyer_str_1 = "https://www.avvo.com/landlord-tenant-lawyer/"+jur_picked.toLowerCase()+".html";
+    lawyer_str_2 = "https://lawyers.findlaw.com/lawyer/practicestate/landlord-tenant/"+jurisdictions[jur_picked].toLowerCase();
 
   } else if (id.includes("XX")) {
-    lawyer_str_0 = "https://www.justia.com/lawyers/legal-malpractice/massachusetts"
+    lawyer_str_0 = "https://www.justia.com/lawyers/legal-malpractice/"+jurisdictions[jur_picked].toLowerCase();
   } else if (id.includes("XX")) {
-    lawyer_str_0 = "https://www.justia.com/lawyers/maritime-law/massachusetts"
+    lawyer_str_0 = "https://www.justia.com/lawyers/maritime-law/"+jurisdictions[jur_picked].toLowerCase();
   } else if (id.includes("VE")) {
-    lawyer_str_0 = "https://www.justia.com/lawyers/military-law/massachusetts"
-    lawyer_str_1 = "https://www.avvo.com/military-law-lawyer/ma.html"
-    lawyer_str_2 = "https://lawyers.findlaw.com/lawyer/practicestate/military-law/massachusetts"
+    lawyer_str_0 = "https://www.justia.com/lawyers/military-law/"+jurisdictions[jur_picked].toLowerCase();
+    lawyer_str_1 = "https://www.avvo.com/military-law-lawyer/"+jur_picked.toLowerCase()+".html";
+    lawyer_str_2 = "https://lawyers.findlaw.com/lawyer/practicestate/military-law/"+jurisdictions[jur_picked].toLowerCase();
   } else if (id.includes("XX")) {
-    lawyer_str_0 = "https://www.justia.com/lawyers/municipal-law/massachusetts"
+    lawyer_str_0 = "https://www.justia.com/lawyers/municipal-law/"+jurisdictions[jur_picked].toLowerCase();
   } else if (id.includes("NA")) {
-    lawyer_str_0 = "https://www.justia.com/lawyers/native-american-law/massachusetts"
-    lawyer_str_1 = "https://www.avvo.com/native-peoples-law-lawyer/ma.html"
-    lawyer_str_2 = "https://lawyers.findlaw.com/lawyer/practicestate/native-peoples-law/massachusetts"
+    lawyer_str_0 = "https://www.justia.com/lawyers/native-american-law/"+jurisdictions[jur_picked].toLowerCase();
+    lawyer_str_1 = "https://www.avvo.com/native-peoples-law-lawyer/"+jur_picked.toLowerCase()+".html";
+    lawyer_str_2 = "https://lawyers.findlaw.com/lawyer/practicestate/native-peoples-law/"+jurisdictions[jur_picked].toLowerCase();
   } else if (id.includes("XX")) {
-    lawyer_str_0 = "https://www.justia.com/lawyers/patents/massachusetts"
+    lawyer_str_0 = "https://www.justia.com/lawyers/patents/"+jurisdictions[jur_picked].toLowerCase();
   } else if (id.includes("XX")) {
-    lawyer_str_0 = "https://www.justia.com/lawyers/securities-law/massachusetts"
+    lawyer_str_0 = "https://www.justia.com/lawyers/securities-law/"+jurisdictions[jur_picked].toLowerCase();
   } else if (id.includes("BE-01")) {
-    lawyer_str_0 = "https://www.justia.com/lawyers/social-security-disability/massachusetts"
-    lawyer_str_1 = "https://www.avvo.com/social-security-lawyer/ma.html"
-    lawyer_str_2 = "https://lawyers.findlaw.com/lawyer/practicestate/social-security-disability/massachusetts"
+    lawyer_str_0 = "https://www.justia.com/lawyers/social-security-disability/"+jurisdictions[jur_picked].toLowerCase();
+    lawyer_str_1 = "https://www.avvo.com/social-security-lawyer/"+jur_picked.toLowerCase()+".html";
+    lawyer_str_2 = "https://lawyers.findlaw.com/lawyer/practicestate/social-security-disability/"+jurisdictions[jur_picked].toLowerCase();
   } else if (id.includes("XX")) {
-    lawyer_str_0 = "https://www.justia.com/lawyers/stockbroker-investment-fraud/massachusetts"
+    lawyer_str_0 = "https://www.justia.com/lawyers/stockbroker-investment-fraud/"+jurisdictions[jur_picked].toLowerCase();
   } else if (id.includes("XX")) {
-    lawyer_str_0 = "https://www.justia.com/lawyers/trademarks/massachusetts"
+    lawyer_str_0 = "https://www.justia.com/lawyers/trademarks/"+jurisdictions[jur_picked].toLowerCase();
   } else if (id.includes("XX")) {
-    lawyer_str_0 = "https://www.justia.com/lawyers/white-collar-crime/massachusetts"
+    lawyer_str_0 = "https://www.justia.com/lawyers/white-collar-crime/"+jurisdictions[jur_picked].toLowerCase();
   } else if (id.includes("CO")) {
-   lawyer_str_0 = "https://www.justia.com/lawyers/massachusetts"
-   lawyer_str_1 = "https://www.avvo.com/all-lawyers/ma.html"
-   lawyer_str_2 = "https://lawyers.findlaw.com/lawyer/practicestate/massachusetts"
+    lawyer_str_0 = "https://www.justia.com/lawyers/"+jurisdictions[jur_picked].toLowerCase();
+    lawyer_str_1 = "https://www.avvo.com/all-lawyers/"+jur_picked.toLowerCase()+".html";
+    lawyer_str_2 = "https://lawyers.findlaw.com/lawyer/practicestate/"+jurisdictions[jur_picked].toLowerCase();
  }
+
 
   var referal_choice = Math.floor(Math.random() * Math.floor(3));
   var event_label = ""
@@ -285,25 +286,17 @@ function resouces(name,id,text_id){
     event_label = "findlaw";
   }
 
-  if (courtforms_str != "" && malrf_str != "") {
-    html = "<p>Here is <a href=\"https://courtformsonline.org/"+courtforms_str+"\" target=\"_blank\" onClick=\"label('"+text_id+"',1,['"+id+"']);\">a collection of relevant form(s)</a> from MassAccess/Court Forms Online. Also, you can use the MA Legal Resource Finder to search for additional free or low-cost assistance. Just <a href=\""+malrf_str+"\" target=\"_blank\" onClick=\"label('"+text_id+"',1,['"+id+"']);\">answer a few questions</a>. "
-  } else if (courtforms_str != "") {
-    html = "<p>Here is <a href=\"https://courtformsonline.org/"+courtforms_str+"\" target=\"_blank\" onClick=\"label('"+text_id+"',1,['"+id+"']);\">a collection of relevant form(s)</a> from MassAccess/Court Forms Online. "
-  } else if (malrf_str != "") {
-    html = "<p><i>Our issue spotter didn't find any relevant forms from MassAccess/Court Forms Online.</i> You can use the MA Legal Resource Finder to search for free or low-cost assistance. Just <a href=\""+malrf_str+"\" target=\"_blank\" onClick=\"label('"+text_id+"',1,['"+id+"']);\">answer a few questions</a>. "
-  } else {
-    html = "<p><i>Our issue spotter didn't find any relevant forms on MassAccess/Court Forms Online.</i> Here is a Massachusetts-specific web search for resouces related to: <a href=\"https://www.google.com/search?q=legal+help+with+"+name+"+issues+in+"+find_name(jur_picked)+"+site%3A*.org+OR+site%3A*."+jur_picked+".us+OR+site%3A*.gov\" target=\"_blank\" onClick=\"label('"+text_id+"',1,['"+id+"']);\">"+name+"</a>. ";
-  }
-
   if (lawyer_str!="" && id.includes("CO")) {
-    html = html + "If you are looking to hire a lawyer, here is a <a href=\""+lawyer_str+"\" target=\"_blank\" onClick=\"label('"+text_id+"',1,['"+id+"']);\">directory of MA atttorneys</a>."
+    html = "<li>If you are looking to hire a lawyer, here is a <a href=\""+lawyer_str+"\" target=\"_blank\" onClick=\"label('"+text_id+"',1,['"+id+"']);\">directory of "+jurisdictions[jur_picked]+" atttorneys</a>.</li>"
   } else if (lawyer_str!="") {
-    html = html + "If you are looking to hire a lawyer, here is a <a href=\""+lawyer_str+"\" target=\"_blank\" onClick=\"label('"+text_id+"',1,['"+id+"']);\">directory of MA atttorneys that work on issues related to <i>"+name+"</i></a>."
+    html = "<li>If you are looking to hire a lawyer, here is a <a href=\""+lawyer_str+"\" target=\"_blank\" onClick=\"label('"+text_id+"',1,['"+id+"']);\">directory of "+jurisdictions[jur_picked]+" atttorneys that work on issues related to <i>"+name+"</i></a>.</li>"
   } else {
-    html = html + "</p>"
+    html = "";
   }
 
+  html = html + "<li>Here is a "+jurisdictions[jur_picked]+"-specific web search for resouces related to: <a href=\"https://www.google.com/search?q=legal+help+with+"+name+"+issues+in+"+jurisdictions[jur_picked]+"+site%3A*.org+OR+site%3A*."+jur_picked+".us+OR+site%3A*.gov\" target=\"_blank\" onClick=\"label('"+text_id+"',1,['"+id+"']);\">"+name+"</a>.</li>";
 
+  html = html + "</ul>"
 
   return html
 
@@ -344,27 +337,7 @@ function showPosition(position) {
      }
     });
 }
-//getLocation();
-
-function find_abr(name) {
-  var out;
-  states.forEach(function(element) {
-    if (name == element["name"]) {
-      out = element["abr"]
-    }
-  });
-  return out;
-}
-
-function find_name(abr) {
-  var out;
-  states.forEach(function(element) {
-    if (abr == element["abr"]) {
-      out = element["name"]
-    }
-  });
-  return out;
-}
+getLocation();
 
 function find_img(id) {
   var filename = id.substring(0, 2)+".jpg"
@@ -499,12 +472,12 @@ function make_query() {
             returned_id = []
             $('#response').html("<h2>It looks like you may be looking for help with...</h2>")
             data["labels"].forEach(function(element) {
-              $('#response').html($('#response').html()+"<div style=\"margin:15px 0px; padding:10px 5px 5px 5px; border-top: solid 1px #555;\"><table width=\"100%\"><tr><td width=\"1%\" valign=\"top\"><div style=\"float:left;border-radius: 8px;border: 1px solid #555;margin:0 15px 0px 0px;background-image:url('images/topics/"+find_img(element["id"])+"');background-position: center;    background-size: 60px 60px;\"><img src=\"images/space.gif\" width=\"60px\" height=\"60px\"></div></td><td><span class=\"subtitle\" style=\"float:right;margin:0px 0 4px 0;font-weight: normal;display:show;\"><a href=\"#uncertainty\">How sure?</a>&nbsp;&nbsp;"+Math.round(element["pred"]*100)+"% ("+Math.round(element["lower"]*100)/100+"-"+Math.round(element["upper"]*100)/100+")</span><span style=\"font-weight: bold; font-size:18px;\">"+element["name"]+"</span><p>"+find_des(element["id"])+"</p>"+resouces(element["name"],element["id"],data["query-id"])+"</td></tr></table></div>")
+              $('#response').html($('#response').html()+"<div style=\"margin:15px 0px; padding:10px 5px 5px 5px; border-top: solid 1px #555;\"><table width=\"100%\"><tr><td width=\"1%\" valign=\"top\"><div style=\"float:left;border-radius: 8px;border: 1px solid #555;margin:0 15px 0px 0px;background-image:url('images/topics/"+find_img(element["id"])+"');background-position: center;    background-size: 60px 60px;\"><img src=\"images/space.gif\" width=\"60px\" height=\"60px\"></div></td><td><span class=\"subtitle\" style=\"float:right;margin:0px 0 4px 0;font-weight: normal;display:show;\"><a href=\"#uncertainty\">How sure?</a>&nbsp;&nbsp;"+Math.round(element["pred"]*100)+"% ("+Math.round(element["lower"]*100)/100+"-"+Math.round(element["upper"]*100)/100+")</span><span style=\"font-weight: bold; font-size:18px;\">"+element["name"]+"</span><p>"+find_des(element["id"])+"</p><ul>"+resouces(element["name"],element["id"],data["query-id"])+"</td></tr></table></div>")
               returned_id.push(element["id"]);
               console.log(element);
               if (element["children"]) {
                 element["children"].forEach(function(child) {
-                  $('#response').html($('#response').html()+"<div style=\"margin:15px 0px; padding:10px 5px 5px 5px; border-top: solid 1px #555;\"><table width=\"100%\"><tr><td width=\"1%\" valign=\"top\"><div style=\"float:left;border-radius: 8px;border: 1px solid #555;margin:0 15px 0px 0px;background-image:url('images/topics/"+find_img(child["id"])+"');background-position: center;    background-size: 60px 60px;\"><img src=\"images/space.gif\" width=\"60px\" height=\"60px\"></div></td><td><span class=\"subtitle\" style=\"float:right;margin:0px 0 4px 0;font-weight: normal;display:show;\"><a href=\"#uncertainty\">How sure?</a>&nbsp;&nbsp;"+Math.round(child["pred"]*100)+"% ("+Math.round(child["lower"]*100)/100+"-"+Math.round(child["upper"]*100)/100+")</span><span style=\"font-weight: bold; font-size:18px;\">"+element["name"]+" &raquo; "+child["name"]+"</span><p>"+find_des(child["id"])+"</p>"+resouces(child["name"],child["id"],data["query-id"])+"</td></tr></table></div>")
+                  $('#response').html($('#response').html()+"<div style=\"margin:15px 0px; padding:10px 5px 5px 5px; border-top: solid 1px #555;\"><table width=\"100%\"><tr><td width=\"1%\" valign=\"top\"><div style=\"float:left;border-radius: 8px;border: 1px solid #555;margin:0 15px 0px 0px;background-image:url('images/topics/"+find_img(child["id"])+"');background-position: center;    background-size: 60px 60px;\"><img src=\"images/space.gif\" width=\"60px\" height=\"60px\"></div></td><td><span class=\"subtitle\" style=\"float:right;margin:0px 0 4px 0;font-weight: normal;display:show;\"><a href=\"#uncertainty\">How sure?</a>&nbsp;&nbsp;"+Math.round(child["pred"]*100)+"% ("+Math.round(child["lower"]*100)/100+"-"+Math.round(child["upper"]*100)/100+")</span><span style=\"font-weight: bold; font-size:18px;\">"+element["name"]+" &raquo; "+child["name"]+"</span><p>"+find_des(child["id"])+"</p><ul>"+resouces(child["name"],child["id"],data["query-id"])+"</td></tr></table></div>")
                   returned_id.push(child["id"]);
                   console.log(child);
                 });
@@ -543,7 +516,7 @@ function make_query() {
      $('#text').css('background-color', '#ffe787');
      alert("Your reply should be at least five words long and must be at least one word long.");
      document.getElementById('text').focus();
-   }
+  }
 
    return true
 
@@ -640,64 +613,64 @@ function scroll2Q(id,speed) {
 }
 
 
-var states = [
-  	{ abr: "AL", name: "Alabama"},
-  	{ abr: "AK", name: "Alaska"},
-  	{ abr: "AS", name: "American Samoa"},
-  	{ abr: "AZ", name: "Arizona"},
-  	{ abr: "AR", name: "Arkansas"},
-  	{ abr: "CA", name: "California"},
-  	{ abr: "CO", name: "Colorado"},
-  	{ abr: "CT", name: "Connecticut"},
-  	{ abr: "DE", name: "Delaware"},
-  	{ abr: "DC", name: "District of Columbia"},
-  	{ abr: "FL", name: "Florida"},
-  	{ abr: "GA", name: "Georgia"},
-  	{ abr: "GU", name: "Guam"},
-  	{ abr: "HI", name: "Hawaii"},
-  	{ abr: "ID", name: "Idaho"},
-  	{ abr: "IL", name: "Illinois"},
-  	{ abr: "IN", name: "Indiana"},
-  	{ abr: "IA", name: "Iowa"},
-  	{ abr: "KS", name: "Kansas"},
-  	{ abr: "KY", name: "Kentucky"},
-  	{ abr: "LA", name: "Louisiana"},
-  	{ abr: "ME", name: "Maine"},
-  	{ abr: "MD", name: "Maryland"},
-  	{ abr: "MA", name: "Massachusetts"},
-  	{ abr: "MI", name: "Michigan"},
-  	{ abr: "MN", name: "Minnesota"},
-  	{ abr: "MS", name: "Mississippi"},
-  	{ abr: "MO", name: "Missouri"},
-  	{ abr: "MT", name: "Montana"},
-  	{ abr: "NE", name: "Nebraska"},
-  	{ abr: "NV", name: "Nevada"},
-  	{ abr: "NH", name: "New Hampshire"},
-  	{ abr: "NJ", name: "New Jersey"},
-  	{ abr: "NM", name: "New Mexico"},
-  	{ abr: "NY", name: "New York"},
-  	{ abr: "NC", name: "North Carolina"},
-  	{ abr: "ND", name: "North Dakota"},
-  	{ abr: "MP", name: "Northern Mariana Islands"},
-  	{ abr: "OH", name: "Ohio"},
-  	{ abr: "OK", name: "Oklahoma"},
-  	{ abr: "OR", name: "Oregon"},
-  	{ abr: "PA", name: "Pennsylvania"},
-  	{ abr: "PR", name: "Puerto Rico"},
-  	{ abr: "RI", name: "Rhode Island"},
-  	{ abr: "SC", name: "South Carolina"},
-  	{ abr: "SD", name: "South Dakota"},
-  	{ abr: "TN", name: "Tennessee"},
-  	{ abr: "TX", name: "Texas"},
-  	{ abr: "UT", name: "Utah"},
-  	{ abr: "VT", name: "Vermont"},
-  	{ abr: "VA", name: "Virginia"},
-  	{ abr: "VI", name: "Virgin Islands"},
-  	{ abr: "WA", name: "Washington"},
-  	{ abr: "WV", name: "West Virginia"},
-  	{ abr: "WI", name: "Wisconsin"},
-  	{ abr: "WY", name: "Wyoming"}
-  ]
+var jurisdictions = {
+  	"AL":"Alabama",
+  	"AK":"Alaska",
+  	"AS":"American Samoa",
+  	"AZ":"Arizona",
+  	"AR":"Arkansas",
+  	"CA":"California",
+  	"CO":"Colorado",
+  	"CT":"Connecticut",
+  	"DE":"Delaware",
+  	"DC":"District of Columbia",
+  	"FL":"Florida",
+  	"GA":"Georgia",
+  	"GU":"Guam",
+  	"HI":"Hawaii",
+  	"ID":"Idaho",
+  	"IL":"Illinois",
+  	"IN":"Indiana",
+  	"IA":"Iowa",
+  	"KS":"Kansas",
+  	"KY":"Kentucky",
+  	"LA":"Louisiana",
+  	"ME":"Maine",
+  	"MD":"Maryland",
+  	"MA":"Massachusetts",
+  	"MI":"Michigan",
+  	"MN":"Minnesota",
+  	"MS":"Mississippi",
+  	"MO":"Missouri",
+  	"MT":"Montana",
+  	"NE":"Nebraska",
+  	"NV":"Nevada",
+  	"NH":"New Hampshire",
+  	"NJ":"New Jersey",
+  	"NM":"New Mexico",
+  	"NY":"New York",
+  	"NC":"North Carolina",
+  	"ND":"North Dakota",
+  	"MP":"Northern Mariana Islands",
+  	"OH":"Ohio",
+  	"OK":"Oklahoma",
+  	"OR":"Oregon",
+  	"PA":"Pennsylvania",
+  	"PR":"Puerto Rico",
+  	"RI":"Rhode Island",
+  	"SC":"South Carolina",
+  	"SD":"South Dakota",
+  	"TN":"Tennessee",
+  	"TX":"Texas",
+  	"UT":"Utah",
+  	"VT":"Vermont",
+  	"VA":"Virginia",
+  	"VI":"Virgin Islands",
+  	"WA":"Washington",
+  	"WV":"West Virginia",
+  	"WI":"Wisconsin",
+  	"WY":"Wyoming"
+  }
 
 // descriptions: https://docs.google.com/spreadsheets/d/1lsugsln0VGenzkLZux5utSbFGjyjmVrboWt48l-EZeo/edit#gid=0
 

@@ -89,19 +89,18 @@
 
   <p>Currently, there are several live implementations of Spot which either focus on issues well covered by Spot or supplement Spot with additional context. You can see them here: <a href="https://courtformsonline.org/" target="_blank">Court Forms Online</a> (MA); <a href="https://masslrf.org/en/triage/info" target="_blank">Massachusetts Legal Resource Finder</a> (MA); <a href="https://ptla.org/find-legal-help" target="_blank">Pine Tree Legal Assistance Triage</a> (ME); and <a href="https://www.reddit.com/r/legaladvice/comments/jxbny2/ai_comes_to_la_ama_and_discussion_about_a_new_ai/" target="_blank">Reddit Eviction help bot</a> (national).</p>
 
-  <p>FWIW, the presumed context below is that you are someone looking to solve a potential legal issue in <b>Massachusetts</b>. <i>Remember, live integrations are, and should, supplement Spot's results with additional information, like traditional content search, or focus only on areas of high performance</i>. <a href="javascript:void('');" onClick="$('#text').val(sample[Math.floor(Math.random() * sample.length)]);$('#text').css('background-color', '');Countable.live(area, callback);">Seed reply below with sample text</a>.<p>
+  <p><i>Remember, live integrations are, and should, supplement Spot's results with additional information, like traditional content search, or focus only on areas of high performance</i>. <a href="javascript:void('');" onClick="$('#text').val(sample[Math.floor(Math.random() * sample.length)]);$('#text').css('background-color', '');Countable.live(area, callback);">Seed reply below with sample text</a>.<p>
 
 	<h1 style="text-align:center;margin:25px 0px 0px 0px;text-align:left;">What seems to be the problem?</h1>
   <div style="margin:3px 0 4px 0;font-weight: normal;"><span class="subtitle"> Longer replies, a sentence or two, tend to get the best results. </span>
   <span id="word_count" name="word_count" class="subtitle" style="float:right;color:red;font-weight:bold;">&nbsp;&nbsp;<span id="result__words">0</span> words</span>
   </div>
 
-  <textarea name='text' id="text" style="width:100%;height:200px;font-size:15px;padding:5px;box-sizing: border-box;" placeholder="Share your story here"></textarea>
+  <textarea name='text' id="text" style="width:100%;height:200px;font-size:15px;padding:5px;box-sizing: border-box;border-radius: 5px;
+	border: solid 1px #5e5e5e;resize:none;" placeholder="Share your story here"></textarea>
 
 <div style="padding:5px 0 8px 0;"><input id="save-id" name="save-id" type="checkbox"><span class="subtitle"><label for="save-id"> Use my reply to help people facing similar issues. <a href="https://spot.suffolklitlab.org/data/user-driven/" target="_blank">Learn more</a></label></span></div>
 
-<p><input type="hidden" id="man_jur" name="man_jur"  value="MA"></p>
-<!--
 <p id="unknown_jur">Where did this happen/is this taking place?&nbsp;&nbsp;
   <select id="man_jur" onChange="$('#man_jur').css('background-color', '');">
     <option value="0">Choose a Location (US only)</option>
@@ -163,7 +162,6 @@
     <option value="WY">Wyoming </option>
   </select>
 </p>
--->
 
 <p id="known_jur" style="display:none;">Is this taking place/did this happen in <b id="jurisdiction">Massachusetts</b>?&nbsp;&nbsp;
   <select id="auto_jur">
@@ -270,9 +268,9 @@
   var sample = [
                   "My landlord wants to kick me out of my apartment.",
                   "The heat and water in my apartment aren't working.",
-                  "I want a divorce.",
+                  "I want to divorce my spouse.",
                   "My spouse won't pay child support.",
-                  "My brother was arrested.",
+                  "My brother was arrested last week.",
                   "I bought a widget at the store and now it doesn't work. How do I get my money back?",
                   "My father died and we're not sure what to do with the house."
                ]
@@ -282,10 +280,10 @@
   function callback (counter) {
     //console.log(counter);
     $('#result__words').html(counter.words);
-    if ($('#result__words').html()<10) {
+    if ($('#result__words').html()<5) {
       $('#word_count').css('color', 'red');
       $('#word_count').css('font-weight', 'bold');
-    } else if (($('#result__words').html()>=10) && ($('#result__words').html()<150)) {
+    } else if (($('#result__words').html()>=5) && ($('#result__words').html()<150)) {
       $('#text').css('background-color', '');
       $('#word_count').css('color', 'black');
       $('#word_count').css('font-weight', 'normal');
