@@ -1,0 +1,1575 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<HTML xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:og="http://ogp.me/ns#"
+      xmlns:fb="http://www.facebook.com/2008/fbml">
+<HEAD>
+	<title>LITCon2020's Not-A-Bot</title>
+
+	<meta http-equiv="Content-type" content="text/html;charset=UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<meta name="apple-mobile-web-app-capable" content="no" />
+	<link rel="apple-touch-icon" href="https://suffolklitlab.org/LITCon/2019/images/icon_300.png"/>
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-108858221-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-108858221-1');
+	</script>
+	<!-- Google Analytics -->
+	<script>
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+	ga('create', 'UA-108858221-1', 'auto');
+	ga('send', 'pageview');
+	</script>
+	<!-- End Google Analytics -->
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css">
+  	<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  	<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+
+	<script>
+		if (!(/iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream)) {
+	  		window.location.replace(".");
+		}
+	</script>
+
+	<meta property="og:type" content="website"/>
+	<meta property="og:title" content="LITCon2020's Not-A-Bot"/>
+	<meta property="og:description" content="An interactive flowchart to help you decide if you should attend LITCon2019."/>
+	<meta property="og:image" content="https://suffolklitlab.org/LITCon/2020/images/socmedia_header_bot.png"/>
+
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:site" content="@SuffolkLITLab">
+	<meta name="twitter:creator" content="@SuffolkLITLab">
+	<meta name="twitter:title" content="LITCon2020's Not-A-Bot">
+	<meta name="twitter:description" content="An interactive flowchart to help you decide if you should attend LITCon2019.">
+	<meta name="twitter:image" content="http://www.davidcolarusso.com/images/litcon2020/socmedia_header_bot.png"/>
+
+</HEAD>
+<BODY BGCOLOR="#ffffff" BACKGROUND="" MARGINWIDTH="0" MARGINHEIGHT="0" onLoad="startAT('1');">
+<div style="position:relative;
+		box-sizing: border-box;
+		border-left: solid 1px #000;
+		z-index:2;
+		right:0;
+		width:100%;
+		top:0;
+		height:40px;
+		background:#002e5d;
+		text-align:center;
+		color:white;
+		font-size:12px;
+		font-family:arial;
+		line-height:40px;">
+	&nbsp;&nbsp;&nbsp;<a href="about.html" style="color:#eee">STANDARD SITE ONLY (CLOSE NOT-A-BOT)</a>
+	<span style="float:right;font-size:12px;line-height:40px;"><a href="https://suffolklitlab.org/LITCon/2019/about/bot.html" target="_blank"><img src="images/Icon_External_Link.png"/></a>&nbsp;&nbsp;&nbsp;</span>
+</div>
+<!---
+###########################################################################
+###########################################################################
+                      Place QnA Snippet below
+###########################################################################
+###########################################################################
+--->
+
+<style>
+
+	body {
+
+		font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+
+	}
+
+
+
+	#rawmarkup{
+
+		display:none;
+
+	}
+
+
+
+	#QandA img{
+
+		width:100%;
+
+	}
+
+
+
+	div.main{
+
+		min-width:300px;
+
+		max-width:650px;
+
+		margin: 0 auto;
+
+	padding:0 5px 0 5px;
+
+		}
+
+	div.frame{
+
+		float:left;
+
+		width:100%;
+
+		margin:5px 0 5px 0;
+
+	}
+
+	div.full{
+
+		float:left;
+
+		width:100%;
+
+	}
+
+	.button{
+
+		padding:8px;
+
+		margin:8px 0 0px 0;
+
+		width:100%;
+
+	}
+
+	div.question_text{
+
+		float:left;
+
+		font-family: Verdana, Geneva, sans-serif;
+
+		font-size: 14px;
+
+		line-height: 20px;
+
+		color:#ffffff;
+
+		min-width:30px;
+
+		background:#5489eb;
+
+		border-radius: 15px;
+
+		padding:10px 15px 14px 15px;
+
+		margin-right:45px;
+
+	}
+
+
+
+	div.question_text a:link, div.question_text a:hover, div.question_text a:active, div.question_text a:visited{ color:#e3fbfc; }
+
+
+
+	div.question_arrow{
+
+		float:left;
+
+		width: 0;
+
+		height: 0;
+
+		border-left: 5px solid transparent;
+
+		border-right: 10px solid transparent;
+
+		border-top: 15px solid #5489eb;
+
+		margin:0 20px;
+
+	}
+
+	div.ans_text{
+
+		float:right;
+
+		font-family: Verdana, Geneva, sans-serif;
+
+		font-size: 14px;
+
+		line-height: 20px;
+
+		color:#000000;
+
+		min-width:30px;
+
+		background:#eeeeee;
+
+		border-radius: 15px;
+
+		padding:10px 15px 14px 15px;
+
+		margin-left:45px;
+
+	}
+
+	div.ans_arrow{
+
+		float:right;
+
+		width: 0;
+
+		height: 0;
+
+		border-left: 10px solid transparent;
+
+		border-right: 5px solid transparent;
+
+		border-top: 15px solid #eeeeee;
+
+		margin:0 20px;
+
+	}
+
+	div.choices{
+
+		float:left;
+
+		width:100%;
+
+		margin:15px 0 0 0;
+
+	}
+
+	div.standard_buttons{
+
+		float:left;
+
+		width:100%;
+
+		margin-top:5px;
+
+		border-top: 1px solid #ddd;
+
+		padding-top:12px;
+
+	}
+
+	div.credits{
+
+		float:left;
+
+		dispaly:none;
+
+		width:100%;
+
+		background:#eee;
+
+		margin:0px 0 15px 0;
+
+	}
+
+	div.credit_text{
+
+		font-family: Verdana, Geneva, sans-serif;
+
+		font-size: 14px;
+
+		line-height: 20px;
+
+		padding:4px 15px 10px 15px;
+
+	}
+
+	li.error{
+
+		list-style-type: none;
+
+		background:#ffdddd;
+
+		margin: 10px 0 0 0;
+
+		padding: 5px;
+
+	}
+
+
+
+	.qpad {
+
+		float:left;
+
+		padding:0 15px;
+
+	}
+
+
+
+	a.sbutton {
+
+		float:left;
+
+		font-family: Verdana, Geneva, sans-serif;
+
+		font-size: 14px;
+
+		line-height: 20px;
+
+		width:48%;
+
+		background: #eee;
+
+		border-radius: 8px;
+
+		padding:10px 0px 12px 0;
+
+		margin: 0 0 3px 0;
+
+		border: solid 1px #888;
+
+		text-align:center;
+
+		color: #000000;
+
+		text-decoration: none;
+
+	}
+
+
+
+	a.sbutton:hover, a.sbutton:active {
+
+		float:left;
+
+		font-family: Verdana, Geneva, sans-serif;
+
+		font-size: 14px;
+
+		line-height: 20px;
+
+		width:48%;
+
+		background: #ddd;
+
+		border-radius: 8px;
+
+		padding:10px 0px 12px 0;
+
+		margin: 0 0 3px 0;
+
+		border: solid 1px #888;
+
+		text-align:center;
+
+		color: #000000;
+
+		text-decoration: none;
+
+	}
+
+
+
+	a.qabutton {
+
+		float:left;
+
+		font-family: Verdana, Geneva, sans-serif;
+
+		font-size: 14px;
+
+		line-height: 20px;
+
+		width:100%;
+
+		background: #eee;
+
+		border-radius: 8px;
+
+		padding:10px 0px 12px 0;
+
+		margin: 0 0 8px 0;
+
+		border: solid 1px #888;
+
+		text-align:left;
+
+		color: #000000;
+
+		text-decoration: none;
+
+	}
+
+
+
+	a.qabutton:hover, a.qabutton:active {
+
+		float:left;
+
+		font-family: Verdana, Geneva, sans-serif;
+
+		font-size: 14px;
+
+		line-height: 20px;
+
+		width:100%;
+
+		background: #ddd;
+
+		border-radius: 8px;
+
+		padding:10px 0px 12px 0;
+
+		margin: 0 0 8px 0;
+
+		border: solid 1px #888;
+
+		text-align:left;
+
+		color: #000000;
+
+		text-decoration: none;
+
+	}
+
+
+
+
+
+	div.xdiv {
+
+		float:left;
+
+		width:100%;
+
+		margin: 0 0 8px 0;
+
+		background: #eee;
+
+		border: solid 1px #888;
+
+		border-radius: 8px;
+
+	}
+
+
+
+	input.xinput {
+
+		-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+
+		-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+
+		box-sizing: border-box;         /* Opera/IE 8+ */
+
+		float:left;
+
+		width:100%;
+
+		font-family: Verdana, Geneva, sans-serif;
+
+		font-size: 14px;
+
+		line-height: 20px;
+
+		background: #fff;
+
+		border-top-left-radius: 8px;
+
+		border-top-right-radius: 8px;
+
+		padding:10px 10px 12px 10px;
+
+		border: solid 0px #888;
+
+		border-bottom: solid 1px #888;
+
+		text-align:left;
+
+		color: #000000;
+
+		text-decoration: none;
+
+	}
+
+
+
+	a.xbutton {
+
+		float:left;
+
+		width:100%;
+
+		text-align:left;
+
+		font-family: Verdana, Geneva, sans-serif;
+
+		font-size: 14px;
+
+		line-height: 20px;
+
+		background: #eee;
+
+		border-radius: 8px;
+
+		padding:10px 0px 12px 0px;
+
+		color: #000000;
+
+		text-decoration: none;
+
+	}
+
+
+
+	a.xbutton:hover, a.xbutton:active {
+
+		border-top-left-radius: 0px;
+
+		border-top-right-radius: 0px;
+
+		background: #ddd;
+
+	}
+
+</style>
+<FORM name="FORM" id="FORM"><div id="conversation" style="margin:15px auto 0 auto;padding:0 15px;max-width:500px">
+<style>
+body{
+	background:white;
+	background-image: url("https://suffolklitlab.github.io/images/babbage.jpg");
+	background-color: #fff;
+	background-repeat: repeat-x;
+	background-position: center -120px ;
+}
+#conversation {
+	max-width:900px;
+}
+#icon {
+	z-index:2;
+	margin: 20px auto 0px auto;
+	border-radius: 50%;
+	width:100px;
+	height:100px;
+	border: 4px solid #fff;
+	background-color: #fff;
+	background-size: 100px;
+	background-position: center;
+ 	background-repeat: no-repeat;
+	background-image: url('https://suffolklitlab.org/images/seal.jpg');
+}
+.title {
+	text-align:center;
+	border-bottom: solid 1px #888;
+	margin-top:10px;
+	padding-bottom:15px;
+}
+.profile_vid {
+	float:none;
+	position:relative;
+	margin: auto;
+}
+.embed_vid {
+	float:none;
+	width:100%;
+}
+</style>
+<div id="icon"></div>
+<h2 align=center>This Is Not A Chatbot</h2>
+<p>It's an interactive flowchart to help you decide if you should <a href="https://web.cvent.com/event/cf22c986-4b48-454f-9dfb-3545fe93f86d/register" target="_blank"> register</a> for <a href="https://twitter.com/SuffolkLITLab" target="_blank">@SuffolkLITLab</a>'s 3<sup>rd</sup> annual legal innovation and technology (LIT) conference—<a href="https://suffolklitlab.org/LITCon/2020/about/about.html" target="_blank">LITCon2020</a>. ProTip: We used a free tool to make this "bot," and it only takes about 20 minutes to learn. Isn't technology grand? Also, there are Easter eggs. ;)</p>
+
+<div id='QandA' class='QandA'><div style='padding:15px;background:#ddffdd;text-align:center;'>Loading QnA...</div></div><div id='Choices' class='choices'></div><div id="rawmarkup" style="display:none;">Title%3A+LITCon2020%27s+Not-A-Bot%0D%0AAuthor%3A+%3Ca+href%3D%22https%3A%2F%2Ftwitter.com%2FSuffolkLITLab%22+target%3D%22_blank%22%3ESuffolk+Legal+Innovation+%26+Technology+Lab%3C%2Fa%3E%0D%0ADescription%3A+An+interactive+flowchart+to+help+you+decide+if+you+should+attend+LITCon2020.%0D%0ABefore%3A%0D%0A%3Cstyle%3E%0D%0Abody%7B%0D%0A%09background%3Awhite%3B%0D%0A%09background-image%3A+url%28%22https%3A%2F%2Fsuffolklitlab.github.io%2Fimages%2Fbabbage.jpg%22%29%3B%0D%0A%09background-color%3A+%23fff%3B%0D%0A%09background-repeat%3A+repeat-x%3B%0D%0A%09background-position%3A+center+-120px+%3B%0D%0A%7D%0D%0A%23conversation+%7B%0D%0A%09max-width%3A900px%3B%0D%0A%7D%0D%0A%23icon+%7B%0D%0A%09z-index%3A2%3B%0D%0A%09margin%3A+20px+auto+0px+auto%3B%0D%0A%09border-radius%3A+50%25%3B%0D%0A%09width%3A100px%3B%0D%0A%09height%3A100px%3B%0D%0A%09border%3A+4px+solid+%23fff%3B%0D%0A%09background-color%3A+%23fff%3B%0D%0A%09background-size%3A+100px%3B%0D%0A%09background-position%3A+center%3B%0D%0A+%09background-repeat%3A+no-repeat%3B%0D%0A%09background-image%3A+url%28%27https%3A%2F%2Fsuffolklitlab.org%2Fimages%2Fseal.jpg%27%29%3B%0D%0A%7D%0D%0A.title+%7B%0D%0A%09text-align%3Acenter%3B%0D%0A%09border-bottom%3A+solid+1px+%23888%3B%0D%0A%09margin-top%3A10px%3B%0D%0A%09padding-bottom%3A15px%3B%0D%0A%7D%0D%0A.profile_vid+%7B%0D%0A%09float%3Anone%3B%0D%0A%09position%3Arelative%3B%0D%0A%09margin%3A+auto%3B%0D%0A%7D%0D%0A.embed_vid+%7B%0D%0A%09float%3Anone%3B%0D%0A%09width%3A100%25%3B%0D%0A%7D%0D%0A%3C%2Fstyle%3E%0D%0A%3Cdiv+id%3D%22icon%22%3E%3C%2Fdiv%3E%0D%0A%3Ch2+align%3Dcenter%3EThis+Is+Not+A+Chatbot%3C%2Fh2%3E%0D%0A%3Cp%3EIt%27s+an+interactive+flowchart+to+help+you+decide+if+you+should+%3Ca+href%3D%22https%3A%2F%2Fweb.cvent.com%2Fevent%2Fcf22c986-4b48-454f-9dfb-3545fe93f86d%2Fregister%22+target%3D%22_blank%22%3E+register%3C%2Fa%3E+for+%3Ca+href%3D%22https%3A%2F%2Ftwitter.com%2FSuffolkLITLab%22+target%3D%22_blank%22%3E%40SuffolkLITLab%3C%2Fa%3E%27s+3%3Csup%3Erd%3C%2Fsup%3E+annual+legal+innovation+and+technology+%28LIT%29+conference%E2%80%94%3Ca+href%3D%22https%3A%2F%2Fsuffolklitlab.org%2FLITCon%2F2020%2Fabout%2Fabout.html%22+target%3D%22_blank%22%3ELITCon2020%3C%2Fa%3E.+ProTip%3A+We+used+a+free+tool+to+make+this+%22bot%2C%22+and+it+only+takes+about+20+minutes+to+learn.+Isn%27t+technology+grand%3F+Also%2C+there+are+Easter+eggs.+%3B%29%3C%2Fp%3E%0D%0A%0D%0AQ%281%29%3A+Can+you+make+it+to+Boston+on+March+30th%2C+2020%3F%0D%0AA%3A+Yes.%0D%0A%09Q%281.1%29%3AGOTO%3Aavailable%0D%0AA%3A+No.%0D%0A%09Q%281.2%29%3AGOTO%3Anotavailable%0D%0AA%3A+Did+you+say+free+tool%3F%0D%0A%09Q%281.3%29%3AGOTO%3Afree%0D%0A%0D%0AQ%28available%29%3A+Great.+GOTO%3Aconvince%0D%0A%0D%0AQ%28convince%29%3A+Do+you+work+in+the+legal+sector%3F%0D%0AA%3A+Yes.%0D%0A%09Q%283.1%29%3AGOTO%3Aproblems%0D%0AA%3A+No.%0D%0A%09Q%283.2%29%3A+Do+you+care+about+the+justice+system%3F%0D%0A%09A%3A+Yes.%0D%0A%09%09Q%283.2.1%29%3AGOTO%3Aproblems%0D%0A%09A%3A+No.%0D%0A%09%09Q%28notforyou%29%3A%3Cimg+src%3D%22https%3A%2F%2Fmedia.giphy.com%2Fmedia%2Fo6KYXl09rnmOQ%2Fgiphy.gif%22+style%3D%22width%3A232px%3Bheight%3A131px%3B%22%2F%3E%3Cbr%3E%3Cbr%3E+Okay...+LITCon+might+not+be+for+you.%0D%0A%09%09A%3A+Can+I+have+cat+pictures+now%3F%0D%0A%09%09%09Q%283.2.2.1%29%3AGOTO%3Acats1%0D%0A%09%09A%3A+Bye.%0D%0A%09%09%09Q%283.2.2.2%29%3AGOTO%3Abye%0D%0A%0D%0AQ%28problems%29%3A+Are+there+things+about+the+way+you+%28or+the+justice+system%29+work%28s%29+that+you+think+could+use+improvement%3F%0D%0AA%3A+Yes.%0D%0A%09Q%28goodnews%29%3A+That%27s+our+jam%21+We%27re+all+about+identifying+and+solving+problems%2C+not+tech+for+tech%27s+sake.+After+all%2C+we%27re+a+%3Ci%3Elegal+%3Cb%3Einnovation%3C%2Fb%3E+and+technology+%28LIT%29+conference%3C%2Fi%3E%2C+not+some+standard+legal+tech+conference.+%3Cbr%3E%3Cbr%3EThat+being+said%2C+what%27s+your+comfort+level+with+tech%3F%0D%0A%09A%3A+I+can+use+Word%2FWordperfect.%0D%0A%09%09Q%284.1.1%29%3A+%3Cimg+src%3D%22https%3A%2F%2Fmedia.giphy.com%2Fmedia%2F1S3vm6ISM2gDu%2Fgiphy.gif%22+style%3D%22width%3A132px%3Bheight%3A116px%3B%22%2F%3E+GOTO%3Aeveryone%0D%0A%09A%3A+Give+me+a+command+line.%0D%0A%09%09Q%284.1.2%29%3A+%3Cimg+src%3D%22https%3A%2F%2Fmedia.giphy.com%2Fmedia%2FgPkWsM6X5xLVe%2Fgiphy.gif%22+style%3D%22width%3A232px%3Bheight%3A174px%3B%22%2F%3E%0D%0A%09%09A%3A+I%27d+love+to+play+a+game.%0D%0A%09%09%09Q%284.1.2.1%29%3A%3Cimg+src%3D%22https%3A%2F%2Fjasoneppink.com%2Fwp-content%2Fgallery%2Fthe-reaction-gif-moving-image-as-gesture%2Fkermit.gif%22+style%3D%22width%3A232px%3Bheight%3A167px%3B%22%3E+GOTO%3Awargames%0D%0A%09%09A%3A+Let%27s+learn+more+about+LITCon.%0D%0A%09%09%09Q%284.1.2.2%29%3AGOTO%3Aeveryone%0D%0A%09A%3A+What%27s+a+command+line%3F%0D%0A%09%09Q%284.1.3%29%3A+%3Cimg+src%3D%22https%3A%2F%2Fmedia.giphy.com%2Fmedia%2FNRa7dRkMlVZRE5HUU4%2Fgiphy.gif%22+style%3D%22width%3A232px%3Bheight%3A130px%3B%22%2F%3E+%3Cbr%3E%3Cbr%3E+It%27s+that+text+interface+you+see+computer+folks+using.+Anyhow%2C+it%27s+not+important.+GOTO%3Aeveryone%0D%0A%0D%0AA%3A+No.%0D%0A%09Q%284.2%29%3A+%3Cimg+src%3D%22https%3A%2F%2Fwww.reactiongifs.com%2Fr%2F2013%2F06%2FI-dont-believe-you.gif%22+style%3D%22width%3A232px%3Bheight%3A174px%3B%22%3EGOTO%3Amproblems%0D%0A%0D%0A%0D%0AQ%28mproblems%29%3A+Are+there+things+about+the+way+you+%28or+the+justice+system%29+work%28s%29+that+you+think+could+use+improvement%3F%0D%0AA%3A+Yes.%0D%0A%09Q%285.1%29%3AGOTO%3Agoodnews%0D%0AA%3A+No.%0D%0A%09Q%285.2%29%3A+%3Cimg+src%3D%22https%3A%2F%2Fmedia.giphy.com%2Fmedia%2FqaYxWacSp8Jfq%2Fgiphy.gif%22+style%3D%22width%3A232px%3Bheight%3A217px%3B%22%3EGOTO%3Ammproblems%0D%0A%0D%0A%0D%0A%0D%0AQ%28mmproblems%29%3A+%3Ci%3EAre+there+things+about+the+way+you+%28or+the+justice+system%29+work%28s%29+that+you+think+could+use+improvement%3F%3C%2Fi%3E%0D%0AA%3A+Yes.%0D%0A%09Q%286.1%29%3AGOTO%3Agoodnews%0D%0AA%3A+No.%0D%0A%09Q%286.2%29%3A+%3Cimg+src%3D%22https%3A%2F%2Fmedia.giphy.com%2Fmedia%2F12FfNKPlSR5k2c%2Fgiphy.gif%22+style%3D%22width%3A232px%3Bheight%3A193px%3B%22%3EGOTO%3Ammmproblems%0D%0A%0D%0A%0D%0AQ%28mmmproblems%29%3A+%3Ci%3E%3Cb%3EAre+there+things+about+the+way+you+%28or+the+justice+system%29+work%28s%29+that+you+think+could+use+improvement%3F%3C%2Fb%3E%3C%2Fi%3E%0D%0AA%3A+Yes.%0D%0A%09Q%287.1%29%3AGOTO%3Agoodnews%0D%0AA%3A+No.%0D%0A%09Q%287.2%29%3AGOTO%3Anotforyou%0D%0A%0D%0A%0D%0AQ%28everyone%29%3A+LITCon%27s+for+everyone+regardless+of+their+comfort+with+tech.+It%27s+a+single-day+single-track+conference+though+there+are+free+skills+building+sessions+and+a+hackathon+over+the+weekend.+The+conference+will+feature+speakers+representing+the+full+spectrum+of+legal+tech+endeavors+with+focus+on+clinical+education+and+criminal+justice.%0D%0AA%3A+Who%27s+speaking%3F%0D%0A%09Q%28keynote%29%3AGOTO%3Aproud%0D%0AA%3A+Tell+me+more+about+these+weekend+sessions.%0D%0A%09Q%28weekend%29%3A+You+can+learn+more+over+the+%3Ca+href%3D%22https%3A%2F%2Fsuffolklitlab.org%2FLITCon%2F2020%2Fhack%2F%22+target%3D%22_blank%22%3Eevent%27s+website%3C%2Fa%3E%2C+but+the+skills+building+sessions+will+include+trainings+tools+for+creating+guided+interviews+and+auto-generating+documents+such+as+%3Ca+href%3D%22https%3A%2F%2Fdocassemble.org%2F%22+target%3D%22_blank%22%3EDocassemble%3C%2Fa%3E%2C+and+%3Ca+href%3D%22https%3A%2F%2Fwww.qnamarkup.org%2F%22+target%3D%22_blank%22%3EQnA+Markup%3C%2Fa%3E.+%3Cbr%3E%3Cbr%3EThe+hackathon+portion+of+the+weekend+is+in+partnership+with+the+%3Ca+href%3D%22http%3A%2F%2Fdkmalone.com%2F2018%2F11%2F29%2Fthe-tubman-project%2F%22+target%3D%22_blank%22%3ETubman+Project%3C%2Fa%3E+and+will+focus+on+creating+tools+for+public+defenders+and+their+clients.+GOTO%3Aproud%0D%0A%0D%0AQ%28proud%29%3A+We%27re+really+proud+of+the+agenda+and+our+speakers.+We%27ll+be+updating+this+%3Ca+href%3D%22https%3A%2F%2Fsuffolklitlab.org%2FLITCon%2F2020%2Fspeakers%2F%22+target%3D%22_blank%22%3Epublic+list%3C%2Fa%3E+as+we+confirm+speakers.+That+being+said%2C+Suffolk+County+District+Attorney+%3Ca+href%3D%22https%3A%2F%2Fsuffolklitlab.org%2FLITCon%2F2020%2Fspeakers%2F%23rollins%22+target%3D%22_blank%22%3ERachael+Rollins%3C%2Fa%3E+is+our+keynote+speaker%2C+and+she%27ll+be+talking+about+the+importance+of+data+in+criminal+justice.+%3Cbr%3E%3Cbr%3E+Are+you+convinced%3F%0D%0AA%3A+I+need+more+convincing.%0D%0A%09Q%28moreconv%29%3A+We+also+have+these+really+great+rapid-fire+talks.+Do+you+want+to+see+some+examples%3F%0D%0A%09A%3A+Yes.%0D%0A%09%09Q%289.1.1%29%3A+You+can+find+a+collection+of+them+on+the+Lab%27s+%3Ca+href%3D%22https%3A%2F%2Fsuffolklitlab.org%2Flitbits%2F%22+target%3D%22_blank%22%3ELIT+Bits+page%3C%2Fa%3E.+GOTO%3Aevenmore%0D%0A%09A%3A+No.%0D%0A%09%09Q%28evenmore%29%3A+Did+I+mention+that+we%27ll+be+showing+off+student+work%3F%0D%0A%09%09A%3A+Yes.%0D%0A%09%09%09Q%289.1.2.1%29%3A+%3Cimg+src%3D%22https%3A%2F%2Fmedia.giphy.com%2Fmedia%2FsBl8Fowq0ErFC%2Fgiphy.gif%22+style%3D%22width%3A232px%3Bheight%3A174px%3B%22%2F%3E%3Cbr%3E%3Cbr%3E+I%27m+pretty+sure+I+didn%27t.+Would+you+like+to+see+a+sample%3F%0D%0A%09%09%09A%3A+Yes.%0D%0A%09%09%09%09Q%289.1.2.1.1%29%3AGOTO%3Astudents%0D%0A%09%09%09A%3A+No.%0D%0A%09%09%09%09Q%289.1.2.1.2%29%3AGOTO%3Anetwork%0D%0A%09%09A%3A+No.%0D%0A%09%09%09Q%289.1.2.2%29%3A+Would+you+like+to+see+a+sample%3F%0D%0A%09%09%09A%3A+Yes.%0D%0A%09%09%09%09Q%28students%29%3A+This+is+from+a+prior+year%27s+conference.+%3Cbr%3E%3Cbr%3E+%3Cdiv+class%3D%22profile_vid%22%3E%3Ciframe+class%3D%22embed_vid%22+src%3D%22https%3A%2F%2Fwww.youtube.com%2Fembed%2FqbPf9VRP6eU%3Frel%3D0%22+gesture%3D%22media%22+allow%3D%22encrypted-media%22+allowfullscreen%3D%22%22+frameborder%3D%220%22%3E%3C%2Fiframe%3E%3C%2Fdiv%3E+%3Cbr%3E%3Cbr%3E+So%3F%0D%0A%09%09%09%09A%3A+I+need+more+convincing.%0D%0A%09%09%09%09%09Q%289.1.2.2.1.1%29%3AGOTO%3Anetwork%0D%0A%09%09%09%09A%3A+What+does+the+conference+cost%3F%0D%0A%09%09%09%09%09Q%289.1.2.2.1.2%29%3AGOTO%3Awhatcost%0D%0A%09%09%09%09A%3A%5Bhttps%3A%2F%2Fweb.cvent.com%2Fevent%2Fcf22c986-4b48-454f-9dfb-3545fe93f86d%2Fregister%5D+Take+me+to+registration.%0D%0A%09%09%09%09%09Q%289.1.2.2.1.3%29%3AGOTO%3Athanks%0D%0A%09%09%09A%3A+No.%0D%0A%09%09%09%09Q%289.1.2.2.2%29%3AGOTO%3Anetwork%0D%0A%0D%0AA%3A+What+does+the+conference+cost%3F%0D%0A%09Q%28whatcost%29%3A+A+measly+%2425+if+you+get+the+early+bird+discount+%28%2450+after+Feb.+29%29.+That+includes+a+continental+breakfast%2C+hot+lunch%2C+and+cocktails.+%3Cbr%3E%3Cbr%3E%3Cimg+src%3D%22https%3A%2F%2Fmedia.giphy.com%2Fmedia%2F5IMcyqKbkg0O4%2Fgiphy.gif%22+style%3D%22width%3A232px%3Bheight%3A128px%3B%22%2F%3E%0D%0A%09A%3A%5Bhttps%3A%2F%2Fweb.cvent.com%2Fevent%2Fcf22c986-4b48-454f-9dfb-3545fe93f86d%2Fregister%5D+Take+me+to+registration.%0D%0A%09%09Q%289.2.1%29%3AGOTO%3Athanks%0D%0A%09A%3A+What+if+%2425+is+too+much%3F%0D%0A%09%09Q%289.2.2%29%3A+Do+you+work+in+public+interest%3F%0D%0A%09%09A%3A+Yes.%0D%0A%09%09%09Q%289.2.2.1%29%3A+Email+Melissa+Guirand+%28%3Ca+href%3D%22mailto%3Amguirand%40suffolk%22%3Emguirand%40suffolk%3C%2Fa%3E%29+and+ask+for+a+pubic+service+waiver.+GOTO%3Athanks%0D%0A%09%09A%3A+No.%0D%0A%09%09%09Q%289.2.2.2%29%3A+Are+you+a+student%3F%0D%0A%09%09%09A%3A+Yes.%0D%0A%09%09%09%09Q%289.2.2.2.1%29%3A+Email+Melissa+Guirand+%28%3Ca+href%3D%22mailto%3Amguirand%40suffolk%22%3Emguirand%40suffolk%3C%2Fa%3E%29+and+ask+for+a+student+waiver.+GOTO%3Athanks%0D%0A%09%09%09A%3A+No.%0D%0A%09%09%09%09Q%289.2.2.2.2%29%3A+Presenters+don%27t+have+to+pay.+Would+you+consider+proposing+a+rapid-fire+talk%3F%0D%0A%09%09%09%09A%3A+Yes.%0D%0A%09%09%09%09%09Q%289.2.2.2.2.1%29%3A+Great.+You+can+find+more+info+about+pitching+a+rapid-fire+talk+%3Ca+href%3D%22https%3A%2F%2Fsuffolklitlab.org%2FLITCon%2F2020%2Flitbits%2F%22+target%3D%22_blank%22%3Ehere%3C%2Fa%3E.+We+hope+to+see+you+on+the+30th.%0D%0A%09%09%09%09%09A%3A+Can+I+have+cat+pictures+now%3F%0D%0A%09%09%09%09%09%09Q%289.2.2.2.2.1.1%29%3AGOTO%3Acats1%0D%0A%09%09%09%09%09A%3A+Bye.%0D%0A%09%09%09%09%09%09Q%289.2.2.2.2.1.2%29%3AGOTO%3Abye%0D%0A%09%09%09%09A%3A+No.%0D%0A%09%09%09%09%09Q%289.2.2.2.2.2%29%3A+I%27m+sorry.+I%27m+not+sure+we+can+help.+GOTO%3Anexttime%0D%0AA%3A%5Bhttps%3A%2F%2Fweb.cvent.com%2Fevent%2Fcf22c986-4b48-454f-9dfb-3545fe93f86d%2Fregister%5D+Sure%2C+take+me+to+registration.%0D%0A%09Q%289.3%29%3AGOTO%3Athanks%0D%0A%0D%0A%0D%0AQ%28network%29%3A+Did+you+know+LITCon+is+a+great+networking+event%2C+bringing+together+clinicians%2C+legal+services+providers%2C+educators%2C+legal+tech+leaders%2C+law+students%2C+and+the+like%3F+It%27s+not+a+complete+list%2C+but+here+are+some+%3Ca+href%3D%22https%3A%2F%2Ftwitter.com%2FSuffolkLITLab%2Flists%2Flitcon2020%22+target%3D%22_blank%22%3Efolks+on+Twitter%3C%2Fa%3E+that+are+coming%2C+and+just+look+at+that+%3Ca+href%3D%22https%3A%2F%2Fsuffolklitlab.org%2FLITCon%2F2020%2Fspeakers%2F%22+target%3D%22_blank%22%3Espeakers+list%3C%2Fa%3E.%0D%0AA%3A+Just+a+little+more+convincing.%0D%0A%09Q%2810.1%29%3A%3Cimg+src%3D%22https%3A%2F%2Fmedia.giphy.com%2Fmedia%2FxUySTzHsAP7FIG18oU%2Fgiphy.gif%22+style%3D%22width%3A232px%3Bheight%3A175px%3B%22%2F%3E%3Cbr%3E%3Cbr%3E+We+built+this+%22bot%22+as+a+commentary+on+the+state+of+legal+tech+to+make+it+clear+that+we+%22get+it.%22+That+should+count+for+something%2C+right%3F+I+mean%2C+%22this+is+not+a+chatbot%2C%22+come+on%3F+Tech+can+be+a+powerful+tool+but+only+when+you%27re+clear-eyed+about+it%27s+potential.%3Cbr%3E%3Cbr%3E+Plus%2C+wait+until+you+hear+how+much+the+conference+costs...+GOTO%3Awhatcost%0D%0AA%3A+What+does+the+conference+cost%3F%0D%0A%09Q%2810.2%29%3AGOTO%3Awhatcost%0D%0AA%3A%5Bhttps%3A%2F%2Fweb.cvent.com%2Fevent%2Fcf22c986-4b48-454f-9dfb-3545fe93f86d%2Fregister%5D+Take+me+to+registration.%0D%0A%09Q%2810.3%29%3AGOTO%3Athanks%0D%0A%0D%0A%0D%0AQ%28free%29%3A+Yes.+It%27s+an+open+source+tool+called+%3Ca+href%3D%22https%3A%2F%2Fwww.qnamarkup.org%22+target%3D%22_blank%22%3EQnA+Markup%3C%2Fa%3E%2C+and+it%27s+actually+one+of+three+open+source+tools+we%27ll+be+teaching+at+our+free+%3Ca+href%3D%22https%3A%2F%2Fsuffolklitlab.org%2FLITCon%2F2020%2Fhack%2F%22+target%3D%22_blank%22%3Eskills+building+session%3C%2Fa%3E+the+weekend+before+the+conference.+Would+you+like+to+see+a+10+min+video+primer%3F%0D%0AA%3A+Sure.%0D%0A%09Q%2811.1%29%3A%3Cdiv+class%3D%22profile_vid%22%3E%3Ciframe+class%3D%22embed_vid%22+src%3D%22https%3A%2F%2Fwww.youtube.com%2Fembed%2FRVhzQ1JVi3s%3Frel%3D0%22+gesture%3D%22media%22+allow%3D%22encrypted-media%22+allowfullscreen%3D%22%22+frameborder%3D%220%22%3E%3C%2Fiframe%3E%3C%2Fdiv%3E%0D%0A%09%3Cbr%3E%3Cbr%3EDo+you+want+more%3F%0D%0A%09A%3A+Yes.%0D%0A%09%09Q%2811.1.1%29%3AGOTO%3Awhatabout%0D%0A%09A%3A+No.%0D%0A%09%09Q%2811.1.2%29%3AGOTO%3Awhatabout%0D%0AA%3A+No+thanks.%0D%0A%09Q%2811.2%29%3AGOTO%3Awhatabout%0D%0AA%3A+Why+would+I+use+something+like+this%3F%0D%0A%09Q%2811.3%29%3A+I+don%27t+know%2C+lots+of+reason.+You+could+help+direct+folks+to+resources+based+on+their+answers+or+collect+info+to+automate+documents...+%3Cbr%3E%3Cbr%3E+%3Cimg+src%3D%22https%3A%2F%2Fmedia.giphy.com%2Fmedia%2F3o6ozovtBb4wLpIVZ6%2Fgiphy.gif%22+style%3D%22width%3A232px%3Bheight%3A130px%3B%22%2F%3E+GOTO%3Awhatabout%0D%0A%0D%0AQ%28whatabout%29%3A+Well%2C+if+you%27re+interested+in+attending+some+free+sessions+on+learning+how+to+use+tools+like+QnA+and+%3Ca+href%3D%22https%3A%2F%2Fdocassemble.org%2F%22+target%3D%22_blank%22%3EDocassemble%3C%2Fa%3E%2C+we%27ll+be+offering+some+on+March+28th+%40+noon.+%3Cbr%3E%3Cbr%3E%0D%0ABack+to+LITCon+proper.+Can+you+make+it+to+Boston+on+March+30th%2C+2020%3F%0D%0AA%3A+Yes.%0D%0A%09Q%2812.1%29%3AGOTO%3Aavailable%0D%0AA%3A+No.%0D%0A%09Q%2812.2%29%3AGOTO%3Anotavailable%0D%0A%0D%0AQ%28notavailable%29%3A+%3Cimg+src%3D%22https%3A%2F%2Fmedia.giphy.com%2Fmedia%2F33iqmp5ATXT5m%2Fgiphy.gif%22+style%3D%22width%3A232px%3Bheight%3A99px%3B%22%2F%3E%3Cbr%3E%3Cbr%3E+Too+bad.+Is+that+a+hard+no+or+an+%22I+need+convincing%22+no%3F%0D%0AA%3A+A+hard+no.%0D%0A%09Q%28nexttime%29%3A+Maybe+next+time.+%3C%21--Please+keep+March+30%2C+2020+open.+That%27s+when+we%27ll+be+having+LITCon2020.%3Cbr%3E%3Cbr%3E%3Cimg+src%3D%22https%3A%2F%2Fsuffolklitlab.org%2FLITCon%2F2021%2Fimages%2FLIT_Con_2021_square_logo.png%22+style%3D%22width%3A232px%3Bheight%3A232px%3B%22%2F%3E--%3E%0D%0A%09A%3A+Can+I+have+cat+pictures+now%3F%0D%0A%09%09Q%2813.1.1%29%3AGOTO%3Acats1%0D%0A%09A%3A+Bye.%0D%0A%09%09Q%2813.1.2%29%3AGOTO%3Abye%0D%0A%0D%0AA%3A+Convince+me.%0D%0A%09Q%2813.2%29%3AGOTO%3Aconvince%0D%0A%0D%0AQ%28thanks%29%3A+We+look+forward+to+seeing+you+on+the+30th.+Please+tell+your+friends.+%3Cbr%3E%3Cbr%3E%3Cimg+src%3D%22https%3A%2F%2Fmedia.giphy.com%2Fmedia%2FFpZvxELO5xE8QcFdoc%2Fgiphy.gif%22+style%3D%22width%3A232px%3Bheight%3A130px%3B%22%2F%3E%0D%0AA%3A+Can+I+have+cat+pictures+now%3F%0D%0A%09Q%2814.1%29%3AGOTO%3Acats1%0D%0AA%3A+Bye.%0D%0A%09Q%2814.2%29%3AGOTO%3Abye%0D%0A%0D%0A%0D%0AQ%28cats1%29%3A+%3Cimg+src%3D%22https%3A%2F%2Fmedia.giphy.com%2Fmedia%2FOv5NiLVXT8JEc%2Fgiphy.gif%22+style%3D%22width%3A232px%3Bheight%3A130px%3B%22%2F%3E%0D%0A%3Cbr%3E%3Cbr%3E+Do+you+need+more%3F%0D%0AA%3A+Yes%0D%0A%09Q%2815.1%29%3AGOTO%3Acats2%0D%0AA%3A+No%0D%0A%09Q%2815.2%29%3ABye+then.+GOTO%3Abye%0D%0A%0D%0AQ%28cats2%29%3A+%3Cimg+src%3D%22https%3A%2F%2Fmedia.giphy.com%2Fmedia%2Fgl8ymnpv4Sqha%2Fgiphy.gif%22+style%3D%22width%3A232px%3Bheight%3A195px%3B%22%2F%3E%0D%0A%3Cbr%3E%3Cbr%3E+Do+you+need+more%3F%0D%0AA%3A+Yes%0D%0A%09Q%2816.1%29%3AGOTO%3Acats3%0D%0AA%3A+No%0D%0A%09Q%2816.2%29%3ABye+then.+GOTO%3Abye%0D%0A%0D%0AQ%28cats3%29%3A+%3Cimg+src%3D%22https%3A%2F%2Fmedia.giphy.com%2Fmedia%2FkvrvnB158J4fm%2Fgiphy.gif%22+style%3D%22width%3A232px%3Bheight%3A194px%3B%22%2F%3E%0D%0A%3Cbr%3E%3Cbr%3E+Do+you+need+more%3F%0D%0AA%3A+Yes%0D%0A%09Q%2817.1%29%3AGOTO%3Acats4%0D%0AA%3A+No%0D%0A%09Q%2817.2%29%3ABye+then.+GOTO%3Abye%0D%0A%0D%0AQ%28cats4%29%3A+%3Cimg+src%3D%22https%3A%2F%2Fmedia.giphy.com%2Fmedia%2FxBAreNGk5DapO%2Fgiphy.gif%22+style%3D%22width%3A232px%3Bheight%3A188px%3B%22%2F%3E%0D%0A%3Cbr%3E%3Cbr%3E+Do+you+need+more%3F%0D%0AA%3A+Yes%0D%0A%09Q%2818.1%29%3AGOTO%3Acats5%0D%0AA%3A+No%0D%0A%09Q%2818.2%29%3ABye+then.+GOTO%3Abye%0D%0A%0D%0AQ%28cats5%29%3A+%3Cimg+src%3D%22https%3A%2F%2Fmedia.giphy.com%2Fmedia%2FBLCHvwl9C5j1u%2Fgiphy.gif%22+style%3D%22width%3A232px%3Bheight%3A232px%3B%22%2F%3E%0D%0A%3Cbr%3E%3Cbr%3E+Do+you+need+more%3F%0D%0AA%3A+Yes%0D%0A%09Q%2819.1%29%3AGOTO%3Acats6%0D%0AA%3A+No%0D%0A%09Q%2819.2%29%3ABye+then.+GOTO%3Abye%0D%0A%0D%0AQ%28cats6%29%3A+%3Cimg+src%3D%22https%3A%2F%2Fmedia.giphy.com%2Fmedia%2F10dU7AN7xsi1I4%2Fgiphy.gif%22+style%3D%22width%3A232px%3Bheight%3A323px%3B%22%2F%3E%0D%0A%3Cbr%3E%3Cbr%3E+Do+you+need+more%3F%0D%0AA%3A+Yes%0D%0A%09Q%2820.1%29%3AGOTO%3Acats7%0D%0AA%3A+No%0D%0A%09Q%2820.2%29%3ABye+then.+GOTO%3Abye%0D%0A%0D%0AQ%28cats7%29%3A+%3Cimg+src%3D%22https%3A%2F%2Fmedia.giphy.com%2Fmedia%2FhPyONzUYJhLZS%2Fgiphy.gif%22+style%3D%22width%3A232px%3Bheight%3A223px%3B%22%2F%3E%0D%0A%3Cbr%3E%3Cbr%3E+Do+you+need+more%3F%0D%0AA%3A+Yes%0D%0A%09Q%2821.1%29%3AGOTO%3Acats8%0D%0AA%3A+No%0D%0A%09Q%2821.2%29%3ABye+then.+GOTO%3Abye%0D%0A%0D%0AQ%28cats8%29%3A+%3Cimg+src%3D%22https%3A%2F%2Fmedia.giphy.com%2Fmedia%2FEndx3eMpqmpZ6%2Fgiphy.gif%22+style%3D%22width%3A232px%3Bheight%3A142px%3B%22%2F%3E+%3Cbr%3E%3Cbr%3E+I+know%2C+those+are+puppies%2C+but+they%27re+sooo+cute.%0D%0A%3Cbr%3E%3Cbr%3E+Do+you+need+more%3F%0D%0AA%3A+Yes%0D%0A%09Q%2822.1%29%3AGOTO%3Acats9%0D%0AA%3A+No%0D%0A%09Q%2822.2%29%3ABye+then.+GOTO%3Abye%0D%0A%0D%0AQ%28cats9%29%3A+%3Cimg+src%3D%22https%3A%2F%2Fmedia.giphy.com%2Fmedia%2F5scVaYq4hKA7u%2Fgiphy.gif%22+style%3D%22width%3A232px%3Bheight%3A130px%3B%22%2F%3E%0D%0A%3Cbr%3E%3Cbr%3E+Do+you+need+more%3F%0D%0AA%3A+Yes%0D%0A%09Q%2823.1%29%3AGOTO%3Acats10%0D%0AA%3A+No%0D%0A%09Q%2823.2%29%3ABye+then.+GOTO%3Abye%0D%0A%0D%0AQ%28cats10%29%3A+%3Cimg+src%3D%22https%3A%2F%2Fmedia.giphy.com%2Fmedia%2Ft7MWRoExDRF72%2Fgiphy.gif%22+style%3D%22width%3A232px%3Bheight%3A207px%3B%22%2F%3E%0D%0A%3Cbr%3E%3Cbr%3E+Do+you+need+more%3F%0D%0AA%3A+Yes%0D%0A%09Q%2824.1%29%3AGOTO%3Acats1%0D%0AA%3A+No%0D%0A%09Q%2824.2%29%3ABye+then.+GOTO%3Abye%0D%0A%0D%0AQ%28bye%29%3A+%3Cimg+src%3D%22https%3A%2F%2Fmedia.giphy.com%2Fmedia%2F3oxHQi7H2L27ilG1Da%2Fgiphy.gif%22+style%3D%22width%3A232px%3Bheight%3A232px%3B%22%2F%3E%0D%0A%0D%0A%0D%0A%0D%0AQ%28wargames%29%3A+How+about+a+game+of+chess%3F%0D%0AA%3A+Sounds+good.+I+love+chess.%0D%0A%09Q%2826.1%29%3A+Your+move+%28works+best+on+a+desktop%29.+%3Cbr%3E%3Cbr%3E%3Ciframe+src%3D%22https%3A%2F%2Fwww.qnamarkup.org%2Ftemplates%2Fchess%2F%22+scrolling%3D%22no%22+seamless%3D%22seamless%22+style%3D%22overflow%3Ahidden%3Bwidth%3A260px%3Bheight%3A260px%3Bborder%3A+solid+0px+%23eee%3B%22%3E%3C%2Fiframe%3E+%3Cbr%3E%3Cbr%3E+Anywho%2C+back+to+the+conference...+GOTO%3Aeveryone%0D%0AA%3A+How+about+thermonuclear+war%3F%0D%0A%09Q%2826.2%29%3A+%3Cimg+src%3D%22https%3A%2F%2Fi.imgur.com%2FWwpALFZ.gif%22+style%3D%22width%3A232px%3Bheight%3A131px%3B%22%3E%3Cbr%3E%3Cbr%3EThe+only+way+to+win+is+not+to+play%21+Have+you+actually+seen+%3Ca+href%3D%22https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FWarGames%22+target%3D_blank%3EWar+Games%3C%2Fa%3E%3F%0D%0A%09A%3A+Yes.%0D%0A%09%09Q%2826.2.1%29%3A+%3Cimg+src%3D%22https%3A%2F%2Fwww.reactiongifs.com%2Fr%2F2013%2F06%2FI-dont-believe-you.gif%22+style%3D%22width%3A232px%3Bheight%3A174px%3B%22%3E%3Cbr%3E%3Cbr%3ELet%27s+try+again.+GOTO%3Awargames%0D%0A%09A%3A+No.%0D%0A%09%09Q%2826.2.2%29%3A+My+apologies.+Let+me+just+say%2C+thermonuclear+war+is+the+wrong+answer.+%3Cbr%3E%3Cbr%3E%3Cimg+src+%3D%22https%3A%2F%2Fi.giphy.com%2FuSHMDTUL7lKso.gif%22+style%3D%22width%3A232px%3Bheight%3A117px%3B%22%3E+GOTO%3Awargames%0D%0AA%3A+Actually%2C+let%27s+get+back+to+LITCon.%0D%0A%09Q%2826.3%29%3AGOTO%3Aeveryone%0D%0A</div><div id="ondeck" name="ondeck"><div id='Q-1' name='Q-1' style='display:none;'> Can you make it to Boston on March 30th, 2020?
+</div><div id='Q-1.1' name='Q-1.1' style='display:none;'>GOTO:2</div><div id='Q-1.2' name='Q-1.2' style='display:none;'>GOTO:13</div><div id='Q-1.3' name='Q-1.3' style='display:none;'>GOTO:11</div><div id='Q-2' name='Q-2' style='display:none;'> Great. GOTO:3</div><div id='Q-3' name='Q-3' style='display:none;'> Do you work in the legal sector?
+</div><div id='Q-3.1' name='Q-3.1' style='display:none;'>GOTO:4</div><div id='Q-3.2' name='Q-3.2' style='display:none;'> Do you care about the justice system?
+</div><div id='Q-3.2.1' name='Q-3.2.1' style='display:none;'>GOTO:4</div><div id='Q-3.2.2' name='Q-3.2.2' style='display:none;'><img src="https://media.giphy.com/media/o6KYXl09rnmOQ/giphy.gif" style="width:232px;height:131px;"/><br><br> Okay... LITCon might not be for you.
+</div><div id='Q-3.2.2.1' name='Q-3.2.2.1' style='display:none;'>GOTO:15</div><div id='Q-3.2.2.2' name='Q-3.2.2.2' style='display:none;'>GOTO:25</div><div id='Q-4' name='Q-4' style='display:none;'> Are there things about the way you (or the justice system) work(s) that you think could use improvement?
+</div><div id='Q-4.1' name='Q-4.1' style='display:none;'> That's our jam! We're all about identifying and solving problems, not tech for tech's sake. After all, we're a <i>legal <b>innovation</b> and technology (LIT) conference</i>, not some standard legal tech conference. <br><br>That being said, what's your comfort level with tech?
+</div><div id='Q-4.1.1' name='Q-4.1.1' style='display:none;'> <img src="https://media.giphy.com/media/1S3vm6ISM2gDu/giphy.gif" style="width:132px;height:116px;"/> GOTO:8</div><div id='Q-4.1.2' name='Q-4.1.2' style='display:none;'> <img src="https://media.giphy.com/media/gPkWsM6X5xLVe/giphy.gif" style="width:232px;height:174px;"/>
+</div><div id='Q-4.1.2.1' name='Q-4.1.2.1' style='display:none;'><img src="https://jasoneppink.com/wp-content/gallery/the-reaction-gif-moving-image-as-gesture/kermit.gif" style="width:232px;height:167px;"> GOTO:26</div><div id='Q-4.1.2.2' name='Q-4.1.2.2' style='display:none;'>GOTO:8</div><div id='Q-4.1.3' name='Q-4.1.3' style='display:none;'> <img src="https://media.giphy.com/media/NRa7dRkMlVZRE5HUU4/giphy.gif" style="width:232px;height:130px;"/> <br><br> It's that text interface you see computer folks using. Anyhow, it's not important. GOTO:8</div><div id='Q-4.2' name='Q-4.2' style='display:none;'> <img src="https://www.reactiongifs.com/r/2013/06/I-dont-believe-you.gif" style="width:232px;height:174px;">GOTO:5</div><div id='Q-5' name='Q-5' style='display:none;'> Are there things about the way you (or the justice system) work(s) that you think could use improvement?
+</div><div id='Q-5.1' name='Q-5.1' style='display:none;'>GOTO:4.1</div><div id='Q-5.2' name='Q-5.2' style='display:none;'> <img src="https://media.giphy.com/media/qaYxWacSp8Jfq/giphy.gif" style="width:232px;height:217px;">GOTO:6</div><div id='Q-6' name='Q-6' style='display:none;'> <i>Are there things about the way you (or the justice system) work(s) that you think could use improvement?</i>
+</div><div id='Q-6.1' name='Q-6.1' style='display:none;'>GOTO:4.1</div><div id='Q-6.2' name='Q-6.2' style='display:none;'> <img src="https://media.giphy.com/media/12FfNKPlSR5k2c/giphy.gif" style="width:232px;height:193px;">GOTO:7</div><div id='Q-7' name='Q-7' style='display:none;'> <i><b>Are there things about the way you (or the justice system) work(s) that you think could use improvement?</b></i>
+</div><div id='Q-7.1' name='Q-7.1' style='display:none;'>GOTO:4.1</div><div id='Q-7.2' name='Q-7.2' style='display:none;'>GOTO:3.2.2</div><div id='Q-8' name='Q-8' style='display:none;'> LITCon's for everyone regardless of their comfort with tech. It's a single-day single-track conference though there are free skills building sessions and a hackathon over the weekend. The conference will feature speakers representing the full spectrum of legal tech endeavors with focus on clinical education and criminal justice.
+</div><div id='Q-8.1' name='Q-8.1' style='display:none;'>GOTO:9</div><div id='Q-8.2' name='Q-8.2' style='display:none;'> You can learn more over the <a href="https://suffolklitlab.org/LITCon/2020/hack/" target="_blank">event's website</a>, but the skills building sessions will include trainings tools for creating guided interviews and auto-generating documents such as <a href="https://docassemble.org/" target="_blank">Docassemble</a>, and <a href="https://www.qnamarkup.org/" target="_blank">QnA Markup</a>. <br><br>The hackathon portion of the weekend is in partnership with the <a href="http://dkmalone.com/2018/11/29/the-tubman-project/" target="_blank">Tubman Project</a> and will focus on creating tools for public defenders and their clients. GOTO:9</div><div id='Q-9' name='Q-9' style='display:none;'> We're really proud of the agenda and our speakers. We'll be updating this <a href="https://suffolklitlab.org/LITCon/2020/speakers/" target="_blank">public list</a> as we confirm speakers. That being said, Suffolk County District Attorney <a href="https://suffolklitlab.org/LITCon/2020/speakers/#rollins" target="_blank">Rachael Rollins</a> is our keynote speaker, and she'll be talking about the importance of data in criminal justice. <br><br> Are you convinced?
+</div><div id='Q-9.1' name='Q-9.1' style='display:none;'> We also have these really great rapid-fire talks. Do you want to see some examples?
+</div><div id='Q-9.1.1' name='Q-9.1.1' style='display:none;'> You can find a collection of them on the Lab's <a href="https://suffolklitlab.org/litbits/" target="_blank">LIT Bits page</a>. GOTO:9.1.2</div><div id='Q-9.1.2' name='Q-9.1.2' style='display:none;'> Did I mention that we'll be showing off student work?
+</div><div id='Q-9.1.2.1' name='Q-9.1.2.1' style='display:none;'> <img src="https://media.giphy.com/media/sBl8Fowq0ErFC/giphy.gif" style="width:232px;height:174px;"/><br><br> I'm pretty sure I didn't. Would you like to see a sample?
+</div><div id='Q-9.1.2.1.1' name='Q-9.1.2.1.1' style='display:none;'>GOTO:9.1.2.2.1</div><div id='Q-9.1.2.1.2' name='Q-9.1.2.1.2' style='display:none;'>GOTO:10</div><div id='Q-9.1.2.2' name='Q-9.1.2.2' style='display:none;'> Would you like to see a sample?
+</div><div id='Q-9.1.2.2.1' name='Q-9.1.2.2.1' style='display:none;'> This is from a prior year's conference. <br><br> <div class="profile_vid"><iframe class="embed_vid" src="https://www.youtube.com/embed/qbPf9VRP6eU?rel=0" gesture="media" allow="encrypted-media" allowfullscreen="" frameborder="0"></iframe></div> <br><br> So?
+</div><div id='Q-9.1.2.2.1.1' name='Q-9.1.2.2.1.1' style='display:none;'>GOTO:10</div><div id='Q-9.1.2.2.1.2' name='Q-9.1.2.2.1.2' style='display:none;'>GOTO:9.2</div><div id='Q-9.1.2.2.1.3' name='Q-9.1.2.2.1.3' style='display:none;'>GOTO:14</div><div id='Q-9.1.2.2.2' name='Q-9.1.2.2.2' style='display:none;'>GOTO:10</div><div id='Q-9.2' name='Q-9.2' style='display:none;'> A measly $25 if you get the early bird discount ($50 after Feb. 29). That includes a continental breakfast, hot lunch, and cocktails. <br><br><img src="https://media.giphy.com/media/5IMcyqKbkg0O4/giphy.gif" style="width:232px;height:128px;"/>
+</div><div id='Q-9.2.1' name='Q-9.2.1' style='display:none;'>GOTO:14</div><div id='Q-9.2.2' name='Q-9.2.2' style='display:none;'> Do you work in public interest?
+</div><div id='Q-9.2.2.1' name='Q-9.2.2.1' style='display:none;'> Email Melissa Guirand (<a href="mailto:mguirand@suffolk">mguirand@suffolk</a>) and ask for a pubic service waiver. GOTO:14</div><div id='Q-9.2.2.2' name='Q-9.2.2.2' style='display:none;'> Are you a student?
+</div><div id='Q-9.2.2.2.1' name='Q-9.2.2.2.1' style='display:none;'> Email Melissa Guirand (<a href="mailto:mguirand@suffolk">mguirand@suffolk</a>) and ask for a student waiver. GOTO:14</div><div id='Q-9.2.2.2.2' name='Q-9.2.2.2.2' style='display:none;'> Presenters don't have to pay. Would you consider proposing a rapid-fire talk?
+</div><div id='Q-9.2.2.2.2.1' name='Q-9.2.2.2.2.1' style='display:none;'> Great. You can find more info about pitching a rapid-fire talk <a href="https://suffolklitlab.org/LITCon/2020/litbits/" target="_blank">here</a>. We hope to see you on the 30th.
+</div><div id='Q-9.2.2.2.2.1.1' name='Q-9.2.2.2.2.1.1' style='display:none;'>GOTO:15</div><div id='Q-9.2.2.2.2.1.2' name='Q-9.2.2.2.2.1.2' style='display:none;'>GOTO:25</div><div id='Q-9.2.2.2.2.2' name='Q-9.2.2.2.2.2' style='display:none;'> I'm sorry. I'm not sure we can help. GOTO:13.1</div><div id='Q-9.3' name='Q-9.3' style='display:none;'>GOTO:14</div><div id='Q-10' name='Q-10' style='display:none;'> Did you know LITCon is a great networking event, bringing together clinicians, legal services providers, educators, legal tech leaders, law students, and the like? It's not a complete list, but here are some <a href="https://twitter.com/SuffolkLITLab/lists/litcon2020" target="_blank">folks on Twitter</a> that are coming, and just look at that <a href="https://suffolklitlab.org/LITCon/2020/speakers/" target="_blank">speakers list</a>.
+</div><div id='Q-10.1' name='Q-10.1' style='display:none;'><img src="https://media.giphy.com/media/xUySTzHsAP7FIG18oU/giphy.gif" style="width:232px;height:175px;"/><br><br> We built this "bot" as a commentary on the state of legal tech to make it clear that we "get it." That should count for something, right? I mean, "this is not a chatbot," come on? Tech can be a powerful tool but only when you're clear-eyed about it's potential.<br><br> Plus, wait until you hear how much the conference costs... GOTO:9.2</div><div id='Q-10.2' name='Q-10.2' style='display:none;'>GOTO:9.2</div><div id='Q-10.3' name='Q-10.3' style='display:none;'>GOTO:14</div><div id='Q-11' name='Q-11' style='display:none;'> Yes. It's an open source tool called <a href="https://www.qnamarkup.org" target="_blank">QnA Markup</a>, and it's actually one of three open source tools we'll be teaching at our free <a href="https://suffolklitlab.org/LITCon/2020/hack/" target="_blank">skills building session</a> the weekend before the conference. Would you like to see a 10 min video primer?
+</div><div id='Q-11.1' name='Q-11.1' style='display:none;'><div class="profile_vid"><iframe class="embed_vid" src="https://www.youtube.com/embed/RVhzQ1JVi3s?rel=0" gesture="media" allow="encrypted-media" allowfullscreen="" frameborder="0"></iframe></div>
+	<br><br>Do you want more?
+</div><div id='Q-11.1.1' name='Q-11.1.1' style='display:none;'>GOTO:12</div><div id='Q-11.1.2' name='Q-11.1.2' style='display:none;'>GOTO:12</div><div id='Q-11.2' name='Q-11.2' style='display:none;'>GOTO:12</div><div id='Q-11.3' name='Q-11.3' style='display:none;'> I don't know, lots of reason. You could help direct folks to resources based on their answers or collect info to automate documents... <br><br> <img src="https://media.giphy.com/media/3o6ozovtBb4wLpIVZ6/giphy.gif" style="width:232px;height:130px;"/> GOTO:12</div><div id='Q-12' name='Q-12' style='display:none;'> Well, if you're interested in attending some free sessions on learning how to use tools like QnA and <a href="https://docassemble.org/" target="_blank">Docassemble</a>, we'll be offering some on March 28th @ noon. <br><br>
+Back to LITCon proper. Can you make it to Boston on March 30th, 2020?
+</div><div id='Q-12.1' name='Q-12.1' style='display:none;'>GOTO:2</div><div id='Q-12.2' name='Q-12.2' style='display:none;'>GOTO:13</div><div id='Q-13' name='Q-13' style='display:none;'> <img src="https://media.giphy.com/media/33iqmp5ATXT5m/giphy.gif" style="width:232px;height:99px;"/><br><br> Too bad. Is that a hard no or an "I need convincing" no?
+</div><div id='Q-13.1' name='Q-13.1' style='display:none;'> Maybe next time. <!--Please keep March 30, 2020 open. That's when we'll be having LITCon2020.<br><br><img src="https://suffolklitlab.org/LITCon/2021/images/LIT_Con_2021_square_logo.png" style="width:232px;height:232px;"/>-->
+</div><div id='Q-13.1.1' name='Q-13.1.1' style='display:none;'>GOTO:15</div><div id='Q-13.1.2' name='Q-13.1.2' style='display:none;'>GOTO:25</div><div id='Q-13.2' name='Q-13.2' style='display:none;'>GOTO:3</div><div id='Q-14' name='Q-14' style='display:none;'> We look forward to seeing you on the 30th. Please tell your friends. <br><br><img src="https://media.giphy.com/media/FpZvxELO5xE8QcFdoc/giphy.gif" style="width:232px;height:130px;"/>
+</div><div id='Q-14.1' name='Q-14.1' style='display:none;'>GOTO:15</div><div id='Q-14.2' name='Q-14.2' style='display:none;'>GOTO:25</div><div id='Q-15' name='Q-15' style='display:none;'> <img src="https://media.giphy.com/media/Ov5NiLVXT8JEc/giphy.gif" style="width:232px;height:130px;"/>
+<br><br> Do you need more?
+</div><div id='Q-15.1' name='Q-15.1' style='display:none;'>GOTO:16</div><div id='Q-15.2' name='Q-15.2' style='display:none;'>Bye then. GOTO:25</div><div id='Q-16' name='Q-16' style='display:none;'> <img src="https://media.giphy.com/media/gl8ymnpv4Sqha/giphy.gif" style="width:232px;height:195px;"/>
+<br><br> Do you need more?
+</div><div id='Q-16.1' name='Q-16.1' style='display:none;'>GOTO:17</div><div id='Q-16.2' name='Q-16.2' style='display:none;'>Bye then. GOTO:25</div><div id='Q-17' name='Q-17' style='display:none;'> <img src="https://media.giphy.com/media/kvrvnB158J4fm/giphy.gif" style="width:232px;height:194px;"/>
+<br><br> Do you need more?
+</div><div id='Q-17.1' name='Q-17.1' style='display:none;'>GOTO:18</div><div id='Q-17.2' name='Q-17.2' style='display:none;'>Bye then. GOTO:25</div><div id='Q-18' name='Q-18' style='display:none;'> <img src="https://media.giphy.com/media/xBAreNGk5DapO/giphy.gif" style="width:232px;height:188px;"/>
+<br><br> Do you need more?
+</div><div id='Q-18.1' name='Q-18.1' style='display:none;'>GOTO:19</div><div id='Q-18.2' name='Q-18.2' style='display:none;'>Bye then. GOTO:25</div><div id='Q-19' name='Q-19' style='display:none;'> <img src="https://media.giphy.com/media/BLCHvwl9C5j1u/giphy.gif" style="width:232px;height:232px;"/>
+<br><br> Do you need more?
+</div><div id='Q-19.1' name='Q-19.1' style='display:none;'>GOTO:20</div><div id='Q-19.2' name='Q-19.2' style='display:none;'>Bye then. GOTO:25</div><div id='Q-20' name='Q-20' style='display:none;'> <img src="https://media.giphy.com/media/10dU7AN7xsi1I4/giphy.gif" style="width:232px;height:323px;"/>
+<br><br> Do you need more?
+</div><div id='Q-20.1' name='Q-20.1' style='display:none;'>GOTO:21</div><div id='Q-20.2' name='Q-20.2' style='display:none;'>Bye then. GOTO:25</div><div id='Q-21' name='Q-21' style='display:none;'> <img src="https://media.giphy.com/media/hPyONzUYJhLZS/giphy.gif" style="width:232px;height:223px;"/>
+<br><br> Do you need more?
+</div><div id='Q-21.1' name='Q-21.1' style='display:none;'>GOTO:22</div><div id='Q-21.2' name='Q-21.2' style='display:none;'>Bye then. GOTO:25</div><div id='Q-22' name='Q-22' style='display:none;'> <img src="https://media.giphy.com/media/Endx3eMpqmpZ6/giphy.gif" style="width:232px;height:142px;"/> <br><br> I know, those are puppies, but they're sooo cute.
+<br><br> Do you need more?
+</div><div id='Q-22.1' name='Q-22.1' style='display:none;'>GOTO:23</div><div id='Q-22.2' name='Q-22.2' style='display:none;'>Bye then. GOTO:25</div><div id='Q-23' name='Q-23' style='display:none;'> <img src="https://media.giphy.com/media/5scVaYq4hKA7u/giphy.gif" style="width:232px;height:130px;"/>
+<br><br> Do you need more?
+</div><div id='Q-23.1' name='Q-23.1' style='display:none;'>GOTO:24</div><div id='Q-23.2' name='Q-23.2' style='display:none;'>Bye then. GOTO:25</div><div id='Q-24' name='Q-24' style='display:none;'> <img src="https://media.giphy.com/media/t7MWRoExDRF72/giphy.gif" style="width:232px;height:207px;"/>
+<br><br> Do you need more?
+</div><div id='Q-24.1' name='Q-24.1' style='display:none;'>GOTO:15</div><div id='Q-24.2' name='Q-24.2' style='display:none;'>Bye then. GOTO:25</div><div id='Q-25' name='Q-25' style='display:none;'> <img src="https://media.giphy.com/media/3oxHQi7H2L27ilG1Da/giphy.gif" style="width:232px;height:232px;"/>
+
+
+
+</div><div id='Q-26' name='Q-26' style='display:none;'> How about a game of chess?
+</div><div id='Q-26.1' name='Q-26.1' style='display:none;'> Your move (works best on a desktop). <br><br><iframe src="https://www.qnamarkup.org/templates/chess/" scrolling="no" seamless="seamless" style="overflow:hidden;width:260px;height:260px;border: solid 0px #eee;"></iframe> <br><br> Anywho, back to the conference... GOTO:8</div><div id='Q-26.2' name='Q-26.2' style='display:none;'> <img src="https://i.imgur.com/WwpALFZ.gif" style="width:232px;height:131px;"><br><br>The only way to win is not to play! Have you actually seen <a href="https://en.wikipedia.org/wiki/WarGames" target=_blank>War Games</a>?
+</div><div id='Q-26.2.1' name='Q-26.2.1' style='display:none;'> <img src="https://www.reactiongifs.com/r/2013/06/I-dont-believe-you.gif" style="width:232px;height:174px;"><br><br>Let's try again. GOTO:26</div><div id='Q-26.2.2' name='Q-26.2.2' style='display:none;'> My apologies. Let me just say, thermonuclear war is the wrong answer. <br><br><img src ="https://i.giphy.com/uSHMDTUL7lKso.gif" style="width:232px;height:117px;"> GOTO:26</div><div id='Q-26.3' name='Q-26.3' style='display:none;'>GOTO:8</div><div id='A-1.1' name='A-1.1' style='display:none;'> Yes.
+</div><div id='A-href-1.1' name='A-href-1.1' style='display:none;'>javascript:void('');</div><div id='A-target-1.1' name='A-target-1.1' style='display:none;'></div><div id='X-1.1' name='X-1.1' style='display:none;'>Yes.</div><div id='A-1.2' name='A-1.2' style='display:none;'> No.
+</div><div id='A-href-1.2' name='A-href-1.2' style='display:none;'>javascript:void('');</div><div id='A-target-1.2' name='A-target-1.2' style='display:none;'></div><div id='X-1.2' name='X-1.2' style='display:none;'>No.</div><div id='A-1.3' name='A-1.3' style='display:none;'> Did you say free tool?
+</div><div id='A-href-1.3' name='A-href-1.3' style='display:none;'>javascript:void('');</div><div id='A-target-1.3' name='A-target-1.3' style='display:none;'></div><div id='X-1.3' name='X-1.3' style='display:none;'>Did you say free tool?</div><div id='A-3.1' name='A-3.1' style='display:none;'> Yes.
+</div><div id='A-href-3.1' name='A-href-3.1' style='display:none;'>javascript:void('');</div><div id='A-target-3.1' name='A-target-3.1' style='display:none;'></div><div id='X-3.1' name='X-3.1' style='display:none;'>Yes.</div><div id='A-3.2' name='A-3.2' style='display:none;'> No.
+</div><div id='A-href-3.2' name='A-href-3.2' style='display:none;'>javascript:void('');</div><div id='A-target-3.2' name='A-target-3.2' style='display:none;'></div><div id='X-3.2' name='X-3.2' style='display:none;'>No.</div><div id='A-3.2.1' name='A-3.2.1' style='display:none;'> Yes.
+</div><div id='A-href-3.2.1' name='A-href-3.2.1' style='display:none;'>javascript:void('');</div><div id='A-target-3.2.1' name='A-target-3.2.1' style='display:none;'></div><div id='X-3.2.1' name='X-3.2.1' style='display:none;'>Yes.</div><div id='A-3.2.2' name='A-3.2.2' style='display:none;'> No.
+</div><div id='A-href-3.2.2' name='A-href-3.2.2' style='display:none;'>javascript:void('');</div><div id='A-target-3.2.2' name='A-target-3.2.2' style='display:none;'></div><div id='X-3.2.2' name='X-3.2.2' style='display:none;'>No.</div><div id='A-3.2.2.1' name='A-3.2.2.1' style='display:none;'> Can I have cat pictures now?
+</div><div id='A-href-3.2.2.1' name='A-href-3.2.2.1' style='display:none;'>javascript:void('');</div><div id='A-target-3.2.2.1' name='A-target-3.2.2.1' style='display:none;'></div><div id='X-3.2.2.1' name='X-3.2.2.1' style='display:none;'>Can I have cat pictures now?</div><div id='A-3.2.2.2' name='A-3.2.2.2' style='display:none;'> Bye.
+</div><div id='A-href-3.2.2.2' name='A-href-3.2.2.2' style='display:none;'>javascript:void('');</div><div id='A-target-3.2.2.2' name='A-target-3.2.2.2' style='display:none;'></div><div id='X-3.2.2.2' name='X-3.2.2.2' style='display:none;'>Bye.</div><div id='A-4.1' name='A-4.1' style='display:none;'> Yes.
+</div><div id='A-href-4.1' name='A-href-4.1' style='display:none;'>javascript:void('');</div><div id='A-target-4.1' name='A-target-4.1' style='display:none;'></div><div id='X-4.1' name='X-4.1' style='display:none;'>Yes.</div><div id='A-4.1.1' name='A-4.1.1' style='display:none;'> I can use Word/Wordperfect.
+</div><div id='A-href-4.1.1' name='A-href-4.1.1' style='display:none;'>javascript:void('');</div><div id='A-target-4.1.1' name='A-target-4.1.1' style='display:none;'></div><div id='X-4.1.1' name='X-4.1.1' style='display:none;'>I can use Word/Wordperfect.</div><div id='A-4.1.2' name='A-4.1.2' style='display:none;'> Give me a command line.
+</div><div id='A-href-4.1.2' name='A-href-4.1.2' style='display:none;'>javascript:void('');</div><div id='A-target-4.1.2' name='A-target-4.1.2' style='display:none;'></div><div id='X-4.1.2' name='X-4.1.2' style='display:none;'>Give me a command line.</div><div id='A-4.1.2.1' name='A-4.1.2.1' style='display:none;'> I'd love to play a game.
+</div><div id='A-href-4.1.2.1' name='A-href-4.1.2.1' style='display:none;'>javascript:void('');</div><div id='A-target-4.1.2.1' name='A-target-4.1.2.1' style='display:none;'></div><div id='X-4.1.2.1' name='X-4.1.2.1' style='display:none;'>I'd love to play a game.</div><div id='A-4.1.2.2' name='A-4.1.2.2' style='display:none;'> Let's learn more about LITCon.
+</div><div id='A-href-4.1.2.2' name='A-href-4.1.2.2' style='display:none;'>javascript:void('');</div><div id='A-target-4.1.2.2' name='A-target-4.1.2.2' style='display:none;'></div><div id='X-4.1.2.2' name='X-4.1.2.2' style='display:none;'>Let's learn more about LITCon.</div><div id='A-4.1.3' name='A-4.1.3' style='display:none;'> What's a command line?
+</div><div id='A-href-4.1.3' name='A-href-4.1.3' style='display:none;'>javascript:void('');</div><div id='A-target-4.1.3' name='A-target-4.1.3' style='display:none;'></div><div id='X-4.1.3' name='X-4.1.3' style='display:none;'>What's a command line?</div><div id='A-4.2' name='A-4.2' style='display:none;'> No.
+</div><div id='A-href-4.2' name='A-href-4.2' style='display:none;'>javascript:void('');</div><div id='A-target-4.2' name='A-target-4.2' style='display:none;'></div><div id='X-4.2' name='X-4.2' style='display:none;'>No.</div><div id='A-5.1' name='A-5.1' style='display:none;'> Yes.
+</div><div id='A-href-5.1' name='A-href-5.1' style='display:none;'>javascript:void('');</div><div id='A-target-5.1' name='A-target-5.1' style='display:none;'></div><div id='X-5.1' name='X-5.1' style='display:none;'>Yes.</div><div id='A-5.2' name='A-5.2' style='display:none;'> No.
+</div><div id='A-href-5.2' name='A-href-5.2' style='display:none;'>javascript:void('');</div><div id='A-target-5.2' name='A-target-5.2' style='display:none;'></div><div id='X-5.2' name='X-5.2' style='display:none;'>No.</div><div id='A-6.1' name='A-6.1' style='display:none;'> Yes.
+</div><div id='A-href-6.1' name='A-href-6.1' style='display:none;'>javascript:void('');</div><div id='A-target-6.1' name='A-target-6.1' style='display:none;'></div><div id='X-6.1' name='X-6.1' style='display:none;'>Yes.</div><div id='A-6.2' name='A-6.2' style='display:none;'> No.
+</div><div id='A-href-6.2' name='A-href-6.2' style='display:none;'>javascript:void('');</div><div id='A-target-6.2' name='A-target-6.2' style='display:none;'></div><div id='X-6.2' name='X-6.2' style='display:none;'>No.</div><div id='A-7.1' name='A-7.1' style='display:none;'> Yes.
+</div><div id='A-href-7.1' name='A-href-7.1' style='display:none;'>javascript:void('');</div><div id='A-target-7.1' name='A-target-7.1' style='display:none;'></div><div id='X-7.1' name='X-7.1' style='display:none;'>Yes.</div><div id='A-7.2' name='A-7.2' style='display:none;'> No.
+</div><div id='A-href-7.2' name='A-href-7.2' style='display:none;'>javascript:void('');</div><div id='A-target-7.2' name='A-target-7.2' style='display:none;'></div><div id='X-7.2' name='X-7.2' style='display:none;'>No.</div><div id='A-8.1' name='A-8.1' style='display:none;'> Who's speaking?
+</div><div id='A-href-8.1' name='A-href-8.1' style='display:none;'>javascript:void('');</div><div id='A-target-8.1' name='A-target-8.1' style='display:none;'></div><div id='X-8.1' name='X-8.1' style='display:none;'>Who's speaking?</div><div id='A-8.2' name='A-8.2' style='display:none;'> Tell me more about these weekend sessions.
+</div><div id='A-href-8.2' name='A-href-8.2' style='display:none;'>javascript:void('');</div><div id='A-target-8.2' name='A-target-8.2' style='display:none;'></div><div id='X-8.2' name='X-8.2' style='display:none;'>Tell me more about these weekend sessions.</div><div id='A-9.1' name='A-9.1' style='display:none;'> I need more convincing.
+</div><div id='A-href-9.1' name='A-href-9.1' style='display:none;'>javascript:void('');</div><div id='A-target-9.1' name='A-target-9.1' style='display:none;'></div><div id='X-9.1' name='X-9.1' style='display:none;'>I need more convincing.</div><div id='A-9.1.1' name='A-9.1.1' style='display:none;'> Yes.
+</div><div id='A-href-9.1.1' name='A-href-9.1.1' style='display:none;'>javascript:void('');</div><div id='A-target-9.1.1' name='A-target-9.1.1' style='display:none;'></div><div id='X-9.1.1' name='X-9.1.1' style='display:none;'>Yes.</div><div id='A-9.1.2' name='A-9.1.2' style='display:none;'> No.
+</div><div id='A-href-9.1.2' name='A-href-9.1.2' style='display:none;'>javascript:void('');</div><div id='A-target-9.1.2' name='A-target-9.1.2' style='display:none;'></div><div id='X-9.1.2' name='X-9.1.2' style='display:none;'>No.</div><div id='A-9.1.2.1' name='A-9.1.2.1' style='display:none;'> Yes.
+</div><div id='A-href-9.1.2.1' name='A-href-9.1.2.1' style='display:none;'>javascript:void('');</div><div id='A-target-9.1.2.1' name='A-target-9.1.2.1' style='display:none;'></div><div id='X-9.1.2.1' name='X-9.1.2.1' style='display:none;'>Yes.</div><div id='A-9.1.2.1.1' name='A-9.1.2.1.1' style='display:none;'> Yes.
+</div><div id='A-href-9.1.2.1.1' name='A-href-9.1.2.1.1' style='display:none;'>javascript:void('');</div><div id='A-target-9.1.2.1.1' name='A-target-9.1.2.1.1' style='display:none;'></div><div id='X-9.1.2.1.1' name='X-9.1.2.1.1' style='display:none;'>Yes.</div><div id='A-9.1.2.1.2' name='A-9.1.2.1.2' style='display:none;'> No.
+</div><div id='A-href-9.1.2.1.2' name='A-href-9.1.2.1.2' style='display:none;'>javascript:void('');</div><div id='A-target-9.1.2.1.2' name='A-target-9.1.2.1.2' style='display:none;'></div><div id='X-9.1.2.1.2' name='X-9.1.2.1.2' style='display:none;'>No.</div><div id='A-9.1.2.2' name='A-9.1.2.2' style='display:none;'> No.
+</div><div id='A-href-9.1.2.2' name='A-href-9.1.2.2' style='display:none;'>javascript:void('');</div><div id='A-target-9.1.2.2' name='A-target-9.1.2.2' style='display:none;'></div><div id='X-9.1.2.2' name='X-9.1.2.2' style='display:none;'>No.</div><div id='A-9.1.2.2.1' name='A-9.1.2.2.1' style='display:none;'> Yes.
+</div><div id='A-href-9.1.2.2.1' name='A-href-9.1.2.2.1' style='display:none;'>javascript:void('');</div><div id='A-target-9.1.2.2.1' name='A-target-9.1.2.2.1' style='display:none;'></div><div id='X-9.1.2.2.1' name='X-9.1.2.2.1' style='display:none;'>Yes.</div><div id='A-9.1.2.2.1.1' name='A-9.1.2.2.1.1' style='display:none;'> I need more convincing.
+</div><div id='A-href-9.1.2.2.1.1' name='A-href-9.1.2.2.1.1' style='display:none;'>javascript:void('');</div><div id='A-target-9.1.2.2.1.1' name='A-target-9.1.2.2.1.1' style='display:none;'></div><div id='X-9.1.2.2.1.1' name='X-9.1.2.2.1.1' style='display:none;'>I need more convincing.</div><div id='A-9.1.2.2.1.2' name='A-9.1.2.2.1.2' style='display:none;'> What does the conference cost?
+</div><div id='A-href-9.1.2.2.1.2' name='A-href-9.1.2.2.1.2' style='display:none;'>javascript:void('');</div><div id='A-target-9.1.2.2.1.2' name='A-target-9.1.2.2.1.2' style='display:none;'></div><div id='X-9.1.2.2.1.2' name='X-9.1.2.2.1.2' style='display:none;'>What does the conference cost?</div><div id='A-9.1.2.2.1.3' name='A-9.1.2.2.1.3' style='display:none;'> Take me to registration.
+</div><div id='A-href-9.1.2.2.1.3' name='A-href-9.1.2.2.1.3' style='display:none;'>https://web.cvent.com/event/cf22c986-4b48-454f-9dfb-3545fe93f86d/register</div><div id='A-target-9.1.2.2.1.3' name='A-target-9.1.2.2.1.3' style='display:none;'>target="_blank" i="https://web.cvent.com/event/cf22c986-4b48-454f-9dfb-3545fe93f86d/register"</div><div id='X-9.1.2.2.1.3' name='X-9.1.2.2.1.3' style='display:none;'>Take me to registration.</div><div id='A-9.1.2.2.2' name='A-9.1.2.2.2' style='display:none;'> No.
+</div><div id='A-href-9.1.2.2.2' name='A-href-9.1.2.2.2' style='display:none;'>javascript:void('');</div><div id='A-target-9.1.2.2.2' name='A-target-9.1.2.2.2' style='display:none;'></div><div id='X-9.1.2.2.2' name='X-9.1.2.2.2' style='display:none;'>No.</div><div id='A-9.2' name='A-9.2' style='display:none;'> What does the conference cost?
+</div><div id='A-href-9.2' name='A-href-9.2' style='display:none;'>javascript:void('');</div><div id='A-target-9.2' name='A-target-9.2' style='display:none;'></div><div id='X-9.2' name='X-9.2' style='display:none;'>What does the conference cost?</div><div id='A-9.2.1' name='A-9.2.1' style='display:none;'> Take me to registration.
+</div><div id='A-href-9.2.1' name='A-href-9.2.1' style='display:none;'>https://web.cvent.com/event/cf22c986-4b48-454f-9dfb-3545fe93f86d/register</div><div id='A-target-9.2.1' name='A-target-9.2.1' style='display:none;'>target="_blank" i="https://web.cvent.com/event/cf22c986-4b48-454f-9dfb-3545fe93f86d/register"</div><div id='X-9.2.1' name='X-9.2.1' style='display:none;'>Take me to registration.</div><div id='A-9.2.2' name='A-9.2.2' style='display:none;'> What if $25 is too much?
+</div><div id='A-href-9.2.2' name='A-href-9.2.2' style='display:none;'>javascript:void('');</div><div id='A-target-9.2.2' name='A-target-9.2.2' style='display:none;'></div><div id='X-9.2.2' name='X-9.2.2' style='display:none;'>What if $25 is too much?</div><div id='A-9.2.2.1' name='A-9.2.2.1' style='display:none;'> Yes.
+</div><div id='A-href-9.2.2.1' name='A-href-9.2.2.1' style='display:none;'>javascript:void('');</div><div id='A-target-9.2.2.1' name='A-target-9.2.2.1' style='display:none;'></div><div id='X-9.2.2.1' name='X-9.2.2.1' style='display:none;'>Yes.</div><div id='A-9.2.2.2' name='A-9.2.2.2' style='display:none;'> No.
+</div><div id='A-href-9.2.2.2' name='A-href-9.2.2.2' style='display:none;'>javascript:void('');</div><div id='A-target-9.2.2.2' name='A-target-9.2.2.2' style='display:none;'></div><div id='X-9.2.2.2' name='X-9.2.2.2' style='display:none;'>No.</div><div id='A-9.2.2.2.1' name='A-9.2.2.2.1' style='display:none;'> Yes.
+</div><div id='A-href-9.2.2.2.1' name='A-href-9.2.2.2.1' style='display:none;'>javascript:void('');</div><div id='A-target-9.2.2.2.1' name='A-target-9.2.2.2.1' style='display:none;'></div><div id='X-9.2.2.2.1' name='X-9.2.2.2.1' style='display:none;'>Yes.</div><div id='A-9.2.2.2.2' name='A-9.2.2.2.2' style='display:none;'> No.
+</div><div id='A-href-9.2.2.2.2' name='A-href-9.2.2.2.2' style='display:none;'>javascript:void('');</div><div id='A-target-9.2.2.2.2' name='A-target-9.2.2.2.2' style='display:none;'></div><div id='X-9.2.2.2.2' name='X-9.2.2.2.2' style='display:none;'>No.</div><div id='A-9.2.2.2.2.1' name='A-9.2.2.2.2.1' style='display:none;'> Yes.
+</div><div id='A-href-9.2.2.2.2.1' name='A-href-9.2.2.2.2.1' style='display:none;'>javascript:void('');</div><div id='A-target-9.2.2.2.2.1' name='A-target-9.2.2.2.2.1' style='display:none;'></div><div id='X-9.2.2.2.2.1' name='X-9.2.2.2.2.1' style='display:none;'>Yes.</div><div id='A-9.2.2.2.2.1.1' name='A-9.2.2.2.2.1.1' style='display:none;'> Can I have cat pictures now?
+</div><div id='A-href-9.2.2.2.2.1.1' name='A-href-9.2.2.2.2.1.1' style='display:none;'>javascript:void('');</div><div id='A-target-9.2.2.2.2.1.1' name='A-target-9.2.2.2.2.1.1' style='display:none;'></div><div id='X-9.2.2.2.2.1.1' name='X-9.2.2.2.2.1.1' style='display:none;'>Can I have cat pictures now?</div><div id='A-9.2.2.2.2.1.2' name='A-9.2.2.2.2.1.2' style='display:none;'> Bye.
+</div><div id='A-href-9.2.2.2.2.1.2' name='A-href-9.2.2.2.2.1.2' style='display:none;'>javascript:void('');</div><div id='A-target-9.2.2.2.2.1.2' name='A-target-9.2.2.2.2.1.2' style='display:none;'></div><div id='X-9.2.2.2.2.1.2' name='X-9.2.2.2.2.1.2' style='display:none;'>Bye.</div><div id='A-9.2.2.2.2.2' name='A-9.2.2.2.2.2' style='display:none;'> No.
+</div><div id='A-href-9.2.2.2.2.2' name='A-href-9.2.2.2.2.2' style='display:none;'>javascript:void('');</div><div id='A-target-9.2.2.2.2.2' name='A-target-9.2.2.2.2.2' style='display:none;'></div><div id='X-9.2.2.2.2.2' name='X-9.2.2.2.2.2' style='display:none;'>No.</div><div id='A-9.3' name='A-9.3' style='display:none;'> Sure, take me to registration.
+</div><div id='A-href-9.3' name='A-href-9.3' style='display:none;'>https://web.cvent.com/event/cf22c986-4b48-454f-9dfb-3545fe93f86d/register</div><div id='A-target-9.3' name='A-target-9.3' style='display:none;'>target="_blank" i="https://web.cvent.com/event/cf22c986-4b48-454f-9dfb-3545fe93f86d/register"</div><div id='X-9.3' name='X-9.3' style='display:none;'>Sure, take me to registration.</div><div id='A-10.1' name='A-10.1' style='display:none;'> Just a little more convincing.
+</div><div id='A-href-10.1' name='A-href-10.1' style='display:none;'>javascript:void('');</div><div id='A-target-10.1' name='A-target-10.1' style='display:none;'></div><div id='X-10.1' name='X-10.1' style='display:none;'>Just a little more convincing.</div><div id='A-10.2' name='A-10.2' style='display:none;'> What does the conference cost?
+</div><div id='A-href-10.2' name='A-href-10.2' style='display:none;'>javascript:void('');</div><div id='A-target-10.2' name='A-target-10.2' style='display:none;'></div><div id='X-10.2' name='X-10.2' style='display:none;'>What does the conference cost?</div><div id='A-10.3' name='A-10.3' style='display:none;'> Take me to registration.
+</div><div id='A-href-10.3' name='A-href-10.3' style='display:none;'>https://web.cvent.com/event/cf22c986-4b48-454f-9dfb-3545fe93f86d/register</div><div id='A-target-10.3' name='A-target-10.3' style='display:none;'>target="_blank" i="https://web.cvent.com/event/cf22c986-4b48-454f-9dfb-3545fe93f86d/register"</div><div id='X-10.3' name='X-10.3' style='display:none;'>Take me to registration.</div><div id='A-11.1' name='A-11.1' style='display:none;'> Sure.
+</div><div id='A-href-11.1' name='A-href-11.1' style='display:none;'>javascript:void('');</div><div id='A-target-11.1' name='A-target-11.1' style='display:none;'></div><div id='X-11.1' name='X-11.1' style='display:none;'>Sure.</div><div id='A-11.1.1' name='A-11.1.1' style='display:none;'> Yes.
+</div><div id='A-href-11.1.1' name='A-href-11.1.1' style='display:none;'>javascript:void('');</div><div id='A-target-11.1.1' name='A-target-11.1.1' style='display:none;'></div><div id='X-11.1.1' name='X-11.1.1' style='display:none;'>Yes.</div><div id='A-11.1.2' name='A-11.1.2' style='display:none;'> No.
+</div><div id='A-href-11.1.2' name='A-href-11.1.2' style='display:none;'>javascript:void('');</div><div id='A-target-11.1.2' name='A-target-11.1.2' style='display:none;'></div><div id='X-11.1.2' name='X-11.1.2' style='display:none;'>No.</div><div id='A-11.2' name='A-11.2' style='display:none;'> No thanks.
+</div><div id='A-href-11.2' name='A-href-11.2' style='display:none;'>javascript:void('');</div><div id='A-target-11.2' name='A-target-11.2' style='display:none;'></div><div id='X-11.2' name='X-11.2' style='display:none;'>No thanks.</div><div id='A-11.3' name='A-11.3' style='display:none;'> Why would I use something like this?
+</div><div id='A-href-11.3' name='A-href-11.3' style='display:none;'>javascript:void('');</div><div id='A-target-11.3' name='A-target-11.3' style='display:none;'></div><div id='X-11.3' name='X-11.3' style='display:none;'>Why would I use something like this?</div><div id='A-12.1' name='A-12.1' style='display:none;'> Yes.
+</div><div id='A-href-12.1' name='A-href-12.1' style='display:none;'>javascript:void('');</div><div id='A-target-12.1' name='A-target-12.1' style='display:none;'></div><div id='X-12.1' name='X-12.1' style='display:none;'>Yes.</div><div id='A-12.2' name='A-12.2' style='display:none;'> No.
+</div><div id='A-href-12.2' name='A-href-12.2' style='display:none;'>javascript:void('');</div><div id='A-target-12.2' name='A-target-12.2' style='display:none;'></div><div id='X-12.2' name='X-12.2' style='display:none;'>No.</div><div id='A-13.1' name='A-13.1' style='display:none;'> A hard no.
+</div><div id='A-href-13.1' name='A-href-13.1' style='display:none;'>javascript:void('');</div><div id='A-target-13.1' name='A-target-13.1' style='display:none;'></div><div id='X-13.1' name='X-13.1' style='display:none;'>A hard no.</div><div id='A-13.1.1' name='A-13.1.1' style='display:none;'> Can I have cat pictures now?
+</div><div id='A-href-13.1.1' name='A-href-13.1.1' style='display:none;'>javascript:void('');</div><div id='A-target-13.1.1' name='A-target-13.1.1' style='display:none;'></div><div id='X-13.1.1' name='X-13.1.1' style='display:none;'>Can I have cat pictures now?</div><div id='A-13.1.2' name='A-13.1.2' style='display:none;'> Bye.
+</div><div id='A-href-13.1.2' name='A-href-13.1.2' style='display:none;'>javascript:void('');</div><div id='A-target-13.1.2' name='A-target-13.1.2' style='display:none;'></div><div id='X-13.1.2' name='X-13.1.2' style='display:none;'>Bye.</div><div id='A-13.2' name='A-13.2' style='display:none;'> Convince me.
+</div><div id='A-href-13.2' name='A-href-13.2' style='display:none;'>javascript:void('');</div><div id='A-target-13.2' name='A-target-13.2' style='display:none;'></div><div id='X-13.2' name='X-13.2' style='display:none;'>Convince me.</div><div id='A-14.1' name='A-14.1' style='display:none;'> Can I have cat pictures now?
+</div><div id='A-href-14.1' name='A-href-14.1' style='display:none;'>javascript:void('');</div><div id='A-target-14.1' name='A-target-14.1' style='display:none;'></div><div id='X-14.1' name='X-14.1' style='display:none;'>Can I have cat pictures now?</div><div id='A-14.2' name='A-14.2' style='display:none;'> Bye.
+</div><div id='A-href-14.2' name='A-href-14.2' style='display:none;'>javascript:void('');</div><div id='A-target-14.2' name='A-target-14.2' style='display:none;'></div><div id='X-14.2' name='X-14.2' style='display:none;'>Bye.</div><div id='A-15.1' name='A-15.1' style='display:none;'> Yes
+</div><div id='A-href-15.1' name='A-href-15.1' style='display:none;'>javascript:void('');</div><div id='A-target-15.1' name='A-target-15.1' style='display:none;'></div><div id='X-15.1' name='X-15.1' style='display:none;'>Yes</div><div id='A-15.2' name='A-15.2' style='display:none;'> No
+</div><div id='A-href-15.2' name='A-href-15.2' style='display:none;'>javascript:void('');</div><div id='A-target-15.2' name='A-target-15.2' style='display:none;'></div><div id='X-15.2' name='X-15.2' style='display:none;'>No</div><div id='A-16.1' name='A-16.1' style='display:none;'> Yes
+</div><div id='A-href-16.1' name='A-href-16.1' style='display:none;'>javascript:void('');</div><div id='A-target-16.1' name='A-target-16.1' style='display:none;'></div><div id='X-16.1' name='X-16.1' style='display:none;'>Yes</div><div id='A-16.2' name='A-16.2' style='display:none;'> No
+</div><div id='A-href-16.2' name='A-href-16.2' style='display:none;'>javascript:void('');</div><div id='A-target-16.2' name='A-target-16.2' style='display:none;'></div><div id='X-16.2' name='X-16.2' style='display:none;'>No</div><div id='A-17.1' name='A-17.1' style='display:none;'> Yes
+</div><div id='A-href-17.1' name='A-href-17.1' style='display:none;'>javascript:void('');</div><div id='A-target-17.1' name='A-target-17.1' style='display:none;'></div><div id='X-17.1' name='X-17.1' style='display:none;'>Yes</div><div id='A-17.2' name='A-17.2' style='display:none;'> No
+</div><div id='A-href-17.2' name='A-href-17.2' style='display:none;'>javascript:void('');</div><div id='A-target-17.2' name='A-target-17.2' style='display:none;'></div><div id='X-17.2' name='X-17.2' style='display:none;'>No</div><div id='A-18.1' name='A-18.1' style='display:none;'> Yes
+</div><div id='A-href-18.1' name='A-href-18.1' style='display:none;'>javascript:void('');</div><div id='A-target-18.1' name='A-target-18.1' style='display:none;'></div><div id='X-18.1' name='X-18.1' style='display:none;'>Yes</div><div id='A-18.2' name='A-18.2' style='display:none;'> No
+</div><div id='A-href-18.2' name='A-href-18.2' style='display:none;'>javascript:void('');</div><div id='A-target-18.2' name='A-target-18.2' style='display:none;'></div><div id='X-18.2' name='X-18.2' style='display:none;'>No</div><div id='A-19.1' name='A-19.1' style='display:none;'> Yes
+</div><div id='A-href-19.1' name='A-href-19.1' style='display:none;'>javascript:void('');</div><div id='A-target-19.1' name='A-target-19.1' style='display:none;'></div><div id='X-19.1' name='X-19.1' style='display:none;'>Yes</div><div id='A-19.2' name='A-19.2' style='display:none;'> No
+</div><div id='A-href-19.2' name='A-href-19.2' style='display:none;'>javascript:void('');</div><div id='A-target-19.2' name='A-target-19.2' style='display:none;'></div><div id='X-19.2' name='X-19.2' style='display:none;'>No</div><div id='A-20.1' name='A-20.1' style='display:none;'> Yes
+</div><div id='A-href-20.1' name='A-href-20.1' style='display:none;'>javascript:void('');</div><div id='A-target-20.1' name='A-target-20.1' style='display:none;'></div><div id='X-20.1' name='X-20.1' style='display:none;'>Yes</div><div id='A-20.2' name='A-20.2' style='display:none;'> No
+</div><div id='A-href-20.2' name='A-href-20.2' style='display:none;'>javascript:void('');</div><div id='A-target-20.2' name='A-target-20.2' style='display:none;'></div><div id='X-20.2' name='X-20.2' style='display:none;'>No</div><div id='A-21.1' name='A-21.1' style='display:none;'> Yes
+</div><div id='A-href-21.1' name='A-href-21.1' style='display:none;'>javascript:void('');</div><div id='A-target-21.1' name='A-target-21.1' style='display:none;'></div><div id='X-21.1' name='X-21.1' style='display:none;'>Yes</div><div id='A-21.2' name='A-21.2' style='display:none;'> No
+</div><div id='A-href-21.2' name='A-href-21.2' style='display:none;'>javascript:void('');</div><div id='A-target-21.2' name='A-target-21.2' style='display:none;'></div><div id='X-21.2' name='X-21.2' style='display:none;'>No</div><div id='A-22.1' name='A-22.1' style='display:none;'> Yes
+</div><div id='A-href-22.1' name='A-href-22.1' style='display:none;'>javascript:void('');</div><div id='A-target-22.1' name='A-target-22.1' style='display:none;'></div><div id='X-22.1' name='X-22.1' style='display:none;'>Yes</div><div id='A-22.2' name='A-22.2' style='display:none;'> No
+</div><div id='A-href-22.2' name='A-href-22.2' style='display:none;'>javascript:void('');</div><div id='A-target-22.2' name='A-target-22.2' style='display:none;'></div><div id='X-22.2' name='X-22.2' style='display:none;'>No</div><div id='A-23.1' name='A-23.1' style='display:none;'> Yes
+</div><div id='A-href-23.1' name='A-href-23.1' style='display:none;'>javascript:void('');</div><div id='A-target-23.1' name='A-target-23.1' style='display:none;'></div><div id='X-23.1' name='X-23.1' style='display:none;'>Yes</div><div id='A-23.2' name='A-23.2' style='display:none;'> No
+</div><div id='A-href-23.2' name='A-href-23.2' style='display:none;'>javascript:void('');</div><div id='A-target-23.2' name='A-target-23.2' style='display:none;'></div><div id='X-23.2' name='X-23.2' style='display:none;'>No</div><div id='A-24.1' name='A-24.1' style='display:none;'> Yes
+</div><div id='A-href-24.1' name='A-href-24.1' style='display:none;'>javascript:void('');</div><div id='A-target-24.1' name='A-target-24.1' style='display:none;'></div><div id='X-24.1' name='X-24.1' style='display:none;'>Yes</div><div id='A-24.2' name='A-24.2' style='display:none;'> No
+</div><div id='A-href-24.2' name='A-href-24.2' style='display:none;'>javascript:void('');</div><div id='A-target-24.2' name='A-target-24.2' style='display:none;'></div><div id='X-24.2' name='X-24.2' style='display:none;'>No</div><div id='A-26.1' name='A-26.1' style='display:none;'> Sounds good. I love chess.
+</div><div id='A-href-26.1' name='A-href-26.1' style='display:none;'>javascript:void('');</div><div id='A-target-26.1' name='A-target-26.1' style='display:none;'></div><div id='X-26.1' name='X-26.1' style='display:none;'>Sounds good. I love chess.</div><div id='A-26.2' name='A-26.2' style='display:none;'> How about thermonuclear war?
+</div><div id='A-href-26.2' name='A-href-26.2' style='display:none;'>javascript:void('');</div><div id='A-target-26.2' name='A-target-26.2' style='display:none;'></div><div id='X-26.2' name='X-26.2' style='display:none;'>How about thermonuclear war?</div><div id='A-26.2.1' name='A-26.2.1' style='display:none;'> Yes.
+</div><div id='A-href-26.2.1' name='A-href-26.2.1' style='display:none;'>javascript:void('');</div><div id='A-target-26.2.1' name='A-target-26.2.1' style='display:none;'></div><div id='X-26.2.1' name='X-26.2.1' style='display:none;'>Yes.</div><div id='A-26.2.2' name='A-26.2.2' style='display:none;'> No.
+</div><div id='A-href-26.2.2' name='A-href-26.2.2' style='display:none;'>javascript:void('');</div><div id='A-target-26.2.2' name='A-target-26.2.2' style='display:none;'></div><div id='X-26.2.2' name='X-26.2.2' style='display:none;'>No.</div><div id='A-26.3' name='A-26.3' style='display:none;'> Actually, let's get back to LITCon.
+</div><div id='A-href-26.3' name='A-href-26.3' style='display:none;'>javascript:void('');</div><div id='A-target-26.3' name='A-target-26.3' style='display:none;'></div><div id='X-26.3' name='X-26.3' style='display:none;'>Actually, let's get back to LITCon.</div>
+<script>
+	var QVnames = [['1','1'],['1.1','1.1'],['1.2','1.2'],['1.3','1.3'],['2','available'],['3','convince'],['3.1','3.1'],['3.2','3.2'],['3.2.1','3.2.1'],['3.2.2','notforyou'],['3.2.2.1','3.2.2.1'],['3.2.2.2','3.2.2.2'],['4','problems'],['4.1','goodnews'],['4.1.1','4.1.1'],['4.1.2','4.1.2'],['4.1.2.1','4.1.2.1'],['4.1.2.2','4.1.2.2'],['4.1.3','4.1.3'],['4.2','4.2'],['5','mproblems'],['5.1','5.1'],['5.2','5.2'],['6','mmproblems'],['6.1','6.1'],['6.2','6.2'],['7','mmmproblems'],['7.1','7.1'],['7.2','7.2'],['8','everyone'],['8.1','keynote'],['8.2','weekend'],['9','proud'],['9.1','moreconv'],['9.1.1','9.1.1'],['9.1.2','evenmore'],['9.1.2.1','9.1.2.1'],['9.1.2.1.1','9.1.2.1.1'],['9.1.2.1.2','9.1.2.1.2'],['9.1.2.2','9.1.2.2'],['9.1.2.2.1','students'],['9.1.2.2.1.1','9.1.2.2.1.1'],['9.1.2.2.1.2','9.1.2.2.1.2'],['9.1.2.2.1.3','9.1.2.2.1.3'],['9.1.2.2.2','9.1.2.2.2'],['9.2','whatcost'],['9.2.1','9.2.1'],['9.2.2','9.2.2'],['9.2.2.1','9.2.2.1'],['9.2.2.2','9.2.2.2'],['9.2.2.2.1','9.2.2.2.1'],['9.2.2.2.2','9.2.2.2.2'],['9.2.2.2.2.1','9.2.2.2.2.1'],['9.2.2.2.2.1.1','9.2.2.2.2.1.1'],['9.2.2.2.2.1.2','9.2.2.2.2.1.2'],['9.2.2.2.2.2','9.2.2.2.2.2'],['9.3','9.3'],['10','network'],['10.1','10.1'],['10.2','10.2'],['10.3','10.3'],['11','free'],['11.1','11.1'],['11.1.1','11.1.1'],['11.1.2','11.1.2'],['11.2','11.2'],['11.3','11.3'],['12','whatabout'],['12.1','12.1'],['12.2','12.2'],['13','notavailable'],['13.1','nexttime'],['13.1.1','13.1.1'],['13.1.2','13.1.2'],['13.2','13.2'],['14','thanks'],['14.1','14.1'],['14.2','14.2'],['15','cats1'],['15.1','15.1'],['15.2','15.2'],['16','cats2'],['16.1','16.1'],['16.2','16.2'],['17','cats3'],['17.1','17.1'],['17.2','17.2'],['18','cats4'],['18.1','18.1'],['18.2','18.2'],['19','cats5'],['19.1','19.1'],['19.2','19.2'],['20','cats6'],['20.1','20.1'],['20.2','20.2'],['21','cats7'],['21.1','21.1'],['21.2','21.2'],['22','cats8'],['22.1','22.1'],['22.2','22.2'],['23','cats9'],['23.1','23.1'],['23.2','23.2'],['24','cats10'],['24.1','24.1'],['24.2','24.2'],['25','bye'],['26','wargames'],['26.1','26.1'],['26.2','26.2'],['26.2.1','26.2.1'],['26.2.2','26.2.2'],['26.3','26.3']];
+</script>
+</div><textarea id="original" name="original" style="display:none;" disabled="disabled"><div id='Q-1' name='Q-1' style='display:none;'> Can you make it to Boston on March 30th, 2020?
+</div><div id='Q-1.1' name='Q-1.1' style='display:none;'>GOTO:2</div><div id='Q-1.2' name='Q-1.2' style='display:none;'>GOTO:13</div><div id='Q-1.3' name='Q-1.3' style='display:none;'>GOTO:11</div><div id='Q-2' name='Q-2' style='display:none;'> Great. GOTO:3</div><div id='Q-3' name='Q-3' style='display:none;'> Do you work in the legal sector?
+</div><div id='Q-3.1' name='Q-3.1' style='display:none;'>GOTO:4</div><div id='Q-3.2' name='Q-3.2' style='display:none;'> Do you care about the justice system?
+</div><div id='Q-3.2.1' name='Q-3.2.1' style='display:none;'>GOTO:4</div><div id='Q-3.2.2' name='Q-3.2.2' style='display:none;'><img src="https://media.giphy.com/media/o6KYXl09rnmOQ/giphy.gif" style="width:232px;height:131px;"/><br><br> Okay... LITCon might not be for you.
+</div><div id='Q-3.2.2.1' name='Q-3.2.2.1' style='display:none;'>GOTO:15</div><div id='Q-3.2.2.2' name='Q-3.2.2.2' style='display:none;'>GOTO:25</div><div id='Q-4' name='Q-4' style='display:none;'> Are there things about the way you (or the justice system) work(s) that you think could use improvement?
+</div><div id='Q-4.1' name='Q-4.1' style='display:none;'> That's our jam! We're all about identifying and solving problems, not tech for tech's sake. After all, we're a <i>legal <b>innovation</b> and technology (LIT) conference</i>, not some standard legal tech conference. <br><br>That being said, what's your comfort level with tech?
+</div><div id='Q-4.1.1' name='Q-4.1.1' style='display:none;'> <img src="https://media.giphy.com/media/1S3vm6ISM2gDu/giphy.gif" style="width:132px;height:116px;"/> GOTO:8</div><div id='Q-4.1.2' name='Q-4.1.2' style='display:none;'> <img src="https://media.giphy.com/media/gPkWsM6X5xLVe/giphy.gif" style="width:232px;height:174px;"/>
+</div><div id='Q-4.1.2.1' name='Q-4.1.2.1' style='display:none;'><img src="https://jasoneppink.com/wp-content/gallery/the-reaction-gif-moving-image-as-gesture/kermit.gif" style="width:232px;height:167px;"> GOTO:26</div><div id='Q-4.1.2.2' name='Q-4.1.2.2' style='display:none;'>GOTO:8</div><div id='Q-4.1.3' name='Q-4.1.3' style='display:none;'> <img src="https://media.giphy.com/media/NRa7dRkMlVZRE5HUU4/giphy.gif" style="width:232px;height:130px;"/> <br><br> It's that text interface you see computer folks using. Anyhow, it's not important. GOTO:8</div><div id='Q-4.2' name='Q-4.2' style='display:none;'> <img src="https://www.reactiongifs.com/r/2013/06/I-dont-believe-you.gif" style="width:232px;height:174px;">GOTO:5</div><div id='Q-5' name='Q-5' style='display:none;'> Are there things about the way you (or the justice system) work(s) that you think could use improvement?
+</div><div id='Q-5.1' name='Q-5.1' style='display:none;'>GOTO:4.1</div><div id='Q-5.2' name='Q-5.2' style='display:none;'> <img src="https://media.giphy.com/media/qaYxWacSp8Jfq/giphy.gif" style="width:232px;height:217px;">GOTO:6</div><div id='Q-6' name='Q-6' style='display:none;'> <i>Are there things about the way you (or the justice system) work(s) that you think could use improvement?</i>
+</div><div id='Q-6.1' name='Q-6.1' style='display:none;'>GOTO:4.1</div><div id='Q-6.2' name='Q-6.2' style='display:none;'> <img src="https://media.giphy.com/media/12FfNKPlSR5k2c/giphy.gif" style="width:232px;height:193px;">GOTO:7</div><div id='Q-7' name='Q-7' style='display:none;'> <i><b>Are there things about the way you (or the justice system) work(s) that you think could use improvement?</b></i>
+</div><div id='Q-7.1' name='Q-7.1' style='display:none;'>GOTO:4.1</div><div id='Q-7.2' name='Q-7.2' style='display:none;'>GOTO:3.2.2</div><div id='Q-8' name='Q-8' style='display:none;'> LITCon's for everyone regardless of their comfort with tech. It's a single-day single-track conference though there are free skills building sessions and a hackathon over the weekend. The conference will feature speakers representing the full spectrum of legal tech endeavors with focus on clinical education and criminal justice.
+</div><div id='Q-8.1' name='Q-8.1' style='display:none;'>GOTO:9</div><div id='Q-8.2' name='Q-8.2' style='display:none;'> You can learn more over the <a href="https://suffolklitlab.org/LITCon/2020/hack/" target="_blank">event's website</a>, but the skills building sessions will include trainings tools for creating guided interviews and auto-generating documents such as <a href="https://docassemble.org/" target="_blank">Docassemble</a>, and <a href="https://www.qnamarkup.org/" target="_blank">QnA Markup</a>. <br><br>The hackathon portion of the weekend is in partnership with the <a href="http://dkmalone.com/2018/11/29/the-tubman-project/" target="_blank">Tubman Project</a> and will focus on creating tools for public defenders and their clients. GOTO:9</div><div id='Q-9' name='Q-9' style='display:none;'> We're really proud of the agenda and our speakers. We'll be updating this <a href="https://suffolklitlab.org/LITCon/2020/speakers/" target="_blank">public list</a> as we confirm speakers. That being said, Suffolk County District Attorney <a href="https://suffolklitlab.org/LITCon/2020/speakers/#rollins" target="_blank">Rachael Rollins</a> is our keynote speaker, and she'll be talking about the importance of data in criminal justice. <br><br> Are you convinced?
+</div><div id='Q-9.1' name='Q-9.1' style='display:none;'> We also have these really great rapid-fire talks. Do you want to see some examples?
+</div><div id='Q-9.1.1' name='Q-9.1.1' style='display:none;'> You can find a collection of them on the Lab's <a href="https://suffolklitlab.org/litbits/" target="_blank">LIT Bits page</a>. GOTO:9.1.2</div><div id='Q-9.1.2' name='Q-9.1.2' style='display:none;'> Did I mention that we'll be showing off student work?
+</div><div id='Q-9.1.2.1' name='Q-9.1.2.1' style='display:none;'> <img src="https://media.giphy.com/media/sBl8Fowq0ErFC/giphy.gif" style="width:232px;height:174px;"/><br><br> I'm pretty sure I didn't. Would you like to see a sample?
+</div><div id='Q-9.1.2.1.1' name='Q-9.1.2.1.1' style='display:none;'>GOTO:9.1.2.2.1</div><div id='Q-9.1.2.1.2' name='Q-9.1.2.1.2' style='display:none;'>GOTO:10</div><div id='Q-9.1.2.2' name='Q-9.1.2.2' style='display:none;'> Would you like to see a sample?
+</div><div id='Q-9.1.2.2.1' name='Q-9.1.2.2.1' style='display:none;'> This is from a prior year's conference. <br><br> <div class="profile_vid"><iframe class="embed_vid" src="https://www.youtube.com/embed/qbPf9VRP6eU?rel=0" gesture="media" allow="encrypted-media" allowfullscreen="" frameborder="0"></iframe></div> <br><br> So?
+</div><div id='Q-9.1.2.2.1.1' name='Q-9.1.2.2.1.1' style='display:none;'>GOTO:10</div><div id='Q-9.1.2.2.1.2' name='Q-9.1.2.2.1.2' style='display:none;'>GOTO:9.2</div><div id='Q-9.1.2.2.1.3' name='Q-9.1.2.2.1.3' style='display:none;'>GOTO:14</div><div id='Q-9.1.2.2.2' name='Q-9.1.2.2.2' style='display:none;'>GOTO:10</div><div id='Q-9.2' name='Q-9.2' style='display:none;'> A measly $25 if you get the early bird discount ($50 after Feb. 29). That includes a continental breakfast, hot lunch, and cocktails. <br><br><img src="https://media.giphy.com/media/5IMcyqKbkg0O4/giphy.gif" style="width:232px;height:128px;"/>
+</div><div id='Q-9.2.1' name='Q-9.2.1' style='display:none;'>GOTO:14</div><div id='Q-9.2.2' name='Q-9.2.2' style='display:none;'> Do you work in public interest?
+</div><div id='Q-9.2.2.1' name='Q-9.2.2.1' style='display:none;'> Email Melissa Guirand (<a href="mailto:mguirand@suffolk">mguirand@suffolk</a>) and ask for a pubic service waiver. GOTO:14</div><div id='Q-9.2.2.2' name='Q-9.2.2.2' style='display:none;'> Are you a student?
+</div><div id='Q-9.2.2.2.1' name='Q-9.2.2.2.1' style='display:none;'> Email Melissa Guirand (<a href="mailto:mguirand@suffolk">mguirand@suffolk</a>) and ask for a student waiver. GOTO:14</div><div id='Q-9.2.2.2.2' name='Q-9.2.2.2.2' style='display:none;'> Presenters don't have to pay. Would you consider proposing a rapid-fire talk?
+</div><div id='Q-9.2.2.2.2.1' name='Q-9.2.2.2.2.1' style='display:none;'> Great. You can find more info about pitching a rapid-fire talk <a href="https://suffolklitlab.org/LITCon/2020/litbits/" target="_blank">here</a>. We hope to see you on the 30th.
+</div><div id='Q-9.2.2.2.2.1.1' name='Q-9.2.2.2.2.1.1' style='display:none;'>GOTO:15</div><div id='Q-9.2.2.2.2.1.2' name='Q-9.2.2.2.2.1.2' style='display:none;'>GOTO:25</div><div id='Q-9.2.2.2.2.2' name='Q-9.2.2.2.2.2' style='display:none;'> I'm sorry. I'm not sure we can help. GOTO:13.1</div><div id='Q-9.3' name='Q-9.3' style='display:none;'>GOTO:14</div><div id='Q-10' name='Q-10' style='display:none;'> Did you know LITCon is a great networking event, bringing together clinicians, legal services providers, educators, legal tech leaders, law students, and the like? It's not a complete list, but here are some <a href="https://twitter.com/SuffolkLITLab/lists/litcon2020" target="_blank">folks on Twitter</a> that are coming, and just look at that <a href="https://suffolklitlab.org/LITCon/2020/speakers/" target="_blank">speakers list</a>.
+</div><div id='Q-10.1' name='Q-10.1' style='display:none;'><img src="https://media.giphy.com/media/xUySTzHsAP7FIG18oU/giphy.gif" style="width:232px;height:175px;"/><br><br> We built this "bot" as a commentary on the state of legal tech to make it clear that we "get it." That should count for something, right? I mean, "this is not a chatbot," come on? Tech can be a powerful tool but only when you're clear-eyed about it's potential.<br><br> Plus, wait until you hear how much the conference costs... GOTO:9.2</div><div id='Q-10.2' name='Q-10.2' style='display:none;'>GOTO:9.2</div><div id='Q-10.3' name='Q-10.3' style='display:none;'>GOTO:14</div><div id='Q-11' name='Q-11' style='display:none;'> Yes. It's an open source tool called <a href="https://www.qnamarkup.org" target="_blank">QnA Markup</a>, and it's actually one of three open source tools we'll be teaching at our free <a href="https://suffolklitlab.org/LITCon/2020/hack/" target="_blank">skills building session</a> the weekend before the conference. Would you like to see a 10 min video primer?
+</div><div id='Q-11.1' name='Q-11.1' style='display:none;'><div class="profile_vid"><iframe class="embed_vid" src="https://www.youtube.com/embed/RVhzQ1JVi3s?rel=0" gesture="media" allow="encrypted-media" allowfullscreen="" frameborder="0"></iframe></div>
+	<br><br>Do you want more?
+</div><div id='Q-11.1.1' name='Q-11.1.1' style='display:none;'>GOTO:12</div><div id='Q-11.1.2' name='Q-11.1.2' style='display:none;'>GOTO:12</div><div id='Q-11.2' name='Q-11.2' style='display:none;'>GOTO:12</div><div id='Q-11.3' name='Q-11.3' style='display:none;'> I don't know, lots of reason. You could help direct folks to resources based on their answers or collect info to automate documents... <br><br> <img src="https://media.giphy.com/media/3o6ozovtBb4wLpIVZ6/giphy.gif" style="width:232px;height:130px;"/> GOTO:12</div><div id='Q-12' name='Q-12' style='display:none;'> Well, if you're interested in attending some free sessions on learning how to use tools like QnA and <a href="https://docassemble.org/" target="_blank">Docassemble</a>, we'll be offering some on March 28th @ noon. <br><br>
+Back to LITCon proper. Can you make it to Boston on March 30th, 2020?
+</div><div id='Q-12.1' name='Q-12.1' style='display:none;'>GOTO:2</div><div id='Q-12.2' name='Q-12.2' style='display:none;'>GOTO:13</div><div id='Q-13' name='Q-13' style='display:none;'> <img src="https://media.giphy.com/media/33iqmp5ATXT5m/giphy.gif" style="width:232px;height:99px;"/><br><br> Too bad. Is that a hard no or an "I need convincing" no?
+</div><div id='Q-13.1' name='Q-13.1' style='display:none;'> Maybe next time. <!--Please keep March 30, 2020 open. That's when we'll be having LITCon2020.<br><br><img src="https://suffolklitlab.org/LITCon/2021/images/LIT_Con_2021_square_logo.png" style="width:232px;height:232px;"/>-->
+</div><div id='Q-13.1.1' name='Q-13.1.1' style='display:none;'>GOTO:15</div><div id='Q-13.1.2' name='Q-13.1.2' style='display:none;'>GOTO:25</div><div id='Q-13.2' name='Q-13.2' style='display:none;'>GOTO:3</div><div id='Q-14' name='Q-14' style='display:none;'> We look forward to seeing you on the 30th. Please tell your friends. <br><br><img src="https://media.giphy.com/media/FpZvxELO5xE8QcFdoc/giphy.gif" style="width:232px;height:130px;"/>
+</div><div id='Q-14.1' name='Q-14.1' style='display:none;'>GOTO:15</div><div id='Q-14.2' name='Q-14.2' style='display:none;'>GOTO:25</div><div id='Q-15' name='Q-15' style='display:none;'> <img src="https://media.giphy.com/media/Ov5NiLVXT8JEc/giphy.gif" style="width:232px;height:130px;"/>
+<br><br> Do you need more?
+</div><div id='Q-15.1' name='Q-15.1' style='display:none;'>GOTO:16</div><div id='Q-15.2' name='Q-15.2' style='display:none;'>Bye then. GOTO:25</div><div id='Q-16' name='Q-16' style='display:none;'> <img src="https://media.giphy.com/media/gl8ymnpv4Sqha/giphy.gif" style="width:232px;height:195px;"/>
+<br><br> Do you need more?
+</div><div id='Q-16.1' name='Q-16.1' style='display:none;'>GOTO:17</div><div id='Q-16.2' name='Q-16.2' style='display:none;'>Bye then. GOTO:25</div><div id='Q-17' name='Q-17' style='display:none;'> <img src="https://media.giphy.com/media/kvrvnB158J4fm/giphy.gif" style="width:232px;height:194px;"/>
+<br><br> Do you need more?
+</div><div id='Q-17.1' name='Q-17.1' style='display:none;'>GOTO:18</div><div id='Q-17.2' name='Q-17.2' style='display:none;'>Bye then. GOTO:25</div><div id='Q-18' name='Q-18' style='display:none;'> <img src="https://media.giphy.com/media/xBAreNGk5DapO/giphy.gif" style="width:232px;height:188px;"/>
+<br><br> Do you need more?
+</div><div id='Q-18.1' name='Q-18.1' style='display:none;'>GOTO:19</div><div id='Q-18.2' name='Q-18.2' style='display:none;'>Bye then. GOTO:25</div><div id='Q-19' name='Q-19' style='display:none;'> <img src="https://media.giphy.com/media/BLCHvwl9C5j1u/giphy.gif" style="width:232px;height:232px;"/>
+<br><br> Do you need more?
+</div><div id='Q-19.1' name='Q-19.1' style='display:none;'>GOTO:20</div><div id='Q-19.2' name='Q-19.2' style='display:none;'>Bye then. GOTO:25</div><div id='Q-20' name='Q-20' style='display:none;'> <img src="https://media.giphy.com/media/10dU7AN7xsi1I4/giphy.gif" style="width:232px;height:323px;"/>
+<br><br> Do you need more?
+</div><div id='Q-20.1' name='Q-20.1' style='display:none;'>GOTO:21</div><div id='Q-20.2' name='Q-20.2' style='display:none;'>Bye then. GOTO:25</div><div id='Q-21' name='Q-21' style='display:none;'> <img src="https://media.giphy.com/media/hPyONzUYJhLZS/giphy.gif" style="width:232px;height:223px;"/>
+<br><br> Do you need more?
+</div><div id='Q-21.1' name='Q-21.1' style='display:none;'>GOTO:22</div><div id='Q-21.2' name='Q-21.2' style='display:none;'>Bye then. GOTO:25</div><div id='Q-22' name='Q-22' style='display:none;'> <img src="https://media.giphy.com/media/Endx3eMpqmpZ6/giphy.gif" style="width:232px;height:142px;"/> <br><br> I know, those are puppies, but they're sooo cute.
+<br><br> Do you need more?
+</div><div id='Q-22.1' name='Q-22.1' style='display:none;'>GOTO:23</div><div id='Q-22.2' name='Q-22.2' style='display:none;'>Bye then. GOTO:25</div><div id='Q-23' name='Q-23' style='display:none;'> <img src="https://media.giphy.com/media/5scVaYq4hKA7u/giphy.gif" style="width:232px;height:130px;"/>
+<br><br> Do you need more?
+</div><div id='Q-23.1' name='Q-23.1' style='display:none;'>GOTO:24</div><div id='Q-23.2' name='Q-23.2' style='display:none;'>Bye then. GOTO:25</div><div id='Q-24' name='Q-24' style='display:none;'> <img src="https://media.giphy.com/media/t7MWRoExDRF72/giphy.gif" style="width:232px;height:207px;"/>
+<br><br> Do you need more?
+</div><div id='Q-24.1' name='Q-24.1' style='display:none;'>GOTO:15</div><div id='Q-24.2' name='Q-24.2' style='display:none;'>Bye then. GOTO:25</div><div id='Q-25' name='Q-25' style='display:none;'> <img src="https://media.giphy.com/media/3oxHQi7H2L27ilG1Da/giphy.gif" style="width:232px;height:232px;"/>
+
+
+
+</div><div id='Q-26' name='Q-26' style='display:none;'> How about a game of chess?
+</div><div id='Q-26.1' name='Q-26.1' style='display:none;'> Your move (works best on a desktop). <br><br><iframe src="https://www.qnamarkup.org/templates/chess/" scrolling="no" seamless="seamless" style="overflow:hidden;width:260px;height:260px;border: solid 0px #eee;"></iframe> <br><br> Anywho, back to the conference... GOTO:8</div><div id='Q-26.2' name='Q-26.2' style='display:none;'> <img src="https://i.imgur.com/WwpALFZ.gif" style="width:232px;height:131px;"><br><br>The only way to win is not to play! Have you actually seen <a href="https://en.wikipedia.org/wiki/WarGames" target=_blank>War Games</a>?
+</div><div id='Q-26.2.1' name='Q-26.2.1' style='display:none;'> <img src="https://www.reactiongifs.com/r/2013/06/I-dont-believe-you.gif" style="width:232px;height:174px;"><br><br>Let's try again. GOTO:26</div><div id='Q-26.2.2' name='Q-26.2.2' style='display:none;'> My apologies. Let me just say, thermonuclear war is the wrong answer. <br><br><img src ="https://i.giphy.com/uSHMDTUL7lKso.gif" style="width:232px;height:117px;"> GOTO:26</div><div id='Q-26.3' name='Q-26.3' style='display:none;'>GOTO:8</div><div id='A-1.1' name='A-1.1' style='display:none;'> Yes.
+</div><div id='A-href-1.1' name='A-href-1.1' style='display:none;'>javascript:void('');</div><div id='A-target-1.1' name='A-target-1.1' style='display:none;'></div><div id='X-1.1' name='X-1.1' style='display:none;'>Yes.</div><div id='A-1.2' name='A-1.2' style='display:none;'> No.
+</div><div id='A-href-1.2' name='A-href-1.2' style='display:none;'>javascript:void('');</div><div id='A-target-1.2' name='A-target-1.2' style='display:none;'></div><div id='X-1.2' name='X-1.2' style='display:none;'>No.</div><div id='A-1.3' name='A-1.3' style='display:none;'> Did you say free tool?
+</div><div id='A-href-1.3' name='A-href-1.3' style='display:none;'>javascript:void('');</div><div id='A-target-1.3' name='A-target-1.3' style='display:none;'></div><div id='X-1.3' name='X-1.3' style='display:none;'>Did you say free tool?</div><div id='A-3.1' name='A-3.1' style='display:none;'> Yes.
+</div><div id='A-href-3.1' name='A-href-3.1' style='display:none;'>javascript:void('');</div><div id='A-target-3.1' name='A-target-3.1' style='display:none;'></div><div id='X-3.1' name='X-3.1' style='display:none;'>Yes.</div><div id='A-3.2' name='A-3.2' style='display:none;'> No.
+</div><div id='A-href-3.2' name='A-href-3.2' style='display:none;'>javascript:void('');</div><div id='A-target-3.2' name='A-target-3.2' style='display:none;'></div><div id='X-3.2' name='X-3.2' style='display:none;'>No.</div><div id='A-3.2.1' name='A-3.2.1' style='display:none;'> Yes.
+</div><div id='A-href-3.2.1' name='A-href-3.2.1' style='display:none;'>javascript:void('');</div><div id='A-target-3.2.1' name='A-target-3.2.1' style='display:none;'></div><div id='X-3.2.1' name='X-3.2.1' style='display:none;'>Yes.</div><div id='A-3.2.2' name='A-3.2.2' style='display:none;'> No.
+</div><div id='A-href-3.2.2' name='A-href-3.2.2' style='display:none;'>javascript:void('');</div><div id='A-target-3.2.2' name='A-target-3.2.2' style='display:none;'></div><div id='X-3.2.2' name='X-3.2.2' style='display:none;'>No.</div><div id='A-3.2.2.1' name='A-3.2.2.1' style='display:none;'> Can I have cat pictures now?
+</div><div id='A-href-3.2.2.1' name='A-href-3.2.2.1' style='display:none;'>javascript:void('');</div><div id='A-target-3.2.2.1' name='A-target-3.2.2.1' style='display:none;'></div><div id='X-3.2.2.1' name='X-3.2.2.1' style='display:none;'>Can I have cat pictures now?</div><div id='A-3.2.2.2' name='A-3.2.2.2' style='display:none;'> Bye.
+</div><div id='A-href-3.2.2.2' name='A-href-3.2.2.2' style='display:none;'>javascript:void('');</div><div id='A-target-3.2.2.2' name='A-target-3.2.2.2' style='display:none;'></div><div id='X-3.2.2.2' name='X-3.2.2.2' style='display:none;'>Bye.</div><div id='A-4.1' name='A-4.1' style='display:none;'> Yes.
+</div><div id='A-href-4.1' name='A-href-4.1' style='display:none;'>javascript:void('');</div><div id='A-target-4.1' name='A-target-4.1' style='display:none;'></div><div id='X-4.1' name='X-4.1' style='display:none;'>Yes.</div><div id='A-4.1.1' name='A-4.1.1' style='display:none;'> I can use Word/Wordperfect.
+</div><div id='A-href-4.1.1' name='A-href-4.1.1' style='display:none;'>javascript:void('');</div><div id='A-target-4.1.1' name='A-target-4.1.1' style='display:none;'></div><div id='X-4.1.1' name='X-4.1.1' style='display:none;'>I can use Word/Wordperfect.</div><div id='A-4.1.2' name='A-4.1.2' style='display:none;'> Give me a command line.
+</div><div id='A-href-4.1.2' name='A-href-4.1.2' style='display:none;'>javascript:void('');</div><div id='A-target-4.1.2' name='A-target-4.1.2' style='display:none;'></div><div id='X-4.1.2' name='X-4.1.2' style='display:none;'>Give me a command line.</div><div id='A-4.1.2.1' name='A-4.1.2.1' style='display:none;'> I'd love to play a game.
+</div><div id='A-href-4.1.2.1' name='A-href-4.1.2.1' style='display:none;'>javascript:void('');</div><div id='A-target-4.1.2.1' name='A-target-4.1.2.1' style='display:none;'></div><div id='X-4.1.2.1' name='X-4.1.2.1' style='display:none;'>I'd love to play a game.</div><div id='A-4.1.2.2' name='A-4.1.2.2' style='display:none;'> Let's learn more about LITCon.
+</div><div id='A-href-4.1.2.2' name='A-href-4.1.2.2' style='display:none;'>javascript:void('');</div><div id='A-target-4.1.2.2' name='A-target-4.1.2.2' style='display:none;'></div><div id='X-4.1.2.2' name='X-4.1.2.2' style='display:none;'>Let's learn more about LITCon.</div><div id='A-4.1.3' name='A-4.1.3' style='display:none;'> What's a command line?
+</div><div id='A-href-4.1.3' name='A-href-4.1.3' style='display:none;'>javascript:void('');</div><div id='A-target-4.1.3' name='A-target-4.1.3' style='display:none;'></div><div id='X-4.1.3' name='X-4.1.3' style='display:none;'>What's a command line?</div><div id='A-4.2' name='A-4.2' style='display:none;'> No.
+</div><div id='A-href-4.2' name='A-href-4.2' style='display:none;'>javascript:void('');</div><div id='A-target-4.2' name='A-target-4.2' style='display:none;'></div><div id='X-4.2' name='X-4.2' style='display:none;'>No.</div><div id='A-5.1' name='A-5.1' style='display:none;'> Yes.
+</div><div id='A-href-5.1' name='A-href-5.1' style='display:none;'>javascript:void('');</div><div id='A-target-5.1' name='A-target-5.1' style='display:none;'></div><div id='X-5.1' name='X-5.1' style='display:none;'>Yes.</div><div id='A-5.2' name='A-5.2' style='display:none;'> No.
+</div><div id='A-href-5.2' name='A-href-5.2' style='display:none;'>javascript:void('');</div><div id='A-target-5.2' name='A-target-5.2' style='display:none;'></div><div id='X-5.2' name='X-5.2' style='display:none;'>No.</div><div id='A-6.1' name='A-6.1' style='display:none;'> Yes.
+</div><div id='A-href-6.1' name='A-href-6.1' style='display:none;'>javascript:void('');</div><div id='A-target-6.1' name='A-target-6.1' style='display:none;'></div><div id='X-6.1' name='X-6.1' style='display:none;'>Yes.</div><div id='A-6.2' name='A-6.2' style='display:none;'> No.
+</div><div id='A-href-6.2' name='A-href-6.2' style='display:none;'>javascript:void('');</div><div id='A-target-6.2' name='A-target-6.2' style='display:none;'></div><div id='X-6.2' name='X-6.2' style='display:none;'>No.</div><div id='A-7.1' name='A-7.1' style='display:none;'> Yes.
+</div><div id='A-href-7.1' name='A-href-7.1' style='display:none;'>javascript:void('');</div><div id='A-target-7.1' name='A-target-7.1' style='display:none;'></div><div id='X-7.1' name='X-7.1' style='display:none;'>Yes.</div><div id='A-7.2' name='A-7.2' style='display:none;'> No.
+</div><div id='A-href-7.2' name='A-href-7.2' style='display:none;'>javascript:void('');</div><div id='A-target-7.2' name='A-target-7.2' style='display:none;'></div><div id='X-7.2' name='X-7.2' style='display:none;'>No.</div><div id='A-8.1' name='A-8.1' style='display:none;'> Who's speaking?
+</div><div id='A-href-8.1' name='A-href-8.1' style='display:none;'>javascript:void('');</div><div id='A-target-8.1' name='A-target-8.1' style='display:none;'></div><div id='X-8.1' name='X-8.1' style='display:none;'>Who's speaking?</div><div id='A-8.2' name='A-8.2' style='display:none;'> Tell me more about these weekend sessions.
+</div><div id='A-href-8.2' name='A-href-8.2' style='display:none;'>javascript:void('');</div><div id='A-target-8.2' name='A-target-8.2' style='display:none;'></div><div id='X-8.2' name='X-8.2' style='display:none;'>Tell me more about these weekend sessions.</div><div id='A-9.1' name='A-9.1' style='display:none;'> I need more convincing.
+</div><div id='A-href-9.1' name='A-href-9.1' style='display:none;'>javascript:void('');</div><div id='A-target-9.1' name='A-target-9.1' style='display:none;'></div><div id='X-9.1' name='X-9.1' style='display:none;'>I need more convincing.</div><div id='A-9.1.1' name='A-9.1.1' style='display:none;'> Yes.
+</div><div id='A-href-9.1.1' name='A-href-9.1.1' style='display:none;'>javascript:void('');</div><div id='A-target-9.1.1' name='A-target-9.1.1' style='display:none;'></div><div id='X-9.1.1' name='X-9.1.1' style='display:none;'>Yes.</div><div id='A-9.1.2' name='A-9.1.2' style='display:none;'> No.
+</div><div id='A-href-9.1.2' name='A-href-9.1.2' style='display:none;'>javascript:void('');</div><div id='A-target-9.1.2' name='A-target-9.1.2' style='display:none;'></div><div id='X-9.1.2' name='X-9.1.2' style='display:none;'>No.</div><div id='A-9.1.2.1' name='A-9.1.2.1' style='display:none;'> Yes.
+</div><div id='A-href-9.1.2.1' name='A-href-9.1.2.1' style='display:none;'>javascript:void('');</div><div id='A-target-9.1.2.1' name='A-target-9.1.2.1' style='display:none;'></div><div id='X-9.1.2.1' name='X-9.1.2.1' style='display:none;'>Yes.</div><div id='A-9.1.2.1.1' name='A-9.1.2.1.1' style='display:none;'> Yes.
+</div><div id='A-href-9.1.2.1.1' name='A-href-9.1.2.1.1' style='display:none;'>javascript:void('');</div><div id='A-target-9.1.2.1.1' name='A-target-9.1.2.1.1' style='display:none;'></div><div id='X-9.1.2.1.1' name='X-9.1.2.1.1' style='display:none;'>Yes.</div><div id='A-9.1.2.1.2' name='A-9.1.2.1.2' style='display:none;'> No.
+</div><div id='A-href-9.1.2.1.2' name='A-href-9.1.2.1.2' style='display:none;'>javascript:void('');</div><div id='A-target-9.1.2.1.2' name='A-target-9.1.2.1.2' style='display:none;'></div><div id='X-9.1.2.1.2' name='X-9.1.2.1.2' style='display:none;'>No.</div><div id='A-9.1.2.2' name='A-9.1.2.2' style='display:none;'> No.
+</div><div id='A-href-9.1.2.2' name='A-href-9.1.2.2' style='display:none;'>javascript:void('');</div><div id='A-target-9.1.2.2' name='A-target-9.1.2.2' style='display:none;'></div><div id='X-9.1.2.2' name='X-9.1.2.2' style='display:none;'>No.</div><div id='A-9.1.2.2.1' name='A-9.1.2.2.1' style='display:none;'> Yes.
+</div><div id='A-href-9.1.2.2.1' name='A-href-9.1.2.2.1' style='display:none;'>javascript:void('');</div><div id='A-target-9.1.2.2.1' name='A-target-9.1.2.2.1' style='display:none;'></div><div id='X-9.1.2.2.1' name='X-9.1.2.2.1' style='display:none;'>Yes.</div><div id='A-9.1.2.2.1.1' name='A-9.1.2.2.1.1' style='display:none;'> I need more convincing.
+</div><div id='A-href-9.1.2.2.1.1' name='A-href-9.1.2.2.1.1' style='display:none;'>javascript:void('');</div><div id='A-target-9.1.2.2.1.1' name='A-target-9.1.2.2.1.1' style='display:none;'></div><div id='X-9.1.2.2.1.1' name='X-9.1.2.2.1.1' style='display:none;'>I need more convincing.</div><div id='A-9.1.2.2.1.2' name='A-9.1.2.2.1.2' style='display:none;'> What does the conference cost?
+</div><div id='A-href-9.1.2.2.1.2' name='A-href-9.1.2.2.1.2' style='display:none;'>javascript:void('');</div><div id='A-target-9.1.2.2.1.2' name='A-target-9.1.2.2.1.2' style='display:none;'></div><div id='X-9.1.2.2.1.2' name='X-9.1.2.2.1.2' style='display:none;'>What does the conference cost?</div><div id='A-9.1.2.2.1.3' name='A-9.1.2.2.1.3' style='display:none;'> Take me to registration.
+</div><div id='A-href-9.1.2.2.1.3' name='A-href-9.1.2.2.1.3' style='display:none;'>https://web.cvent.com/event/cf22c986-4b48-454f-9dfb-3545fe93f86d/register</div><div id='A-target-9.1.2.2.1.3' name='A-target-9.1.2.2.1.3' style='display:none;'>target="_blank" i="https://web.cvent.com/event/cf22c986-4b48-454f-9dfb-3545fe93f86d/register"</div><div id='X-9.1.2.2.1.3' name='X-9.1.2.2.1.3' style='display:none;'>Take me to registration.</div><div id='A-9.1.2.2.2' name='A-9.1.2.2.2' style='display:none;'> No.
+</div><div id='A-href-9.1.2.2.2' name='A-href-9.1.2.2.2' style='display:none;'>javascript:void('');</div><div id='A-target-9.1.2.2.2' name='A-target-9.1.2.2.2' style='display:none;'></div><div id='X-9.1.2.2.2' name='X-9.1.2.2.2' style='display:none;'>No.</div><div id='A-9.2' name='A-9.2' style='display:none;'> What does the conference cost?
+</div><div id='A-href-9.2' name='A-href-9.2' style='display:none;'>javascript:void('');</div><div id='A-target-9.2' name='A-target-9.2' style='display:none;'></div><div id='X-9.2' name='X-9.2' style='display:none;'>What does the conference cost?</div><div id='A-9.2.1' name='A-9.2.1' style='display:none;'> Take me to registration.
+</div><div id='A-href-9.2.1' name='A-href-9.2.1' style='display:none;'>https://web.cvent.com/event/cf22c986-4b48-454f-9dfb-3545fe93f86d/register</div><div id='A-target-9.2.1' name='A-target-9.2.1' style='display:none;'>target="_blank" i="https://web.cvent.com/event/cf22c986-4b48-454f-9dfb-3545fe93f86d/register"</div><div id='X-9.2.1' name='X-9.2.1' style='display:none;'>Take me to registration.</div><div id='A-9.2.2' name='A-9.2.2' style='display:none;'> What if $25 is too much?
+</div><div id='A-href-9.2.2' name='A-href-9.2.2' style='display:none;'>javascript:void('');</div><div id='A-target-9.2.2' name='A-target-9.2.2' style='display:none;'></div><div id='X-9.2.2' name='X-9.2.2' style='display:none;'>What if $25 is too much?</div><div id='A-9.2.2.1' name='A-9.2.2.1' style='display:none;'> Yes.
+</div><div id='A-href-9.2.2.1' name='A-href-9.2.2.1' style='display:none;'>javascript:void('');</div><div id='A-target-9.2.2.1' name='A-target-9.2.2.1' style='display:none;'></div><div id='X-9.2.2.1' name='X-9.2.2.1' style='display:none;'>Yes.</div><div id='A-9.2.2.2' name='A-9.2.2.2' style='display:none;'> No.
+</div><div id='A-href-9.2.2.2' name='A-href-9.2.2.2' style='display:none;'>javascript:void('');</div><div id='A-target-9.2.2.2' name='A-target-9.2.2.2' style='display:none;'></div><div id='X-9.2.2.2' name='X-9.2.2.2' style='display:none;'>No.</div><div id='A-9.2.2.2.1' name='A-9.2.2.2.1' style='display:none;'> Yes.
+</div><div id='A-href-9.2.2.2.1' name='A-href-9.2.2.2.1' style='display:none;'>javascript:void('');</div><div id='A-target-9.2.2.2.1' name='A-target-9.2.2.2.1' style='display:none;'></div><div id='X-9.2.2.2.1' name='X-9.2.2.2.1' style='display:none;'>Yes.</div><div id='A-9.2.2.2.2' name='A-9.2.2.2.2' style='display:none;'> No.
+</div><div id='A-href-9.2.2.2.2' name='A-href-9.2.2.2.2' style='display:none;'>javascript:void('');</div><div id='A-target-9.2.2.2.2' name='A-target-9.2.2.2.2' style='display:none;'></div><div id='X-9.2.2.2.2' name='X-9.2.2.2.2' style='display:none;'>No.</div><div id='A-9.2.2.2.2.1' name='A-9.2.2.2.2.1' style='display:none;'> Yes.
+</div><div id='A-href-9.2.2.2.2.1' name='A-href-9.2.2.2.2.1' style='display:none;'>javascript:void('');</div><div id='A-target-9.2.2.2.2.1' name='A-target-9.2.2.2.2.1' style='display:none;'></div><div id='X-9.2.2.2.2.1' name='X-9.2.2.2.2.1' style='display:none;'>Yes.</div><div id='A-9.2.2.2.2.1.1' name='A-9.2.2.2.2.1.1' style='display:none;'> Can I have cat pictures now?
+</div><div id='A-href-9.2.2.2.2.1.1' name='A-href-9.2.2.2.2.1.1' style='display:none;'>javascript:void('');</div><div id='A-target-9.2.2.2.2.1.1' name='A-target-9.2.2.2.2.1.1' style='display:none;'></div><div id='X-9.2.2.2.2.1.1' name='X-9.2.2.2.2.1.1' style='display:none;'>Can I have cat pictures now?</div><div id='A-9.2.2.2.2.1.2' name='A-9.2.2.2.2.1.2' style='display:none;'> Bye.
+</div><div id='A-href-9.2.2.2.2.1.2' name='A-href-9.2.2.2.2.1.2' style='display:none;'>javascript:void('');</div><div id='A-target-9.2.2.2.2.1.2' name='A-target-9.2.2.2.2.1.2' style='display:none;'></div><div id='X-9.2.2.2.2.1.2' name='X-9.2.2.2.2.1.2' style='display:none;'>Bye.</div><div id='A-9.2.2.2.2.2' name='A-9.2.2.2.2.2' style='display:none;'> No.
+</div><div id='A-href-9.2.2.2.2.2' name='A-href-9.2.2.2.2.2' style='display:none;'>javascript:void('');</div><div id='A-target-9.2.2.2.2.2' name='A-target-9.2.2.2.2.2' style='display:none;'></div><div id='X-9.2.2.2.2.2' name='X-9.2.2.2.2.2' style='display:none;'>No.</div><div id='A-9.3' name='A-9.3' style='display:none;'> Sure, take me to registration.
+</div><div id='A-href-9.3' name='A-href-9.3' style='display:none;'>https://web.cvent.com/event/cf22c986-4b48-454f-9dfb-3545fe93f86d/register</div><div id='A-target-9.3' name='A-target-9.3' style='display:none;'>target="_blank" i="https://web.cvent.com/event/cf22c986-4b48-454f-9dfb-3545fe93f86d/register"</div><div id='X-9.3' name='X-9.3' style='display:none;'>Sure, take me to registration.</div><div id='A-10.1' name='A-10.1' style='display:none;'> Just a little more convincing.
+</div><div id='A-href-10.1' name='A-href-10.1' style='display:none;'>javascript:void('');</div><div id='A-target-10.1' name='A-target-10.1' style='display:none;'></div><div id='X-10.1' name='X-10.1' style='display:none;'>Just a little more convincing.</div><div id='A-10.2' name='A-10.2' style='display:none;'> What does the conference cost?
+</div><div id='A-href-10.2' name='A-href-10.2' style='display:none;'>javascript:void('');</div><div id='A-target-10.2' name='A-target-10.2' style='display:none;'></div><div id='X-10.2' name='X-10.2' style='display:none;'>What does the conference cost?</div><div id='A-10.3' name='A-10.3' style='display:none;'> Take me to registration.
+</div><div id='A-href-10.3' name='A-href-10.3' style='display:none;'>https://web.cvent.com/event/cf22c986-4b48-454f-9dfb-3545fe93f86d/register</div><div id='A-target-10.3' name='A-target-10.3' style='display:none;'>target="_blank" i="https://web.cvent.com/event/cf22c986-4b48-454f-9dfb-3545fe93f86d/register"</div><div id='X-10.3' name='X-10.3' style='display:none;'>Take me to registration.</div><div id='A-11.1' name='A-11.1' style='display:none;'> Sure.
+</div><div id='A-href-11.1' name='A-href-11.1' style='display:none;'>javascript:void('');</div><div id='A-target-11.1' name='A-target-11.1' style='display:none;'></div><div id='X-11.1' name='X-11.1' style='display:none;'>Sure.</div><div id='A-11.1.1' name='A-11.1.1' style='display:none;'> Yes.
+</div><div id='A-href-11.1.1' name='A-href-11.1.1' style='display:none;'>javascript:void('');</div><div id='A-target-11.1.1' name='A-target-11.1.1' style='display:none;'></div><div id='X-11.1.1' name='X-11.1.1' style='display:none;'>Yes.</div><div id='A-11.1.2' name='A-11.1.2' style='display:none;'> No.
+</div><div id='A-href-11.1.2' name='A-href-11.1.2' style='display:none;'>javascript:void('');</div><div id='A-target-11.1.2' name='A-target-11.1.2' style='display:none;'></div><div id='X-11.1.2' name='X-11.1.2' style='display:none;'>No.</div><div id='A-11.2' name='A-11.2' style='display:none;'> No thanks.
+</div><div id='A-href-11.2' name='A-href-11.2' style='display:none;'>javascript:void('');</div><div id='A-target-11.2' name='A-target-11.2' style='display:none;'></div><div id='X-11.2' name='X-11.2' style='display:none;'>No thanks.</div><div id='A-11.3' name='A-11.3' style='display:none;'> Why would I use something like this?
+</div><div id='A-href-11.3' name='A-href-11.3' style='display:none;'>javascript:void('');</div><div id='A-target-11.3' name='A-target-11.3' style='display:none;'></div><div id='X-11.3' name='X-11.3' style='display:none;'>Why would I use something like this?</div><div id='A-12.1' name='A-12.1' style='display:none;'> Yes.
+</div><div id='A-href-12.1' name='A-href-12.1' style='display:none;'>javascript:void('');</div><div id='A-target-12.1' name='A-target-12.1' style='display:none;'></div><div id='X-12.1' name='X-12.1' style='display:none;'>Yes.</div><div id='A-12.2' name='A-12.2' style='display:none;'> No.
+</div><div id='A-href-12.2' name='A-href-12.2' style='display:none;'>javascript:void('');</div><div id='A-target-12.2' name='A-target-12.2' style='display:none;'></div><div id='X-12.2' name='X-12.2' style='display:none;'>No.</div><div id='A-13.1' name='A-13.1' style='display:none;'> A hard no.
+</div><div id='A-href-13.1' name='A-href-13.1' style='display:none;'>javascript:void('');</div><div id='A-target-13.1' name='A-target-13.1' style='display:none;'></div><div id='X-13.1' name='X-13.1' style='display:none;'>A hard no.</div><div id='A-13.1.1' name='A-13.1.1' style='display:none;'> Can I have cat pictures now?
+</div><div id='A-href-13.1.1' name='A-href-13.1.1' style='display:none;'>javascript:void('');</div><div id='A-target-13.1.1' name='A-target-13.1.1' style='display:none;'></div><div id='X-13.1.1' name='X-13.1.1' style='display:none;'>Can I have cat pictures now?</div><div id='A-13.1.2' name='A-13.1.2' style='display:none;'> Bye.
+</div><div id='A-href-13.1.2' name='A-href-13.1.2' style='display:none;'>javascript:void('');</div><div id='A-target-13.1.2' name='A-target-13.1.2' style='display:none;'></div><div id='X-13.1.2' name='X-13.1.2' style='display:none;'>Bye.</div><div id='A-13.2' name='A-13.2' style='display:none;'> Convince me.
+</div><div id='A-href-13.2' name='A-href-13.2' style='display:none;'>javascript:void('');</div><div id='A-target-13.2' name='A-target-13.2' style='display:none;'></div><div id='X-13.2' name='X-13.2' style='display:none;'>Convince me.</div><div id='A-14.1' name='A-14.1' style='display:none;'> Can I have cat pictures now?
+</div><div id='A-href-14.1' name='A-href-14.1' style='display:none;'>javascript:void('');</div><div id='A-target-14.1' name='A-target-14.1' style='display:none;'></div><div id='X-14.1' name='X-14.1' style='display:none;'>Can I have cat pictures now?</div><div id='A-14.2' name='A-14.2' style='display:none;'> Bye.
+</div><div id='A-href-14.2' name='A-href-14.2' style='display:none;'>javascript:void('');</div><div id='A-target-14.2' name='A-target-14.2' style='display:none;'></div><div id='X-14.2' name='X-14.2' style='display:none;'>Bye.</div><div id='A-15.1' name='A-15.1' style='display:none;'> Yes
+</div><div id='A-href-15.1' name='A-href-15.1' style='display:none;'>javascript:void('');</div><div id='A-target-15.1' name='A-target-15.1' style='display:none;'></div><div id='X-15.1' name='X-15.1' style='display:none;'>Yes</div><div id='A-15.2' name='A-15.2' style='display:none;'> No
+</div><div id='A-href-15.2' name='A-href-15.2' style='display:none;'>javascript:void('');</div><div id='A-target-15.2' name='A-target-15.2' style='display:none;'></div><div id='X-15.2' name='X-15.2' style='display:none;'>No</div><div id='A-16.1' name='A-16.1' style='display:none;'> Yes
+</div><div id='A-href-16.1' name='A-href-16.1' style='display:none;'>javascript:void('');</div><div id='A-target-16.1' name='A-target-16.1' style='display:none;'></div><div id='X-16.1' name='X-16.1' style='display:none;'>Yes</div><div id='A-16.2' name='A-16.2' style='display:none;'> No
+</div><div id='A-href-16.2' name='A-href-16.2' style='display:none;'>javascript:void('');</div><div id='A-target-16.2' name='A-target-16.2' style='display:none;'></div><div id='X-16.2' name='X-16.2' style='display:none;'>No</div><div id='A-17.1' name='A-17.1' style='display:none;'> Yes
+</div><div id='A-href-17.1' name='A-href-17.1' style='display:none;'>javascript:void('');</div><div id='A-target-17.1' name='A-target-17.1' style='display:none;'></div><div id='X-17.1' name='X-17.1' style='display:none;'>Yes</div><div id='A-17.2' name='A-17.2' style='display:none;'> No
+</div><div id='A-href-17.2' name='A-href-17.2' style='display:none;'>javascript:void('');</div><div id='A-target-17.2' name='A-target-17.2' style='display:none;'></div><div id='X-17.2' name='X-17.2' style='display:none;'>No</div><div id='A-18.1' name='A-18.1' style='display:none;'> Yes
+</div><div id='A-href-18.1' name='A-href-18.1' style='display:none;'>javascript:void('');</div><div id='A-target-18.1' name='A-target-18.1' style='display:none;'></div><div id='X-18.1' name='X-18.1' style='display:none;'>Yes</div><div id='A-18.2' name='A-18.2' style='display:none;'> No
+</div><div id='A-href-18.2' name='A-href-18.2' style='display:none;'>javascript:void('');</div><div id='A-target-18.2' name='A-target-18.2' style='display:none;'></div><div id='X-18.2' name='X-18.2' style='display:none;'>No</div><div id='A-19.1' name='A-19.1' style='display:none;'> Yes
+</div><div id='A-href-19.1' name='A-href-19.1' style='display:none;'>javascript:void('');</div><div id='A-target-19.1' name='A-target-19.1' style='display:none;'></div><div id='X-19.1' name='X-19.1' style='display:none;'>Yes</div><div id='A-19.2' name='A-19.2' style='display:none;'> No
+</div><div id='A-href-19.2' name='A-href-19.2' style='display:none;'>javascript:void('');</div><div id='A-target-19.2' name='A-target-19.2' style='display:none;'></div><div id='X-19.2' name='X-19.2' style='display:none;'>No</div><div id='A-20.1' name='A-20.1' style='display:none;'> Yes
+</div><div id='A-href-20.1' name='A-href-20.1' style='display:none;'>javascript:void('');</div><div id='A-target-20.1' name='A-target-20.1' style='display:none;'></div><div id='X-20.1' name='X-20.1' style='display:none;'>Yes</div><div id='A-20.2' name='A-20.2' style='display:none;'> No
+</div><div id='A-href-20.2' name='A-href-20.2' style='display:none;'>javascript:void('');</div><div id='A-target-20.2' name='A-target-20.2' style='display:none;'></div><div id='X-20.2' name='X-20.2' style='display:none;'>No</div><div id='A-21.1' name='A-21.1' style='display:none;'> Yes
+</div><div id='A-href-21.1' name='A-href-21.1' style='display:none;'>javascript:void('');</div><div id='A-target-21.1' name='A-target-21.1' style='display:none;'></div><div id='X-21.1' name='X-21.1' style='display:none;'>Yes</div><div id='A-21.2' name='A-21.2' style='display:none;'> No
+</div><div id='A-href-21.2' name='A-href-21.2' style='display:none;'>javascript:void('');</div><div id='A-target-21.2' name='A-target-21.2' style='display:none;'></div><div id='X-21.2' name='X-21.2' style='display:none;'>No</div><div id='A-22.1' name='A-22.1' style='display:none;'> Yes
+</div><div id='A-href-22.1' name='A-href-22.1' style='display:none;'>javascript:void('');</div><div id='A-target-22.1' name='A-target-22.1' style='display:none;'></div><div id='X-22.1' name='X-22.1' style='display:none;'>Yes</div><div id='A-22.2' name='A-22.2' style='display:none;'> No
+</div><div id='A-href-22.2' name='A-href-22.2' style='display:none;'>javascript:void('');</div><div id='A-target-22.2' name='A-target-22.2' style='display:none;'></div><div id='X-22.2' name='X-22.2' style='display:none;'>No</div><div id='A-23.1' name='A-23.1' style='display:none;'> Yes
+</div><div id='A-href-23.1' name='A-href-23.1' style='display:none;'>javascript:void('');</div><div id='A-target-23.1' name='A-target-23.1' style='display:none;'></div><div id='X-23.1' name='X-23.1' style='display:none;'>Yes</div><div id='A-23.2' name='A-23.2' style='display:none;'> No
+</div><div id='A-href-23.2' name='A-href-23.2' style='display:none;'>javascript:void('');</div><div id='A-target-23.2' name='A-target-23.2' style='display:none;'></div><div id='X-23.2' name='X-23.2' style='display:none;'>No</div><div id='A-24.1' name='A-24.1' style='display:none;'> Yes
+</div><div id='A-href-24.1' name='A-href-24.1' style='display:none;'>javascript:void('');</div><div id='A-target-24.1' name='A-target-24.1' style='display:none;'></div><div id='X-24.1' name='X-24.1' style='display:none;'>Yes</div><div id='A-24.2' name='A-24.2' style='display:none;'> No
+</div><div id='A-href-24.2' name='A-href-24.2' style='display:none;'>javascript:void('');</div><div id='A-target-24.2' name='A-target-24.2' style='display:none;'></div><div id='X-24.2' name='X-24.2' style='display:none;'>No</div><div id='A-26.1' name='A-26.1' style='display:none;'> Sounds good. I love chess.
+</div><div id='A-href-26.1' name='A-href-26.1' style='display:none;'>javascript:void('');</div><div id='A-target-26.1' name='A-target-26.1' style='display:none;'></div><div id='X-26.1' name='X-26.1' style='display:none;'>Sounds good. I love chess.</div><div id='A-26.2' name='A-26.2' style='display:none;'> How about thermonuclear war?
+</div><div id='A-href-26.2' name='A-href-26.2' style='display:none;'>javascript:void('');</div><div id='A-target-26.2' name='A-target-26.2' style='display:none;'></div><div id='X-26.2' name='X-26.2' style='display:none;'>How about thermonuclear war?</div><div id='A-26.2.1' name='A-26.2.1' style='display:none;'> Yes.
+</div><div id='A-href-26.2.1' name='A-href-26.2.1' style='display:none;'>javascript:void('');</div><div id='A-target-26.2.1' name='A-target-26.2.1' style='display:none;'></div><div id='X-26.2.1' name='X-26.2.1' style='display:none;'>Yes.</div><div id='A-26.2.2' name='A-26.2.2' style='display:none;'> No.
+</div><div id='A-href-26.2.2' name='A-href-26.2.2' style='display:none;'>javascript:void('');</div><div id='A-target-26.2.2' name='A-target-26.2.2' style='display:none;'></div><div id='X-26.2.2' name='X-26.2.2' style='display:none;'>No.</div><div id='A-26.3' name='A-26.3' style='display:none;'> Actually, let's get back to LITCon.
+</div><div id='A-href-26.3' name='A-href-26.3' style='display:none;'>javascript:void('');</div><div id='A-target-26.3' name='A-target-26.3' style='display:none;'></div><div id='X-26.3' name='X-26.3' style='display:none;'>Actually, let's get back to LITCon.</div>
+<script>
+	var QVnames = [['1','1'],['1.1','1.1'],['1.2','1.2'],['1.3','1.3'],['2','available'],['3','convince'],['3.1','3.1'],['3.2','3.2'],['3.2.1','3.2.1'],['3.2.2','notforyou'],['3.2.2.1','3.2.2.1'],['3.2.2.2','3.2.2.2'],['4','problems'],['4.1','goodnews'],['4.1.1','4.1.1'],['4.1.2','4.1.2'],['4.1.2.1','4.1.2.1'],['4.1.2.2','4.1.2.2'],['4.1.3','4.1.3'],['4.2','4.2'],['5','mproblems'],['5.1','5.1'],['5.2','5.2'],['6','mmproblems'],['6.1','6.1'],['6.2','6.2'],['7','mmmproblems'],['7.1','7.1'],['7.2','7.2'],['8','everyone'],['8.1','keynote'],['8.2','weekend'],['9','proud'],['9.1','moreconv'],['9.1.1','9.1.1'],['9.1.2','evenmore'],['9.1.2.1','9.1.2.1'],['9.1.2.1.1','9.1.2.1.1'],['9.1.2.1.2','9.1.2.1.2'],['9.1.2.2','9.1.2.2'],['9.1.2.2.1','students'],['9.1.2.2.1.1','9.1.2.2.1.1'],['9.1.2.2.1.2','9.1.2.2.1.2'],['9.1.2.2.1.3','9.1.2.2.1.3'],['9.1.2.2.2','9.1.2.2.2'],['9.2','whatcost'],['9.2.1','9.2.1'],['9.2.2','9.2.2'],['9.2.2.1','9.2.2.1'],['9.2.2.2','9.2.2.2'],['9.2.2.2.1','9.2.2.2.1'],['9.2.2.2.2','9.2.2.2.2'],['9.2.2.2.2.1','9.2.2.2.2.1'],['9.2.2.2.2.1.1','9.2.2.2.2.1.1'],['9.2.2.2.2.1.2','9.2.2.2.2.1.2'],['9.2.2.2.2.2','9.2.2.2.2.2'],['9.3','9.3'],['10','network'],['10.1','10.1'],['10.2','10.2'],['10.3','10.3'],['11','free'],['11.1','11.1'],['11.1.1','11.1.1'],['11.1.2','11.1.2'],['11.2','11.2'],['11.3','11.3'],['12','whatabout'],['12.1','12.1'],['12.2','12.2'],['13','notavailable'],['13.1','nexttime'],['13.1.1','13.1.1'],['13.1.2','13.1.2'],['13.2','13.2'],['14','thanks'],['14.1','14.1'],['14.2','14.2'],['15','cats1'],['15.1','15.1'],['15.2','15.2'],['16','cats2'],['16.1','16.1'],['16.2','16.2'],['17','cats3'],['17.1','17.1'],['17.2','17.2'],['18','cats4'],['18.1','18.1'],['18.2','18.2'],['19','cats5'],['19.1','19.1'],['19.2','19.2'],['20','cats6'],['20.1','20.1'],['20.2','20.2'],['21','cats7'],['21.1','21.1'],['21.2','21.2'],['22','cats8'],['22.1','22.1'],['22.2','22.2'],['23','cats9'],['23.1','23.1'],['23.2','23.2'],['24','cats10'],['24.1','24.1'],['24.2','24.2'],['25','bye'],['26','wargames'],['26.1','26.1'],['26.2','26.2'],['26.2.1','26.2.1'],['26.2.2','26.2.2'],['26.3','26.3']];
+</script>
+</textarea><textarea id="transcript" name="transcript" style="display:none;" disabled="disabled"></textarea><div style="float:left;width:100%;margin:15px 0 0px 0;border-top: solid 1px #ddd;"><div id=credits class=credits style="display:none;"><div class=credit_text><p><b> LITCon2020's Not-A-Bot</b></p><p>By  <a href="https://twitter.com/SuffolkLITLab" target="_blank">Suffolk Legal Innovation & Technology Lab</a></p><p> An interactive flowchart to help you decide if you should attend LITCon2020.</p></div></div><p align=center><a href="javascript:void('');" onClick="shoh('credits');">credits</a> | <a href="https://www.qnamarkup.org/" target=_top>code your own</a></p></div></FORM></div></div>
+<script type="text/javascript">
+	var QNum = 0;
+	var Qhtml = "";
+	var Dhtml = "";
+	var label = "";
+	var GOTOfired = 0;
+	var path = [];
+	var doc_bin = [];
+	var convo_bin = [];
+	var freetext = 0;
+	var goingback = 0;
+
+	$("#conversation input").on("keypress", 'form', function (e) {
+    	var code = e.keyCode || e.which;
+    	if (code == 13) {
+        	e.preventDefault();
+        	return false;
+    	}
+	});
+
+	function answerQ(lb,restart) {
+		currentQ = label;
+		label = lb;
+		Dhtml = 'D-'+label;
+		Qhtml = 'Q-'+label;
+		var Ahtml = 'A-'+label;
+		var Jhtml = 'J-'+QNum;
+		var Xhtml = 'X-'+label;
+		var Xihtml = 'Xi-'+label;
+
+		var input_error = 0;
+		if (restart == undefined) {
+			var regexp = new RegExp("\<variable\>");
+			//if (document.getElementById(Xihtml)) {
+			//	console.log("document.getElementById("+Xihtml+").value: "+document.getElementById(Xihtml).value);
+			//} else {
+			//	console.log("NO document.getElementById("+Xihtml+").value: ");
+			//}
+			if (document.getElementById(Ahtml).innerHTML.match(regexp)) {
+				document.getElementById(Xihtml).value = document.getElementById(Xihtml).value.replace(/(^\s*|\s*$)/,"");
+				if (document.getElementById(Xihtml).value == "") {
+					input_error = "Your answer appears to be empty.";
+					label = currentQ;
+				} else {
+					document.getElementById(Xihtml).value = document.getElementById(Xihtml).value.replace(/</g,"<");
+					document.getElementById(Xihtml).value = document.getElementById(Xihtml).value.replace(/>/g,">");
+				}
+			}
+		}
+
+		if (input_error != 0) {
+			alert(input_error);
+			document.getElementById(Xihtml).focus();
+		} else {
+			if (restart == undefined) {
+				//if (document.getElementById(Ahtml).innerHTML!="") {
+					document.getElementById('QandA').innerHTML += "<div id=\"break-at-"+QNum+"\" class='frame'><div class='full'><div class='ans_text'>"+document.getElementById(Ahtml).innerHTML+"</div></div><div class='ans_arrow'></div></div></div></div>";
+				//}
+				// insert answer from button
+				if (document.getElementById(valueis(currentQ))) {
+					document.getElementById(valueis(currentQ)).outerHTML='';
+				}
+				if (document.getElementById(Xihtml)) {
+					document.getElementById('QandA').innerHTML = "<textarea style=\"display:none;\" id=\""+valueis(currentQ)+"\" name=\""+valueis(currentQ)+"\">"+document.getElementById(Xihtml).value+"</textarea>\n" + document.getElementById('QandA').innerHTML
+				} else {
+					document.getElementById('QandA').innerHTML = "<textarea style=\"display:none;\" id=\""+valueis(currentQ)+"\" name=\""+valueis(currentQ)+"\">"+document.getElementById(Xhtml).innerHTML+"</textarea>\n" + document.getElementById('QandA').innerHTML
+				}
+				if (document.getElementById('QandA').innerHTML.match(regexp)) {
+				 	var duplicatevars = new RegExp("id=\""+document.getElementById(Xhtml).innerHTML+"(.)*"+document.getElementById(Xhtml).innerHTML+"\"","g");
+					document.getElementById('QandA').innerHTML = document.getElementById('QandA').innerHTML.replace(duplicatevars, "");
+					document.getElementById('QandA').innerHTML = document.getElementById('QandA').innerHTML.replace(/\<variable\>(\<\/variable\>)?/, "<input type=hidden id=\""+document.getElementById(Xhtml).innerHTML+"\" name=\""+document.getElementById(Xhtml).innerHTML+"\" value=\""+document.getElementById(Xihtml).value+"\"/>"+document.getElementById(Xihtml).value);
+					//document.getElementById('transcript').value = document.getElementById('transcript').value.replace(/\<variable\>(\<\/variable\>)?/, document.getElementById(Xihtml).value+"\n");
+					var thisvariable = new RegExp("<(X|x)>"+document.getElementById(Xhtml).innerHTML+"<\/(X|x)>","g");
+					//document.getElementById('doc').innerHTML = document.getElementById('doc').innerHTML.replace(thisvariable, document.getElementById(document.getElementById(Xhtml).innerHTML).innerHTML);
+					//document.getElementById('ondeck').innerHTML = document.getElementById('ondeck').innerHTML.replace(thisvariable, document.getElementById(valueis(currentQ)).innerHTML);
+					//console.log("thisvariable: "+thisvariable);
+					//console.log("Variable name: "+valueis(currentQ));
+					//console.log("Variable value: "+document.getElementById(valueis(currentQ)).innerHTML);
+					if(document.getElementById(Ahtml).innerHTML != "") {
+						//document.getElementById('transcript').value += "USER: "+document.getElementById(Xihtml).value+"\n";
+						convo_bin.push("USER: "+document.getElementById(Xihtml).value+"\n");
+					}
+				} else {
+					//document.getElementById('transcript').value += "USER: "+document.getElementById(Ahtml).innerHTML+"\n";
+					convo_bin.push("USER: "+document.getElementById(Ahtml).innerHTML+"\n");
+				}
+				document.getElementById('Choices').innerHTML = '';
+				if (goingback == 0) {
+					setTimeout(function() {renderQnA(Qhtml,Jhtml,Dhtml,restart)}, 300);
+				} else {
+					renderQnA(Qhtml,Jhtml,Dhtml,restart);
+				}
+			} else {
+				document.getElementById('Choices').innerHTML = '';
+				path = [];
+				renderQnA(Qhtml,Jhtml,Dhtml,restart);
+			}
+
+		}
+
+	}
+
+
+	function renderQnA(Qht,Jht,Dht,restar) {
+		Dhtml = Dht;
+
+		GOTOfired = 0;
+		path.push(label);
+
+		swapGOTO(Qht,Jht);
+
+		console.log("After swap: "+GOTOfired);
+
+		if (GOTOfired == 0) {
+			document.getElementById('QandA').innerHTML += "<div id="+Jht+" style=\"float:left;width:100%;height:1px;\"> </div>";
+		}
+		document.getElementById('QandA').innerHTML += "<div class='frame'><div class='full'><div class='question_text'>"+swapvar(document.getElementById(Qhtml).innerHTML)+"</div></div><div class='question_arrow'></div></div>";
+
+		document.getElementById('QandA').innerHTML = document.getElementById('QandA').innerHTML.replace(/(\<br\>){2}/gi,"</div></div><div class='question_arrow'></div></div></div></div><div class='frame'><div class='full'><div class='question_text'>");
+		document.getElementById('QandA').innerHTML = document.getElementById('QandA').innerHTML.replace(/(\<br\> \<br\>)/gi,"<br><br>");
+
+		// add question
+		//document.getElementById('transcript').value += swapvar("BOT: "+ document.getElementById(Qhtml).innerHTML);
+		//document.getElementById('transcript').value = document.getElementById('transcript').value.replace(/(\<br\>){2}/gi,"\nBOT: ");
+		this_text = swapvar("BOT: "+ document.getElementById(Qhtml).innerHTML);
+		this_text = this_text.replace(/(\<br\>){2}/gi,"\nBOT: ");
+		convo_bin.push(this_text);
+
+		// make push doc into array in doc() cycle through array and put into output
+		// maybe remove doc div
+		if (document.getElementById(Dhtml)) {
+			doc_bin.push([document.getElementById(Dhtml).innerHTML,currentQ]);
+			console.log("Add to Doc ("+Dhtml+"): "+document.getElementById(Dhtml).innerHTML);
+			//document.getElementById('doc').innerHTML += document.getElementById(Dhtml).innerHTML;
+		}
+
+		tmp = getElementsByIdRegExp("div", "A-"+label+"(\\.{1}\\d){1}$");
+		a_href = getElementsByIdRegExp("div", "A-href-"+label+"(\\.{1}\\d){1}$");
+		a_target = getElementsByIdRegExp("div", "A-target-"+label+"(\\.{1}\\d){1}$");
+		tmp_x = getElementsByIdRegExp("div", "X-"+label+"(\\.{1}\\d){1}$");
+		var Xishere = 0;
+		for ( var i = 0; i < tmp.length; i++ ) {
+			var nextlabel = tmp[i].id.substr(2);
+			var Xihtml = 'Xi-'+nextlabel;
+			var regexp = "\<variable\>";
+			var regexp_js = "^javascript:";
+			var regexp_load_js = "loadQnA";
+			var script_call = "";
+			if (tmp[i].innerHTML.match(regexp)) {
+				if (a_href[i].innerHTML.match('^(_blank:)?javascript:')) {
+					script_call = a_href[i].innerHTML.replace(/^(_blank:)?javascript:/gi,"");
+				} else {
+					if (a_href[i].innerHTML.match('^_blank:')) {
+						script_call = "window.open('"+a_href[i].innerHTML.replace(/^_blank:/,"")+"','_blank');";
+					} else {
+						script_call = "location.href = '"+a_href[i].innerHTML+"';";
+					}
+				}
+
+				if(a_href[i].innerHTML.match(regexp_load_js)){
+					document.getElementById('Choices').innerHTML += "<div class=\"xdiv\"><input type=\""+a_target[i].innerHTML+"\" id=\""+Xihtml+"\" name=\""+Xihtml+"\" class=\"xinput\" onkeypress=\"if (event.keyCode==13){"+script_call+"}\"/><a href=\"javascript:void('');\" class=\"xbutton\" onClick=\""+script_call+"\"><span class=\"qpad\">Save above text as answer.</span></a></div>";
+				} else {
+					document.getElementById('Choices').innerHTML += "<div class=\"xdiv\"><input type=\""+a_target[i].innerHTML+"\" id=\""+Xihtml+"\" name=\""+Xihtml+"\" class=\"xinput\" onkeypress=\"if (event.keyCode==13){answerQ('"+nextlabel+"');"+script_call+"}\"/><a href=\"javascript:void('');\" class=\"xbutton\" onClick=\"answerQ('"+nextlabel+"');"+script_call+"\"><span class=\"qpad\">Save above text as answer.</span></a></div>";
+				}
+				Xishere = Xihtml;
+				freetext = Xihtml;
+			} else if (a_href[i].innerHTML.match(regexp_js) && a_href[i].innerHTML != "javascript:void('');") {
+				tmp[i].innerHTML = tmp[i].innerHTML.replace(/(\<br\>){2}/gi,"<br> <br>");
+				var script_call = a_href[i].innerHTML.replace(/^javascript:/gi,"");
+				if(a_href[i].innerHTML.match(regexp_load_js)){
+					document.getElementById('Choices').innerHTML += "<a href=\"javascript:void('');\" class=\"qabutton\" onClick=\""+script_call+"\" "+a_target[i].innerHTML+"><span class=\"qpad\">"+tmp[i].innerHTML+"</span></a>";
+				} else {
+					document.getElementById('Choices').innerHTML += "<a href=\"javascript:void('');\" class=\"qabutton\" onClick=\"answerQ('"+nextlabel+"');"+script_call+"\" "+a_target[i].innerHTML+"><span class=\"qpad\">"+tmp[i].innerHTML+"</span></a>";
+				}
+				freetext = 0;
+			} else {
+				tmp[i].innerHTML = tmp[i].innerHTML.replace(/(\<br\>){2}/gi,"<br> <br>");
+				document.getElementById('Choices').innerHTML += "<a href=\""+a_href[i].innerHTML+"\" class=\"qabutton\" onClick=\"answerQ('"+nextlabel+"');\" "+a_target[i].innerHTML+"><span class=\"qpad\">"+tmp[i].innerHTML+"</span></a>";
+				freetext = 0;
+			}
+		}
+
+		if (restar == undefined) {
+
+			document.getElementById('Choices').innerHTML += "<div class=\"standard_buttons\">";
+			if (QNum > 1) {
+				document.getElementById('Choices').innerHTML += "<a href=\"javascript:void('');\" class=\"sbutton\" onClick=\"goback(QNum);\">GO BACK ONE</a>";
+				document.getElementById('Choices').innerHTML += "<a href=\"javascript:void('');\" class=\"sbutton\" style=\"float:right\" onClick=\"startAT('1');\">START OVER</a>";
+			} else if (QNum == 1) {
+				document.getElementById('Choices').innerHTML += "<a href=\"javascript:void('');\" class=\"sbutton\" onClick=\"startAT('1');\">GO BACK ONE</a>";
+				document.getElementById('Choices').innerHTML += "<a href=\"javascript:void('');\" class=\"sbutton\" style=\"float:right\" onClick=\"startAT('1');\">START OVER</a>";
+			}
+			document.getElementById('Choices').innerHTML += "</div>"
+		}
+
+		if (QNum != 0) {
+			if (goingback == 0) {
+				scroll2Q(Jht,800);
+			} else {
+				window.scrollTo(0, document.getElementById(Jht).offsetTop);
+			}
+		} else if (restar != undefined) {
+			window.scrollTo(0,0);
+		}
+		if (Xishere != 0 && window.self == window.top) {
+			console.log("Set focus for: "+Xishere);
+			document.getElementById(Xishere).focus();
+		}
+		console.log("Q#: "+QNum);
+		console.log("New Path: "+path);
+		QNum++;
+		goingback = 0;
+
+	}
+
+
+	function swapGOTO(QH,JH) {
+		var regex = new RegExp("GOTO:(\d*)(\.\d+)*");
+		if (regex.test(document.getElementById(QH).innerHTML)) {
+			var Qtext = document.getElementById(QH).innerHTML.match(/(GOTO:(\d*)(.\s*\d+)*)/);
+			document.getElementById('QandA').innerHTML += "<div id="+JH+" style=\"float:left;width:100%;height:1px;\"> </div>";
+			// Add question
+			// note I added () around the < to avoid a < followed by a ? which causes problems in php
+			var Qtexttrans = document.getElementById(QH).innerHTML.replace(/(<)?GOTO:(\d*)(.\s*\d+)*>?/,"");
+			Qtexttrans = Qtexttrans.replace(/\s*$/,"");
+			if (Qtexttrans != "") {
+				//document.getElementById('transcript').value += swapvar("BOT: "+Qtexttrans+"\n");
+				convo_bin.push(swapvar("BOT: "+Qtexttrans+"\n"));
+			}
+			if (document.getElementById(QH).innerHTML.match(/^GOTO:(\d*)(.\s*\d+)*/)) {
+				document.getElementById('QandA').innerHTML += document.getElementById(QH).innerHTML.replace(/(<)?GOTO:(\d*)(.\s*\d+)*>?/,"<"+Qtext+">");
+			} else {
+				document.getElementById('QandA').innerHTML += "<div class='frame'><div class='full'><div class='question_text'>"+ swapvar(document.getElementById(QH).innerHTML.replace(/(<)?GOTO:(\d*)(.\s*\d+)*>?/,"<"+Qtext+">"))+"</div></div><div class='question_arrow'></div></div>";
+			}
+			// replace GOTO with text
+			label = Qtext[0].replace("GOTO:","");
+			Qhtml = 'Q-'+label;
+			if (document.getElementById(Dhtml)) {
+				doc_bin.push([document.getElementById(Dhtml).innerHTML,currentQ]);
+				console.log("Add to Doc ("+Dhtml+"): "+document.getElementById(Dhtml).innerHTML);
+				//document.getElementById('doc').innerHTML += document.getElementById(Dhtml).innerHTML;
+			}
+			Dhtml = 'D-'+label;
+			GOTOfired = 1;
+			console.log("In swap: "+GOTOfired);
+			swapGOTO(Qhtml,JH);
+		}
+	}
+
+
+	function scroll2Q(id,speed) {
+		var top = document.getElementById(id).offsetTop; //Getting Y of target element
+		console.log("Jump to Y for ("+id+"): "+top);
+		//adapted from https://github.com/Yappli/smooth-scroll
+		var moving_frequency = 5; // Affects performance !
+		var hop_count = speed/moving_frequency
+        var getScrollTopDocumentAtBegin = document.documentElement.scrollTop + document.body.scrollTop;
+        var gap = (top - getScrollTopDocumentAtBegin) / hop_count;
+		for(var i = 1; i <= hop_count; i++)
+        {
+        	(function()
+           	{
+           		var hop_top_position = gap*i;
+           	    setTimeout(function(){  window.scrollTo(0, hop_top_position + getScrollTopDocumentAtBegin); }, moving_frequency*i);
+           	 })();
+        }
+	}
+
+	function getElementsByIdIs(selectorTag, name) {
+		var items = [];
+		var myPosts = document.getElementsByTagName(selectorTag);
+			//omitting undefined null check for brevity
+			if (myPosts[0].id == name) {
+				items.push(myPosts[0]);
+			}
+
+		return items;
+	}
+
+	function getElementsByIdRegExp(selectorTag, expression) {
+		// note you need to escape \ in the expression with \, i.e., \\ = \
+		var regex = new RegExp(expression);
+		var items = [];
+		var myPosts = document.getElementsByTagName(selectorTag);
+		for (var i = 0; i < myPosts.length; i++) {
+			if (regex.test(myPosts[i].id)) {
+				items.push(myPosts[i]);
+			}
+		}
+
+		return items;
+	}
+
+	// startAT QnA
+	function startAT(id) {
+		document.getElementById('ondeck').innerHTML = document.getElementById('original').value;
+		document.getElementById('QandA').innerHTML = "";
+		//document.getElementById('transcript').value = "";
+		doc_bin = [];
+		convo_bin = [];
+		QNum = 0;
+		answerQ(id,'1');
+	}
+
+	//show funtion
+	function show(id) {
+   		if (document.getElementById) { // DOM3 = IE5, NS6
+        	document.getElementById(id).style.display = 'block';
+    	} else {
+        	if (document.layers) {
+            	document.id.display = 'block';
+        	} else {
+                document.all.id.style.display = 'block';
+        	}
+    	}
+	}
+
+	//hide funtion
+	function hide(id) {
+    	if (document.getElementById) { // DOM3 = IE5, NS6
+        	document.getElementById(id).style.display = 'none';
+    	} else {
+        	if (document.layers) {
+                document.id.display = 'none';
+        	} else {
+                document.all.id.style.display = 'none';
+        	}
+    	}
+	}
+
+	//show OR hide funtion depends on if element is shown or hidden
+	function shoh(id) {
+    	if (document.getElementById) { // DOM3 = IE5, NS6
+        	if (document.getElementById(id).style.display == "none"){
+            	document.getElementById(id).style.display = 'block';
+        	} else {
+            	document.getElementById(id).style.display = 'none';
+        	}
+    	} else {
+        	if (document.layers) {
+            	if (document.id.display == "none"){
+                	document.id.display = 'block';
+            	} else {
+                	document.id.display = 'none';
+            	}
+        	} else {
+            	if (document.all.id.style.visibility == "none"){
+                	document.all.id.style.display = 'block';
+            	} else {
+                	document.all.id.style.display = 'none';
+            	}
+        	}
+    	}
+	}
+
+	function swapvar(input) {
+		var output;
+		for(var i = 0; i < QVnames.length; i++) {
+			if (document.getElementById(QVnames[i][1])) {
+				var item = QVnames[i][1].replace(/\./g,"\\.");
+				var varegx = new RegExp("<x>"+item+"<\/x>","gi");
+				//console.log(QVnames[i][1]);
+				input = input.replace(varegx,document.getElementById(QVnames[i][1]).innerHTML);
+			}
+		}
+		output = input
+		return output
+	}
+
+	function docforindex(indexID) {
+		for(var i = 0; i < doc_bin.length; i++) {
+			if(doc_bin[i][1] == indexID) {
+				return true;
+			}
+		}
+	}
+	function indexis(variablename) {
+		for(var i = 0; i < QVnames.length; i++) {
+			if(QVnames[i][1] == variablename) {
+				return QVnames[i][0];
+			}
+		}
+	}
+	function valueis(variablekey) {
+		for(var i = 0; i < QVnames.length; i++) {
+			if(QVnames[i][0] == variablekey) {
+				return QVnames[i][1];
+			}
+		}
+	}
+
+	function look4goto(qn,id) {
+		console.log("GOTO SEARCH: "+id);
+		var qID = "Q-"+id;
+		// If there's a doc in the XXXXXXXXXXXXXXXX, remove it.
+		if (docforindex(path.indexOf(id))) {
+			console.log("DOC FOUND "+id);
+			doc_bin.splice(doc_bin.length-1,1);
+		}
+		convo_bin.splice(-2,2);
+		var re = new RegExp("GOTO:(([a-z0-9\._-]*)\s*)$","gi");
+		if (document.getElementById(qID).innerHTML.match(re)) {
+			convo_bin.splice(-1,1);
+			console.log("GOTO FOUND: "+id);
+			textinput = re.exec(document.getElementById(qID).innerHTML)[2]+"";
+			if (docforindex(indexis(textinput))) {
+				document.getElementById("Xi-"+path[qn]).value = document.getElementById(valueis(textinput)).innerHTML;
+				console.log("DOC FOUND "+textinput);
+				doc_bin.splice(doc_bin.length-1,1);
+			}
+			look4goto(qn,textinput);
+		}
+	}
+
+	function goback(qn) {
+		Qlast = qn - 3
+		qn = qn - 2;
+		label = path[qn];
+		goingback = 1;
+
+		console.log("GO BACK TO:"+qn);
+		var re = new RegExp('(((^|\\n).*)*)<div id="break-at-'+qn+'" class="frame">((.*)(\\W.*))*', 'g');
+		document.getElementById("QandA").innerHTML = document.getElementById("QandA").innerHTML.replace(re, '$1');
+		document.getElementById('Choices').innerHTML += "<input type=\"hidden\" id=\"Xi-"+path[qn]+"\" name=\"Xi-"+path[qn]+"\" value=\"\">";
+			console.log("####################: "+path[path.length-1]);
+
+		//look4goto(qn,path[path.length-1]);
+
+		path.splice(-1,1);
+		convo_bin.splice(-4,4);
+		//convo_bin.splice(-2,2);
+
+		// If there's a doc in the last Q that you're removing, hold on to it.
+		// And put it back after you've removed it. When you rerender the Q.
+		if (document.getElementById("X-"+path[qn]) && document.getElementById(valueis(path[Qlast]))) {
+			document.getElementById("Xi-"+path[qn]).value = document.getElementById(valueis(path[Qlast])).innerHTML;
+			doc_bin.splice(doc_bin.length-1,1);
+		}
+
+		// If there's a doc in the current Q, remove it.
+		if (docforindex(currentQ)) {
+			console.log("DOC FOUND (current) "+currentQ);
+			doc_bin.splice(doc_bin.length-1,1);
+		}
+		// If there's a doc in the queued up Q, remove it.
+		if (document.getElementById(Dhtml)) {
+			console.log("DOC FOUND (ondeck)"+Dhtml);
+			doc_bin.splice(doc_bin.length-1,1);
+		}
+
+		look4goto(qn,path[path.length-1]);
+
+		if (freetext != 0) {
+			document.getElementById(freetext).value = "";
+		}
+		QNum = qn;
+		loadQ = path[path.length-1];
+		path.splice(-1,1);
+
+		console.log("Reload ans for: "+loadQ);
+		answerQ(loadQ);
+	}
+
+	function transcript(output) {
+		var convo_output = "";
+		for (var i = 0, len = convo_bin.length; i < len; i++) {
+			convo_output += convo_bin[i];
+		}
+		if (output == 1) {
+			return convo_output;
+		} else {
+			return convo_output.replace(/<[^>]*>/g,"");
+		}
+	}
+
+	function doc() {
+		var doc_output = "";
+		for (var i = 0, len = doc_bin.length; i < len; i++) {
+			doc_output += doc_bin[i][0];
+		}
+		return swapvar(doc_output);
+	}
+
+	function json_str() {
+
+		var json_list = "{";
+		for(var i = 0; i < QVnames.length; i++) {
+			if (!document.getElementById("Q-"+QVnames[i][0]).innerHTML.match(/(GOTO:(\d*)(.\s*\d+)*)/)) {
+				if (document.getElementById(QVnames[i][1])) {
+					json_list = json_list+'"'+QVnames[i][1]+'":"'+document.getElementById(QVnames[i][1]).innerHTML+'"';
+				} else {
+					json_list = json_list+'"'+QVnames[i][1]+'":"'+'"';
+				}
+				json_list = json_list+",";
+			}
+			if (i+1 == QVnames.length) {
+				json_list = json_list.replace(/,$/, '');
+				json_list = json_list+"}";
+			}
+		}
+		return json_list;
+	}
+
+	function mail2(to,subject,body) {
+		to = encodeURIComponent(to);
+		subject = encodeURIComponent(subject);
+		body = encodeURIComponent(body);
+		window.location.href = "mailto:"+to+"?subject="+subject+"&body="+body;
+	}
+
+	function submit2(action,method,docAs,instructions,transcriptAs,jsonAs,target) {
+		document.FORM.action = action;
+		document.FORM.method = method;
+		if (target) {
+			document.FORM.target = target;
+		} else {
+			document.FORM.target = "_self";
+		}
+
+		if (docAs) {
+			if (document.getElementsByName(docAs).length == 0) {
+				var doctext = document.createElement("textarea");
+				doctext.style.display ='none';
+				doctext.name= docAs;
+				doctext.value= doc();
+				document.getElementById('FORM').appendChild(doctext);
+			} else {
+				$('textarea[name='+docAs+']').val(json_str())
+			}
+			if (instructions) {
+				if (document.getElementsByName('i').length == 0) {
+					var instructtext = document.createElement("textarea");
+					instructtext.type='hidden';
+					instructtext.style.display ='none';
+					instructtext.name= 'i';
+					instructtext.value= instructions;
+					document.getElementById('FORM').appendChild(instructtext);
+				} else {
+					$('textarea[name=i]').val(json_str())
+				}
+			}
+		}
+		if (transcriptAs) {
+			if (document.getElementsByName(transcriptAs).length == 0) {
+				var ttext = document.createElement("textarea");
+				ttext.type='hidden';
+				ttext.style.display ='none';
+				ttext.name= transcriptAs;
+				ttext.value= transcript();
+				document.getElementById('FORM').appendChild(ttext);
+			} else {
+				$('textarea[name='+transcriptAs+']').val(json_str())
+			}
+		}
+		if (jsonAs) {
+			if (document.getElementsByName(jsonAs).length == 0) {
+				var json = document.createElement("textarea");
+				json.type='hidden';
+				json.style.display ='none';
+				json.name= jsonAs;
+				json.value= json_str();
+				document.getElementById('FORM').appendChild(json);
+			} else {
+				$('textarea[name='+jsonAs+']').val(json_str())
+			}
+		}
+		var ondeckdiv = document.getElementById('ondeck').innerHTML;
+		var rawmarkupdiv = document.getElementById('rawmarkup').innerHTML;
+		document.getElementById('ondeck').innerHTML = "";
+		document.getElementById('rawmarkup').innerHTML = "";
+		document.FORM.submit();
+		document.getElementById('ondeck').innerHTML = ondeckdiv;
+		document.getElementById('rawmarkup').innerHTML = rawmarkupdiv;
+	}
+
+	function csv() {
+		var csv_list = "";
+		for(var i = 0; i < QVnames.length; i++) {
+			if (!document.getElementById("Q-"+QVnames[i][0]).innerHTML.match(/(GOTO:(\d*)(.\s*\d+)*)/)) {
+				csv_list = csv_list+'"'+QVnames[i][1]+'"';
+				csv_list = csv_list+",";
+			}
+			if (i+1 == QVnames.length) {
+				csv_list = csv_list.replace(/,$/, '');
+				csv_list = csv_list+"\n";
+			}
+		}
+		for(var i = 0; i < QVnames.length; i++) {
+			if (!document.getElementById("Q-"+QVnames[i][0]).innerHTML.match(/(GOTO:(\d*)(.\s*\d+)*)/)) {
+				if (document.getElementById(QVnames[i][1])) {
+					csv_list = csv_list+'"'+document.getElementById(QVnames[i][1]).innerHTML+'"';
+				} else {
+					csv_list = csv_list+'""';
+				}
+				csv_list = csv_list+",";
+			}
+			if (i+1 == QVnames.length) {
+				csv_list = csv_list.replace(/,$/, '');
+				csv_list = csv_list+"\n";
+			}
+		}
+
+		return csv_list;
+	}
+
+	function getvar(val) {
+		return document.getElementById(val).value;
+	}
+
+	function goto(val) {
+	   answerQ(indexis(val));
+	}
+
+	// h/t http://runnable.com/U5HC9xtufQpsu5aj/use-javascript-to-save-textarea-as-a-txt-file
+	function save2(filename,content)
+	{
+
+	// I'm using file system support as a proxy for support for this feature.
+	// Check based on one found at: http://blog.teamtreehouse.com/building-an-html5-text-editor-with-the-filesystem-apis
+	// Handle vendor prefixes.
+	window.requestFileSystem = window.requestFileSystem ||
+							   window.webkitRequestFileSystem;
+	// Check for support.
+	if (window.requestFileSystem) {
+	// content = ID of textarea to save
+	// name = name to save file as, including file extension
+	// grab the content of the form field and place it into a variable
+	//    var textToWrite = document.getElementById(content).value;
+	//  create a new Blob (html5 magic) that conatins the data from your form feild
+		var textFileAsBlob = new Blob([content], {type:'text/plain'});
+
+	// Specify the name of the file to be saved
+		var fileNamecontentAs = filename;
+
+	// Optionally allow the user to choose a file name by providing
+	// an imput field in the HTML and using the collected data here
+	// var fileNamecontentAs = txtFileName.text;
+
+	// create a link for our script to 'click'
+		var downloadLink = document.createElement("a");
+	//  supply the name of the file (from the var above).
+	// you could create the name here but using a var
+	// allows more flexability later.
+		downloadLink.download = fileNamecontentAs;
+	// provide text for the link. This will be hidden so you
+	// can actually use anything you want.
+		downloadLink.innerHTML = "My Hidden Link";
+
+	// allow our code to work in webkit & Gecko based browsers
+	// without the need for a if / else block.
+		window.URL = window.URL || window.webkitURL;
+
+	// Create the link Object.
+		downloadLink.href = window.URL.createObjectURL(textFileAsBlob);
+	// when link is clicked call a function to remove it from
+	// the DOM in case user wants to save a second file.
+		downloadLink.onclick = destroyClickedElement;
+	// make sure the link is hidden.
+		downloadLink.style.display = "none";
+	// add the link to the DOM
+		document.body.appendChild(downloadLink);
+
+	// click the new link
+		downloadLink.click();
+	} else {
+		alert('This feature is not supported by your browser.');
+	}
+
+	}
+
+	function destroyClickedElement(event)
+	{
+	// remove the link from the DOM
+		document.body.removeChild(event.target);
+	}
+
+	// EOF
+
+</script>
+
+
+<!---
+###########################################################################
+###########################################################################
+                      Place QnA Snippet above
+###########################################################################
+###########################################################################
+--->
+
+</BODY>
+</HTML>
