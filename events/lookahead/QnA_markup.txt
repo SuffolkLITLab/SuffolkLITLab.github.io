@@ -44,7 +44,7 @@ body{
 </style>
 <div id="icon"></div>
 <h2 align=center>This Is Not A Chatbot</h2>
-<p>It's an interactive flowchart to help you decide if you should our April 26<sup>th</sup> Look Ahead event. ProTip: We used a free tool to make this "bot," and it only takes about 20 minutes to learn. Isn't technology grand? Also, there are Easter eggs. ;)</p>
+<p>It's an interactive flowchart to help you decide if you should attend our April 26<sup>th</sup> Look Ahead event. ProTip: We used a free tool to make this "bot," and it only takes about 20 minutes to learn. Isn't technology grand? Also, there are Easter eggs. ;)</p>
 
 Q(1): Can you make it to Boston on April 26th, 2022?
 A: Yes.
