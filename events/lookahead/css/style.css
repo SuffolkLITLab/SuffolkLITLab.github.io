@@ -323,3 +323,16 @@ a.anchor {
 	box-sizing: border-box;
 	text-transform: uppercase;
 }
+
+.button {
+  background: #0072E8;
+  width: 195px;
+  height: 60px;
+  line-height: 60px;
+  text-align:center;
+  color:white;
+  font-weight:600;
+  border-radius:10px;
+  margin:0px auto;
+  box-sizing: border-box;
+}

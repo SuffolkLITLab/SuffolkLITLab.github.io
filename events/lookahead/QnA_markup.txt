@@ -131,19 +131,20 @@ A: I need more convincing.
 				Q(9.1.2.1.1):GOTO:network
 			A: What does this event cost?
 				Q(9.1.2.1.2):GOTO:whatcost
-			A: I'm convinced.
+			A:[https://sites.suffolk.edu/litpanelreception/] I'm convinced. Take me to registration. 
 				Q(9.1.2.1.3):GOTO:thanks
 		A: No.
 			Q(9.1.2.2):GOTO:network
 
 A: What does the conference cost?
 	Q(whatcost): Nothing. It's free! That includes a reception with wine and beer. <br><br><img src="https://media.giphy.com/media/5IMcyqKbkg0O4/giphy.gif" style="width:232px;height:128px;"/>
-	A: I'm convinced.
+	A: [https://sites.suffolk.edu/litpanelreception/] I'm convinced. Take me to registration. 
 		Q(9.2.1):GOTO:thanks
 	A: Can I have cat pictures now?
 		Q(9.2.2):GOTO:cats1
 	A: Bye.
 		Q(9.2.3):GOTO:bye
+A:[https://sites.suffolk.edu/litpanelreception/] I'm convinced. Take me to registration. 
 
 
 Q(network): Did you know this is a great networking event, bringing together clinicians, legal services providers, educators, law students, and the like? Just look at that <a href="https://suffolklitlab.org/events/lookahead/speakers/" target="_blank">speakers list</a>.
