@@ -402,7 +402,7 @@ function make_query() {
       console.log(Data)
       $.ajax({
         type: "POST",
-        url: "https://spot.pythonanywhere.com/v0/entities-nested/",
+        url: "https://spot.suffolklitlab.org/v0/entities-nested/",
         data: JSON.stringify(Data),
         dataType: "json",
         headers: {
@@ -488,7 +488,7 @@ function label(query,present,arry) {
 
     $.ajax({
     type: "POST",
-    url: "https://spot.pythonanywhere.com/v0/actions/",
+    url: "https://spot.suffolklitlab.org/v0/actions/",
     data: JSON.stringify(Data),
     dataType: "json",
     headers: {
@@ -515,7 +515,7 @@ function bulk_clear(query,arry) {
 
     $.ajax({
     type: "POST",
-    url: "https://spot.pythonanywhere.com/v0/opinions/",
+    url: "https://spot.suffolklitlab.org/v0/opinions/",
     data: JSON.stringify(Data),
     dataType: "json",
     headers: {
