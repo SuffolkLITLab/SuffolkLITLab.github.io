@@ -2,55 +2,6 @@ window.scrollTo(0,0)
 var controlling_jur = "man_jur";
 var jur_picked = "0";
 
-function keyword(api_output) {
-
-  var label_vals = [];
-  api_output["labels"].forEach(function(element) {
-      label_vals.push(element["id"]);
-      if (element["children"]) {
-        element["children"].forEach(function(child) {
-          label_vals.push(child["id"]);
-        });
-      }
-  });
-
-  console.log("labels:", label_vals)
-
-  if (!label_vals.find(a =>a.includes("AA")) && (
-        api_output["text"].toLowerCase().includes("appeal") |
-        api_output["text"].toLowerCase().includes("motion to enlarge") |
-        api_output["text"].toLowerCase().includes("single justice")
-      )) {
-    api_output["labels"].push({id: "AA-00-00-00-00",name: "Massachusetts Appeals",lower: 0,pred: 0.5,upper:1})
-  }
-
-  if (!label_vals.find(a =>a.includes("CO")) && (
-        api_output["text"].toLowerCase().includes("indigency") |
-        api_output["text"].toLowerCase().includes("indigent") |
-        api_output["text"].toLowerCase().includes("cover sheet")
-      )) {
-    api_output["labels"].push({id: "CO-00-00-00-00",name: "Courts and Lawyers",lower: 0,pred: 0.5,upper:1})
-  }
-
-  if (!label_vals.find(a =>a.includes("FA-07")) && (
-        api_output["text"].toLowerCase().includes("abuse") |
-        api_output["text"].toLowerCase().includes("abusive") |
-        api_output["text"].toLowerCase().includes("harass") |
-        api_output["text"].toLowerCase().includes("threat") |
-        api_output["text"].toLowerCase().includes("stalk") |
-        api_output["text"].toLowerCase().includes("domestic violence") |
-        api_output["text"].toLowerCase().includes("beat") |
-        api_output["text"].toLowerCase().includes("hits me") |
-        api_output["text"].toLowerCase().includes("hit me")
-      )) {
-    api_output["labels"].push({id: "FA-07-00-00-00",name: "Domestic Violence and Abuse",lower: 0,pred: 0.5,upper:1})
-  }
-
-  api_output["labels"] = sort_by_key(api_output["labels"], 'pred')
-
-  return api_output
-}
-
 function resouces(name,id,text_id){
 
   var lawyer_str = "";
@@ -451,7 +402,7 @@ function make_query() {
       console.log(Data)
       $.ajax({
         type: "POST",
-        url: "https://spot.suffolklitlab.org/v0/entities-nested/",
+        url: "https://spot.pythonanywhere.com/v0/entities-nested/",
         data: JSON.stringify(Data),
         dataType: "json",
         headers: {
@@ -460,7 +411,6 @@ function make_query() {
         contentType : "application/json",
         success: function(data) {
 
-          //data = keyword(data);
           console.log(data)
           tmp_data = data
           tmp_data["labels"] = sort_by_key(tmp_data["labels"], 'pred')
@@ -538,7 +488,7 @@ function label(query,present,arry) {
 
     $.ajax({
     type: "POST",
-    url: "https://spot.suffolklitlab.org/v0/actions/",
+    url: "https://spot.pythonanywhere.com/v0/actions/",
     data: JSON.stringify(Data),
     dataType: "json",
     headers: {
@@ -565,7 +515,7 @@ function bulk_clear(query,arry) {
 
     $.ajax({
     type: "POST",
-    url: "https://spot.suffolklitlab.org/v0/opinions/",
+    url: "https://spot.pythonanywhere.com/v0/opinions/",
     data: JSON.stringify(Data),
     dataType: "json",
     headers: {
