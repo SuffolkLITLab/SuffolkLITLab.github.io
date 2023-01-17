@@ -3,11 +3,11 @@ window.scrollTo(0,0)
 function make_query(override=null) {
 
   var human = "placeholder";
-  if ((override != 1) && (override != 2) && (override != 3)){
+  if (!(override in [1,2,3,4,5,6,7,8,9,10,11,12,13])){
     var busy = 1;
     var go = 0;
     if ((busy == 1) && (localStorage.getItem('human_ans')==null)){
-      var human_prompt = "We're experienceing high traffic, and it takes $$$ to run this bot. Please help convence us you're human and part of the Suffolk community.\n\n";
+      var human_prompt = "We're experienceing high traffic. Please help convence us you're human and part of the Suffolk community.\n\n";
 
       var question_pool = ["What is Suffolk's mascot?","What street is Sargent Hall on?"]
 
@@ -30,14 +30,14 @@ function make_query(override=null) {
 
     query = $("#text").val()
 
-    if (((query == null) | (query.trim() == "")) && (override != 1) && (override != 2) && (override != 3)) {
+    if (((query == null) | (query.trim() == "")) && !(override in [1,2,3,4,5,6,7,8,9,10,11,12,13])) {
       alert("Please enter a question, and try again.")
       $('#loading').hide();
     } else if (override == 1) {
       scroll2Q('output',900);
-      var sources = `<h3>The 🤖's Sources</h3><p>For accuracy, double check the answer above against the sources below.</p><ol>`;
+      var sources = `<h3>Sources:</h3><p>For accuracy, double check the above against the sources below. <i>Note: Links to individual PDF pages may not work on mobile.</i></p><ol>`;
       sources += `<li><a href="" target="_blank">source one</a></li>`;
-      sources += `</ol>`;
+      sources += `</ol><p style="text-align:center;">~ <a href="#bot">ask another</a> ~</p>`;
       $('#response').html("<p class='ai_question'><b>Q:</b> What clinical programs are offered at Suffolk?</p><p class='ai_answer'><b>A:</b> ans here</p>"+sources)
       setTimeout(function(){
           $('#loading').hide();
@@ -45,9 +45,9 @@ function make_query(override=null) {
       }, 1200);
     } else if (override == 2) {
       scroll2Q('output',900);
-      var sources = `<h3>The 🤖's Sources</h3><p>For accuracy, double check the answer above against the sources below.</p><ol>`;
+      var sources = `<h3>Sources:</h3><p>For accuracy, double check the above against the sources below. <i>Note: Links to individual PDF pages may not work on mobile.</i></p><ol>`;
       sources += `<li><a href="" target="_blank">source one</a></li>`;
-      sources += `</ol>`;
+      sources += `</ol><p style="text-align:center;">~ <a href="#bot">ask another</a> ~</p>`;
       $('#response').html("<p class='ai_question'><b>Q:</b> I enjoyed constitutional law as a 1L; what classes might I like as a 2L?</p><p class='ai_answer'><b>A:</b> ans here</p>"+sources)
       setTimeout(function(){
           $('#loading').hide();
@@ -55,10 +55,110 @@ function make_query(override=null) {
       }, 1200);
     } else if (override == 3) {
       scroll2Q('output',900);
-      var sources = `<h3>The 🤖's Sources</h3><p>For accuracy, double check the answer above against the sources below.</p><ol>`;
+      var sources = `<h3>Sources:</h3><p>For accuracy, double check the above against the sources below. <i>Note: Links to individual PDF pages may not work on mobile.</i></p><ol>`;
       sources += `<li><a href="" target="_blank">source one</a></li>`;
-      sources += `</ol>`;
+      sources += `</ol><p style="text-align:center;">~ <a href="#bot">ask another</a> ~</p>`;
       $('#response').html("<p class='ai_question'><b>Q:</b> Are there any classes on positive pyschology?</p><p class='ai_answer'><b>A:</b> ans here</p>"+sources)
+      setTimeout(function(){
+          $('#loading').hide();
+          $('#response').show()
+      }, 1200);
+    } else if (override == 4) {
+      scroll2Q('output',900);
+      var sources = `<h3>Sources:</h3><p>For accuracy, double check the above against the sources below. <i>Note: Links to individual PDF pages may not work on mobile.</i></p><ol>`;
+      sources += `<li><a href="" target="_blank">source one</a></li>`;
+      sources += `</ol><p style="text-align:center;">~ <a href="#bot">ask another</a> ~</p>`;
+      $('#response').html("<p class='ai_question'><b>Q:</b> q here</p><p class='ai_answer'><b>A:</b> ans here</p>"+sources)
+      setTimeout(function(){
+          $('#loading').hide();
+          $('#response').show()
+      }, 1200);
+    } else if (override == 5) {
+      scroll2Q('output',900);
+      var sources = `<h3>Sources:</h3><p>For accuracy, double check the above against the sources below. <i>Note: Links to individual PDF pages may not work on mobile.</i></p><ol>`;
+      sources += `<li><a href="" target="_blank">source one</a></li>`;
+      sources += `</ol><p style="text-align:center;">~ <a href="#bot">ask another</a> ~</p>`;
+      $('#response').html("<p class='ai_question'><b>Q:</b> q here</p><p class='ai_answer'><b>A:</b> ans here</p>"+sources)
+      setTimeout(function(){
+          $('#loading').hide();
+          $('#response').show()
+      }, 1200);
+    } else if (override == 6) {
+      scroll2Q('output',900);
+      var sources = `<h3>Sources:</h3><p>For accuracy, double check the above against the sources below. <i>Note: Links to individual PDF pages may not work on mobile.</i></p><ol>`;
+      sources += `<li><a href="" target="_blank">source one</a></li>`;
+      sources += `</ol><p style="text-align:center;">~ <a href="#bot">ask another</a> ~</p>`;
+      $('#response').html("<p class='ai_question'><b>Q:</b> q here</p><p class='ai_answer'><b>A:</b> ans here</p>"+sources)
+      setTimeout(function(){
+          $('#loading').hide();
+          $('#response').show()
+      }, 1200);
+    } else if (override == 7) {
+      scroll2Q('output',900);
+      var sources = `<h3>Sources:</h3><p>For accuracy, double check the above against the sources below. <i>Note: Links to individual PDF pages may not work on mobile.</i></p><ol>`;
+      sources += `<li><a href="" target="_blank">source one</a></li>`;
+      sources += `</ol><p style="text-align:center;">~ <a href="#bot">ask another</a> ~</p>`;
+      $('#response').html("<p class='ai_question'><b>Q:</b> q here</p><p class='ai_answer'><b>A:</b> ans here</p>"+sources)
+      setTimeout(function(){
+          $('#loading').hide();
+          $('#response').show()
+      }, 1200);
+    } else if (override == 8) {
+      scroll2Q('output',900);
+      var sources = `<h3>Sources:</h3><p>For accuracy, double check the above against the sources below. <i>Note: Links to individual PDF pages may not work on mobile.</i></p><ol>`;
+      sources += `<li><a href="" target="_blank">source one</a></li>`;
+      sources += `</ol><p style="text-align:center;">~ <a href="#bot">ask another</a> ~</p>`;
+      $('#response').html("<p class='ai_question'><b>Q:</b> q here</p><p class='ai_answer'><b>A:</b> ans here</p>"+sources)
+      setTimeout(function(){
+          $('#loading').hide();
+          $('#response').show()
+      }, 1200);
+    } else if (override == 9) {
+      scroll2Q('output',900);
+      var sources = `<h3>Sources:</h3><p>For accuracy, double check the above against the sources below. <i>Note: Links to individual PDF pages may not work on mobile.</i></p><ol>`;
+      sources += `<li><a href="" target="_blank">source one</a></li>`;
+      sources += `</ol><p style="text-align:center;">~ <a href="#bot">ask another</a> ~</p>`;
+      $('#response').html("<p class='ai_question'><b>Q:</b> q here</p><p class='ai_answer'><b>A:</b> ans here</p>"+sources)
+      setTimeout(function(){
+          $('#loading').hide();
+          $('#response').show()
+      }, 1200);
+    } else if (override == 10) {
+      scroll2Q('output',900);
+      var sources = `<h3>Sources:</h3><p>For accuracy, double check the above against the sources below. <i>Note: Links to individual PDF pages may not work on mobile.</i></p><ol>`;
+      sources += `<li><a href="" target="_blank">source one</a></li>`;
+      sources += `</ol><p style="text-align:center;">~ <a href="#bot">ask another</a> ~</p>`;
+      $('#response').html("<p class='ai_question'><b>Q:</b> q here</p><p class='ai_answer'><b>A:</b> ans here</p>"+sources)
+      setTimeout(function(){
+          $('#loading').hide();
+          $('#response').show()
+      }, 1200);
+    } else if (override == 11) {
+      scroll2Q('output',900);
+      var sources = `<h3>Sources:</h3><p>For accuracy, double check the above against the sources below. <i>Note: Links to individual PDF pages may not work on mobile.</i></p><ol>`;
+      sources += `<li><a href="" target="_blank">source one</a></li>`;
+      sources += `</ol><p style="text-align:center;">~ <a href="#bot">ask another</a> ~</p>`;
+      $('#response').html("<p class='ai_question'><b>Q:</b> q here</p><p class='ai_answer'><b>A:</b> ans here</p>"+sources)
+      setTimeout(function(){
+          $('#loading').hide();
+          $('#response').show()
+      }, 1200);
+    } else if (override == 12) {
+      scroll2Q('output',900);
+      var sources = `<h3>Sources:</h3><p>For accuracy, double check the above against the sources below. <i>Note: Links to individual PDF pages may not work on mobile.</i></p><ol>`;
+      sources += `<li><a href="" target="_blank">source one</a></li>`;
+      sources += `</ol><p style="text-align:center;">~ <a href="#bot">ask another</a> ~</p>`;
+      $('#response').html("<p class='ai_question'><b>Q:</b> q here</p><p class='ai_answer'><b>A:</b> ans here</p>"+sources)
+      setTimeout(function(){
+          $('#loading').hide();
+          $('#response').show()
+      }, 1200);
+    } else if (override == 13) {
+      scroll2Q('output',900);
+      var sources = `<h3>Sources:</h3><p>For accuracy, double check the above against the sources below. <i>Note: Links to individual PDF pages may not work on mobile.</i></p><ol>`;
+      sources += `<li><a href="" target="_blank">source one</a></li>`;
+      sources += `</ol><p style="text-align:center;">~ <a href="#bot">ask another</a> ~</p>`;
+      $('#response').html("<p class='ai_question'><b>Q:</b> q here</p><p class='ai_answer'><b>A:</b> ans here</p>"+sources)
       setTimeout(function(){
           $('#loading').hide();
           $('#response').show()
@@ -88,11 +188,11 @@ function make_query(override=null) {
           $('#loading').hide();
           if (data["status"] == 200) {
 
-            var sources = "<h3>The 🤖's Sources</h3><p>For accuracy, double check the answer above against the sources below.</p><ol>"
+            var sources = "<h3>Sources:</h3><p>For accuracy, double check the above against the sources below. <i>Note: Links to individual PDF pages may not work on mobile.</i></p><ol>"
             for (n in data["sources"]){
               sources += `<li><a href="`+data["sources"][n][1]+`" target="_blank">`+data["sources"][n][0]+`</a></li>`;
             }
-            sources += `</ol>`
+            sources += `</ol><p style="text-align:center;">~ <a href="#bot">ask another</a> ~</p>`
             $('#response').html("<p class='ai_question'><b>Q:</b> "+query+"<p class='ai_answer'><b>A:</b> "+data["response"]+"</p>"+sources);
           } else if (data["status"] == 0) {
             localStorage.clear();
