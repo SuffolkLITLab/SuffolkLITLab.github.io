@@ -10,11 +10,11 @@ function make_query(query=null) {
     var question_pool = ["What is Suffolk's mascot?","What street is Sargent Hall on?"]
 
     h_test = question_pool[Math.floor(Math.random() * question_pool.length)]
+    localStorage.setItem('h_test', h_test);
 
     human = prompt(human_prompt + h_test).trim().toLowerCase();
     if ((human != "") && (human != null)) {
       localStorage.setItem('human_ans', human);
-      localStorage.setItem('h_test', h_test);
       go = 1;
     }
   } else {
@@ -91,7 +91,7 @@ function make_query(query=null) {
       });
     }
   } else {
-    alert("Sorry!")
+    alert("Sorry! There was an issue.")
   }
     return true
 
