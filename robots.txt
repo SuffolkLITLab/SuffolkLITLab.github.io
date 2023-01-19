@@ -1,6 +1,2 @@
 User-agent: *
 Disallow: /doc-assembly-line/slack_archive/
-Disallow: /clinics/
-Disallow: /clinics/index.html
-Disallow: /clinics_52874623/
-Disallow: /clinics_52874623/index.html
