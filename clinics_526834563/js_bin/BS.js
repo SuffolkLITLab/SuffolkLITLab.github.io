@@ -7,7 +7,7 @@ function make_query(query=null) {
   var human = "placeholder";
   var go = 0;
   if ((localStorage.getItem('h_test')==null) && (localStorage.getItem('human_ans')==null)){
-    var human_prompt = "We're experienceing high traffic. Please help convence us you're human and part of the Suffolk community.\n\n";
+    var human_prompt = "Please help convence us you're human and part of the Suffolk community.\n\n";
 
     var question_pool = ["What is Suffolk's mascot?","What street is Sargent Hall on?"]
 
