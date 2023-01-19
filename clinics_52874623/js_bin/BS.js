@@ -68,7 +68,7 @@ function make_query(query=null) {
             $('#response').html("<h2>We're sorry, but you didn't pass the human / community test or your pass has expired.</h2><p>Please submit your question again.</p>");
             $('#response').show();
           } else {
-            $('#response').html("<h2>We encountered a problem answering your question.</h2><p>It's probably due to heavy traffic. Please try again later, or I suppose you could read the <a href=\"docs/clinical_information_packet.pdf\" target=\"_blank\">Clinical Information Packet</a> that's all I'm doing. ;) </p>");
+            $('#response').html("<h2>We encountered a problem answering your question.</h2><p>It's probably due to heavy traffic. Please try again later, or I suppose you could read the <a href=\"docs/clinical_information_packet.pdf\" target=\"_blank\">Clinical Information Packet</a> to find the answer to your questions. ¯\_(ツ)_/¯</p>");
           }
           //$('#response').html(JSON.stringify(data))
 
