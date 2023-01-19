@@ -68,16 +68,10 @@ function make_query(query=null) {
             $('#response').html("<h2>We're sorry, but you didn't pass the human / community test or your pass has expired.</h2><p>Please submit your question again.</p>");
             $('#response').show();
           } else {
-            $('#response').html("<h2>We encountered a problem answering your question.</h2><p>It's probably due to heavy traffic. Please try again later, or I suppose you could read the <a href=\"docs/clinical_information_packet.pdf\" target=\"_blank\">Clinical Information Packet</a> to find the answer to your questions. ¯\_(ツ)_/¯</p>");
+            $('#response').html("<h2>We encountered a problem answering your question.</h2><p>It's probably due to heavy traffic. Please try again later.</p>");
           }
           //$('#response').html(JSON.stringify(data))
-
-          if (data["reused"]==1){
-            setTimeout(() => { $('#loading').hide();$('#response').show(); }, 1500);
-          } else {
-            $('#loading').hide();
-            $('#response').show();
-          }
+          $('#response').show()
         },
         error: function (jqXHR, exception) {
           err = JSON.parse(jqXHR.responseText)
@@ -93,7 +87,7 @@ function make_query(query=null) {
       });
     }
   } else {
-    alert("Sorry! There was an issue.")
+    alert("Sorry!")
   }
     return true
 
