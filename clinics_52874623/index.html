@@ -36,7 +36,7 @@
 	<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
 	<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 	<script src="https://code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
-  <script src="js_bin/BS.js"></script>
+  <script src="js_bin/BS.js?v=2023-01-19"></script>
   <style>
         .ai_button {
           font-family: 'Inter', 'Arial';
@@ -152,40 +152,40 @@
   <span id="random_q"></span>
 
   <p id="q_2" style="display:none;">
-    <input type="button" class="ai_button" value="Transactional Clinic?" onCLick="make_query(2);"/>
+    <input type="button" class="ai_button" value="What do students in the LIT Clinic do?" onCLick="make_query('What do students in the LIT Clinic do?');"/>
   </p>
   <p id="q_3" style="display:none;">
-    <input type="button" class="ai_button" value="Environmental Law & Policy Clinic?" onCLick="make_query(3);"/>
+    <input type="button" class="ai_button" value="What do students in the Environmental Law & Policy Clinic do?" onCLick="make_query('What do students in the Environmental Law & Policy Clinic do?');"/>
   </p>
   <p id="q_4" style="display:none;">
-    <input type="button" class="ai_button" value="Family Advocacy Clinic?" onCLick="make_query(4);"/>
+    <input type="button" class="ai_button" value="What do students in the Family Advocacy Clinic do?" onCLick="make_query('What do students in the Family Advocacy Clinic do?');"/>
   </p>
   <p id="q_5" style="display:none;">
-    <input type="button" class="ai_button" value="Health Law Clinic?" onCLick="make_query(5);"/>
+    <input type="button" class="ai_button" value="What do students in the Health Law Clinic do?" onCLick="make_query('What do students in the Health Law Clinic do?');"/>
   </p>
   <p id="q_6" style="display:none;">
-    <input type="button" class="ai_button" value="Human Rights and Indigenous Peoples Clinic?" onCLick="make_query(6);"/>
+    <input type="button" class="ai_button" value="What do students in the Human Rights and Indigenous Peoples Clinic do?" onCLick="make_query('What do students in the Human Rights and Indigenous Peoples Clinic do?');"/>
   </p>
   <p id="q_7" style="display:none;">
-    <input type="button" class="ai_button" value="Immigrant Justice Clinic?" onCLick="make_query(7);"/>
+    <input type="button" class="ai_button" value="What do students in the Immigrant Justice Clinic do?" onCLick="make_query('What do students in the Immigrant Justice Clinic do?');"/>
   </p>
   <p id="q_8" style="display:none;">
-    <input type="button" class="ai_button" value="Innocence Clinic?" onCLick="make_query(8);"/>
+    <input type="button" class="ai_button" value="What do students in the Innocence Clinic do?" onCLick="make_query('What do students in the Innocence Clinic do?');"/>
   </p>
   <p id="q_9" style="display:none;">
-    <input type="button" class="ai_button" value="Intellectual Property & Entrepreneurship?" onCLick="make_query(9);"/>
+    <input type="button" class="ai_button" value="What do students in the Intellectual Property & Entrepreneurship do?" onCLick="make_query('What do students in the Intellectual Property & Entrepreneurship do?');"/>
   </p>
   <p id="q_10" style="display:none;">
-    <input type="button" class="ai_button" value="Juvenile Defenders Clinic?" onCLick="make_query(10);"/>
+    <input type="button" class="ai_button" value="What do students in the Juvenile Defenders Clinic do?" onCLick="make_query('What do students in the Juvenile Defenders Clinic do?');"/>
   </p>
   <p id="q_11" style="display:none;">
-    <input type="button" class="ai_button" value="Suffolk Defenders?" onCLick="make_query(11);"/>
+    <input type="button" class="ai_button" value="What do students in the Suffolk Defenders do?" onCLick="make_query('What do students in the Suffolk Defenders do?');"/>
   </p>
   <p id="q_12" style="display:none;">
-    <input type="button" class="ai_button" value="Suffolk Prosecutors Program?" onCLick="make_query(12);"/>
+    <input type="button" class="ai_button" value="What do students in the Suffolk Prosecutors Program do?" onCLick="make_query('What do students in the Suffolk Prosecutors Program do?');"/>
   </p>
   <p id="q_13" style="display:none;">
-    <input type="button" class="ai_button" value="Legal Innovation & Tech Clinic ?" onCLick="make_query(12);"/>
+    <input type="button" class="ai_button" value="What do students in the Transactional Clinic do?" onCLick="make_query('What do students in the Transactional Clinic do?');"/>
   </p>
 
   <div id="output" style="float:left;width:100%;">
@@ -220,7 +220,8 @@
     return arr.slice(0, n);
   };
 
-  show_qs = sampleSize(["#q_2", "#q_3", "#q_4", "#q_5", "#q_6", "#q_7", "#q_8", "#q_9", "#q_10", "#q_11", "#q_12", "#q_13"], 2)
+  //show_qs = sampleSize(["#q_2", "#q_3", "#q_4", "#q_5", "#q_6", "#q_7", "#q_8", "#q_9", "#q_10", "#q_11", "#q_12", "#q_13"], 2)
+  show_qs = sampleSize(["#q_3", "#q_4", "#q_5", "#q_6", "#q_7", "#q_8", "#q_9", "#q_10", "#q_11", "#q_12", "#q_13"], 2)
 
   for (x in show_qs){
     $(show_qs[x]).detach().appendTo('#random_q')
