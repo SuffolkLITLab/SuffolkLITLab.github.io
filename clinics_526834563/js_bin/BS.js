@@ -62,7 +62,13 @@ function make_query(query=null) {
               sources += `<li><a href="`+data["sources"][n][1]+`" target="_blank">`+data["sources"][n][0]+`</a></li>`;
             }
             sources += `</ol><p style="text-align:center;">~ <a href="#bot">ask another question</a> ~</p>`
-            $('#response').html("<p class='ai_question'><b>Q:</b> "+query+"<p class='ai_answer'><b>A:</b> "+data["response"]+"</br></br>But what do I know? I'm just a bot. Check the sources below to keep me honest. 👇</p>"+sources);
+            var what_do_i_know = "";
+            if (data["response"]!="My appologies, I can't help with that. Please try again.") {
+              what_do_i_know = "</br></br>But what do I know? I'm just a bot. Check the sources below to keep me honest. 👇";
+            } else {
+              sources = "";
+            }
+            $('#response').html("<p class='ai_question'><b>Q:</b> "+query+"<p class='ai_answer'><b>A:</b> "+data["response"]+what_do_i_know+"</p>"+sources);
           } else if (data["status"] == 0) {
             localStorage.clear();
             $('#response').html("<h2>We're sorry, but you didn't pass the human / community test or your pass has expired.</h2><p>Please submit your question again.</p>");
