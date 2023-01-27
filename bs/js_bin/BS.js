@@ -5,8 +5,9 @@ window.scrollTo(0,0)
 function make_query(query=null) {
 
   var human = "placeholder";
+  var busy = 0;
   var go = 0;
-  if ((localStorage.getItem('h_test')==null) && (localStorage.getItem('human_ans')==null)){
+  if ((localStorage.getItem('h_test')==null) && (localStorage.getItem('human_ans')==null) && (busy==1)){
     var human_prompt = "Please help convence us you're human and part of the Suffolk community.\n\n";
 
     var question_pool = ["What is Suffolk's mascot?","What street is Sargent Hall on?"]
