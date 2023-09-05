@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <title>My RSS Algo</title>
+	<meta property="og:site_name" content="My RSS Algo"/>
+	<meta property="og:type" content="website"/>
+	<meta property="og:title" content="My RSS Algo"/>
+	<meta property="og:description" content="An open source client-side algorithmically-driven RSS reader, living with your data on your device."/>
+    <meta property="og:image" content="https://suffolklitlab.org/images/thefuture.png"/>
+    <link rel="apple-touch-icon" href="https://suffolklitlab.org/images/icon_300.png"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="style/main.css?v=2023-09-02_1245">
+    <script src="js/report.js?v=2023-09-02_1245"></script>    
+    <script src="js/feeds.js?v=2023-09-02_1245"></script>
+
+</head>
+<body>
+    <div class="container">
+        <div style="float:left;width:100%;margin-top: 20px;">
+            <div class="menu">
+                <button id="toggle-mode" class="btn btn-secondary" aria-label="Toggle Dark Mode">🌗</button>
+                <!--<button id="math" class="btn btn-secondary">❤️ + Math</button>-->
+                <button id="manage-feeds" class="btn btn-secondary">My Feeds</button>
+                <button id="add-feed" class="btn btn-primary">+</button>
+            </div>
+            <div style="float:left;"><h1 class="my-1">My RSS Algo</h1></div>
+            <div style="float:left;width:100%;padding-top: 8px;">
+                <p>
+                    An open source client-side algorithmically-driven <a href="https://en.wikipedia.org/wiki/RSS" target="_blank">RSS</a> reader made at the <a href="https://suffolklitlab.org/" target="_blank">Suffolk LIT Lab</a>. Use 👍 &amp; 👎 + "Seen" or "Open" to feed the algo. Votes don't leave your device. Customize the algo's behavior in <i>Settings &amp; Data</i>. Curate your feeds using the <i>My Feeds</i> and <i>plus</i> buttons above. For project updates, follow <a href="https://mastodon.social/deck/tags/suffolkrssalgo" target="_blank">#SuffolkRSSalgo</a> on Mastodon, or check out <a href="https://github.com/colarusso/rss_algo" target="_blank">our GitHub page</a>.
+                </p>
+            </div>
+            <div id="loading" style="float:left;background:yellow;display:none;color:black;margin-bottom: 10px;">
+                <i>&nbsp;Loading...&nbsp;</i>
+            </div>
+            <div style="float:left;width:100%;">
+                <span style="float:right">
+                    <a id="a_settings" href="javascript:void('')" onClick="toggle_settings()">Settings &amp; Data</a>
+                </span>
+                <span id="unread-count" class="text-danger">New: ?</span>
+                <span id="read-count" class="text-success">Seen: ?</span>
+            </div>
+        </div>
+        <div id="news-feed" class="row gy-3">
+            <!-- News articles will be dynamically added here -->
+        </div>
+        <div id="my_settings" style="display:none;float:left;padding-top: 15px;">
+            <h2>Settings &amp; Data</h2>
+            <p>
+                You can manage your feeds by clicking "My Feeds" at the <a href="javascript:void('')" onClick="history.replaceState('', document.title, window.location.pathname);window.scrollTo(0, 0);">top</a> of this page. See additional controls below. To determine what articles you like, we make use of insights from <a href="https://en.wikipedia.org/wiki/Tf%E2%80%93idf" target="_blank">TF-IDF</a>, comparing all the text from the cards you vote up or down with everything you've "seen." I hope to write a more complete explanation sometime. When I do, I'll put a link here. Until then, you can always look at <a href="https://github.com/colarusso/rss_algo" target="_blank">the code</a>.
+            </p>
+            <p>
+                <i>Note: when figuring out what you "like" we look only at the card's title, description, and the RSS Feed's name. We don't look at the content of the article, and we also compress all feed titles into single words. That's why you might see things like nyttopstories (NYT > Top Stories) in the word lists below.</i>
+            </p>
+            <h4>Cooldown Clock</h4>
+            <p>
+                There's no need to download every feed every time you hit refresh. So this site waits a defined period before downloading content. If you refresh the page before the end of this cooldown period, it will recalculate ratings based on recent votes and filter what it displays based on the other options here, but it won't try to download your feeds. Currently the period is set to <b><i><span id="cooldown-value">0.25</span></i> hours</b>. <i>You can change this below, but you must refresh the page to see results. <span class="highlighted"><b>If you set a cooldown period that is shorter than the current value, you will have to wait for the old period to pass before the new one takes effect. So, once you set it and refresh, there's no quickly going back.</b></span></i>
+            </p>
+            <p>
+                <input type="range" id="cooldown-slider" min="0.25" max="4" value="0.25" step="0.25" style="width:100%;">
+            </p>
+            <div class="row">
+                <div class="col-md-6 col-sm-12" style="overflow:hidden;">
+                    <h4>A Note on Performance</h4>
+                    <p>
+                        The options you choose below will effect this site's performance. Generally speaking, the more inclusive your choices the larger your timeline will be and the slower it will load, reorder, and the like. Of course, the number of feeds you follow will also influence this. The trick is finding the right balance for you and your device.
+                    </p>
+                </div>
+                <div class="col-md-6 col-sm-12" style="overflow:hidden;">
+                    <h4>Show Cards You've Seen</h4>
+                    <p>
+                        <label for="hiddenMode"><input type="checkbox" id="hiddenMode" value="1"> Show cards marked as "Seen" at the end of the list but grayed out. <i>Refresh page to see results</i>.</label>
+                    </p>
+                    <h4>Images</h4>
+                    <p>
+                        <label for="ignore-images"><input type="checkbox" id="ignore-images" value="1"> Ignore preview images (i.e., load w/o thumbnails). <i>Refresh page to see results</i>.</label>
+                    </p>
+                </div>
+            </div>
+            <h4>Ratings Cutoff</h4>
+            <p>
+                After the recommendations kick in, each of your cards is given a rating which is used to order the above list. We also truncate the list based on the following cutoff value. We use the <a href="https://en.wikipedia.org/wiki/Standard_score" target="_blank">z-score</a> of the rating. The z-score of a value is just the number of standard deviations it is away from the mean (average). So the average score of your cards is always 0. Negative numbers are below average, and positive numbers are above average. 
+            </p>
+            <p>
+                Z-Score for cutoff: <b><i><span id="cutoff-value">-2</span></i></b>. <i>Refresh page to see results</i>.
+            </p>
+            <p>
+                <input type="range" id="cutoff-slider" min="-3.5" max="3.5" value="-2" step="0.01" style="width:100%;">
+            </p>
+            <h4>Positive vs. Negative</h4>
+            <p>
+                When calculating ratings, how much influence should <i>down votes</i> have compared to <i>up votes</i>? If you choose 0, they don't count at all. If you choose 2, they'll count twice as much as <i>up votes</i>. Current value: <b><i><span id="negativity-value">1.25</span></i></b>. <i>Refresh page to see results</i>.
+            </p>
+            <p>
+                <input type="range" id="negativity-slider" min="0" max="2" value="1.25" step="0.01" style="width:100%;">
+            </p>
+            <div class="row" style="margin-bottom: 10px;">
+                <div class="col-xl-4 col-lg-5 col-md-6 col-sm-12 col-md-4" style="overflow:hidden;">
+                    <h4>Positive</h4>
+                    <p>
+                        Here are your <b><i>most-positive</i></b> words and their approximate TF-IDF, treating all up-voted cards as a single document: <span id="upwords">not enough data</span>
+                    </p>
+                    <button id="clear-upvotes" class="btn btn-danger btn-block">Clear Upvotes</button>
+                </div>
+                <div class="col-xl-4 col-lg-5 col-md-6 col-sm-12 col-md-4" style="overflow:hidden;">
+                    <h4>Negative</h4>
+                    <p>
+                        Here are your <b><i>most-negative</i></b> words and their approximate TF-IDF, treating all down-voted cards as a single document: <span id="downwords">not enough data</span>
+                    </p>
+                    <button id="clear-downvotes" class="btn btn-danger btn-block">Clear Downvotes</button>
+                </div>
+                <div class="col-xl-4 col-lg-5 col-md-6 col-sm-12 col-md-4">
+                    <h4>History</h4>
+                    <p>
+                        Display content from the last <b><i><span id="lookback-value">7</span> days</i></b>. <i>Refresh page to see results</i>.
+                    </p>
+                    <p>
+                        <input type="range" id="lookback-slider" min="1" max="15" value="7" style="width:100%;">
+                    </p>
+                    <p>
+                        You can limit how much you see in your timeline by adjusting the slider above. If you clear you reading history, however, it will remove older articles, not just hide them. This will effect your recommendations since they are based on interactions with old articles.
+                    </p>
+                    <button id="clear-read-history" class="btn btn-danger btn-block">Clear Reading History</button>
+                    <button id="factory-reset" class="btn btn-danger btn-block factory-reset" onClick="reset_all();"><b>RESET ALL</b></button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-sm-12" style="overflow:hidden;">
+                    <h4>Mastodon</h4>
+                    <p>
+                        Since users of <a href="https://joinmastodon.org/" target="_blank">Mastodon</a> use different servers/instances, we need to collect that information to enable sharing (i.e., so we can queue your post on the right server). If you'd like to use this feature, enter your server here:
+                    </p>
+                    <p><input id="masto_instance" value="" oninput="localStorage.instance=this.value"></p>
+                </div>
+                <div class="col-md-6 col-sm-12" style="overflow:hidden;">
+                    <h4>Your Data</h4>
+                    <p>
+                        FWIW, you can download the data stored in your browser to a file. This is helpful for backups and if you want to move your history et al. between devices.
+                    </p>
+                    <input id="upload" type="file" style="display: none;"/> 
+                    <p>
+                        <a href="javascript:saveTextAsFile(JSON.stringify(localStorage,null,2),'My_RSS_algo_data.json');" class="btn btn-primary">Download My Data</a>&nbsp;
+                        <a href="javascript:upload_file()" class="btn btn-danger">Upload Data</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <a href="https://suffolklitlab.org/" alt="LIT Lab" target="_blank">
+                <img id="footer_logo_long" src="images/lit_suffolk.png" border="0" height="35px" alt="LIT and Suffolk University Law School Logos" align="left"/>
+                <img id="footer_logo_sqr" src="images/blue_logo.png" border="0" alt="LIT and Suffolk University Law School Logos" align="left"/>
+            </a>
+            <span style="float:right">
+                <a href="https://github.com/colarusso/rss_algo" target="_blank">GitHub</a>
+            </span>
+        </div>
+    </div>
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.js"></script>
+
+<script src="js/functions.js?v=2023-09-02_1245"></script>    
+
+</html>
