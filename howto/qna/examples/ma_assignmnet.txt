@@ -3,36 +3,36 @@ Author: David Colarusso
 Before: <link rel="stylesheet" type="text/css" href="https://suffolklitlab.org/howto/qna/style/style.css">
 <div id="icon" style="background-size: 110px 99px;background-image: url('https://suffolklitlab.org/howto/qna/images/maxheadroom.gif');"></div>
 <h2 style="text-align:center;">Massachusetts Indigency Calculator</h2>
-<p><b>This is a <a href="https://www.codingthelaw.org/level/2/#mission_p2">class project</a>. You should not rely on it as a source of legal information. It is likely incomplete.</b></p>
+<p><b>This is a <a href="https://www.codingthelaw.org/Fall_2023/level/2/#mission_p2">class project</a>. You should not rely on it as a source of legal information. It is likely incomplete.</b></p>
 <p>Answer the following questions to see if you qualify for an appointment of counsel or fee waiver.</p>
 After:
 <script>
 function fedpov(house,income,percentage){
 	// Determines if your income is less than or equal to
-	// a percentage of the 2021 federal poverty guidelines
+	// a percentage of the 2023 federal poverty guidelines
 	// for the contiguous United States. See
 	// https://aspe.hhs.gov/poverty-guidelines
 
 		var line = NaN;
 
 		if (house == 1) {
-			line = 12880;
+			line = 14580;
 		} else if (house == 2) {
-			line = 17420;
+			line = 19720;
 		} else if (house == 3) {
-			line = 21960;
+			line = 24860;
 		} else if (house == 4) {
-			line = 26500;
+			line = 30000;
 		} else if (house == 5) {
-			line = 31040;
+			line = 35140;
 		} else if (house == 6) {
-			line = 35580;
+			line = 40280;
 		} else if (house == 7) {
-			line = 40120;
+			line = 45420;
 		} else if (house == 8) {
-			line = 44660;
+			line = 50560;
 		} else if (house > 8) {
-			line = 44660 + (house-8)*4540;
+			line = 50560 + (house-8)*5140;
 		}
 
 		if (income <= (line*(percentage/100))) {
