@@ -21,7 +21,7 @@ body {
 }
 
 #msg_bar {
-	display:none;
+	/* display:none; */
 	position: relative;
 	width:100%;
 	background:#ffe262;;
