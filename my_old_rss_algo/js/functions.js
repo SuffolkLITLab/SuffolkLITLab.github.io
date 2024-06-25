@@ -825,13 +825,13 @@ document.addEventListener("DOMContentLoaded", function() {
                 sponsor.className = `col-xl-4 col-lg-5 col-md-6 col-sm-12 article-container`;
                 sponsor.innerHTML = `
                     <div class="card">
-                        <div class="masto_share" style="right:10px;"><a href="javascript:void('')" onclick="MastodonShare('Support Suffolk Law\\'s LIT Lab;url=https://suffolklitlab.org/docs/affiliates.pdf');">Mastodon</a></div>
+                        <div class="masto_share" style="right:10px;"><a href="javascript:void('')" onclick="MastodonShare('Support Suffolk Law\\'s LIT Lab;url=https://projects.suffolklitlab.org/docs/affiliates.pdf');">Mastodon</a></div>
                         ${img_html}
                         <div class="card-body">
                                 <h5 class="card-title">Support the People Who Built <i>My RSS Algo</i>!</h5>
                                 <p class="card-text">Through its Affiliates Program, Suffolk University Law School's Legal Innovation and Technology <a href="https://suffolklitlab.org/" target="_blank">(LIT) Lab</a> provides members with connections to experts and law students working with emerging legal services technologies, while growing the Lab's capacity to serve disadvantaged communities.</p>
                             <div style="text-align:right;">
-                                <a href="https://suffolklitlab.org/docs/affiliates.pdf" class="btn btn-primary" target="_blank">Become an Affiliate</a>
+                                <a href="https://projects.suffolklitlab.org/docs/affiliates.pdf" class="btn btn-primary" target="_blank">Become an Affiliate</a>
                             </div>
                         </div>
                         <div class="card-footer">

@@ -1,7 +1,7 @@
 Title: Massachusetts Indigency Calculator
 Author: David Colarusso
-Before: <link rel="stylesheet" type="text/css" href="https://suffolklitlab.org/howto/qna/style/style.css">
-<div id="icon" style="background-size: 110px 99px;background-image: url('https://suffolklitlab.org/howto/qna/images/maxheadroom.gif');"></div>
+Before: <link rel="stylesheet" type="text/css" href="https://projects.suffolklitlab.org/howto/qna/style/style.css">
+<div id="icon" style="background-size: 110px 99px;background-image: url('https://projects.suffolklitlab.org/howto/qna/images/maxheadroom.gif');"></div>
 <h2 style="text-align:center;">Massachusetts Indigency Calculator</h2>
 <p><b>This is a <a href="https://www.codingthelaw.org/Fall_2023/level/2/#mission_p2">class project</a>. You should not rely on it as a source of legal information. It is likely incomplete.</b></p>
 <p>Answer the following questions to see if you qualify for an appointment of counsel or fee waiver.</p>

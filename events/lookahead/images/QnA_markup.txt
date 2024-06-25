@@ -24,7 +24,7 @@ body{
 	background-size: 100px;
 	background-position: center;
  	background-repeat: no-repeat;
-	background-image: url('https://suffolklitlab.org/images/seal.jpg');
+	background-image: url('https://projects.suffolklitlab.org/images/seal.jpg');
 }
 .title {
 	text-align:center;
